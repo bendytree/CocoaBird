@@ -28,3 +28,6 @@ Thumbs.db
 *.mode1v3
 *.pbxuser
 *.xcuserstate
+*.xcuserdatad
+*.xcworkspace
+/xcuserdata/*
