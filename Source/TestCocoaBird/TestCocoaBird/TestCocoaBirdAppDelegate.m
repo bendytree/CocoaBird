@@ -10,7 +10,6 @@
 
 @implementation TestCocoaBirdAppDelegate
 
-
 @synthesize window=_window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

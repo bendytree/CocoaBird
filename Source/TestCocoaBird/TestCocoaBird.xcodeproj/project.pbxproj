@@ -267,6 +267,7 @@
 				BCBEC0211399945300FB5FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
