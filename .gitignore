@@ -25,5 +25,6 @@ Trunk/Resources
 *.InstallLog
 Thumbs.db
 .DS_Store
-slesser.mode1v3
-slesser.pbxuser
+*.mode1v3
+*.pbxuser
+*.xcuserstate
