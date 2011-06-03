@@ -8,6 +8,8 @@
 
 #import "TestCocoaBirdAppDelegate.h"
 
+#import "ASIHTTPRequest.h"
+
 @implementation TestCocoaBirdAppDelegate
 
 @synthesize window=_window;
