@@ -1124,7 +1124,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/joshinnorman/Documents/Projects/CocoaBird/Source/TestCocoaBird/TestCocoaBird.xcodeproj/</string>
-		<real>328832545.29213601</real>
+		<real>328832634.80274999</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2281,7 +2281,7 @@
 				<integer>213</integer>
 			</dict>
 		</dict>
-		<real>328832545.289545</real>
+		<real>328832634.80113298</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2676,7 +2676,7 @@
 				<integer>253</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>328832540.28937697</real>
+			<real>328832632.709153</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -2687,7 +2687,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 5:22 PM</string>
+		<string>Today at 5:23 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>

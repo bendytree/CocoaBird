@@ -31,3 +31,6 @@ Thumbs.db
 *.xcuserdatad
 *.xcworkspace
 /xcuserdata/*
+Source/TestCocoaBird/TestCocoaBird.xcodeproj/project.xcworkspace/*
+Source/TestCocoaBird/TestCocoaBird.xcodeproj/project.xcworkspace
+Source/TestCocoaBird/TestCocoaBird.xcodeproj/project.xcworkspace/xcuserdata/joshinnorman.xcuserdatad/UserInterfaceState.xcuserstate
