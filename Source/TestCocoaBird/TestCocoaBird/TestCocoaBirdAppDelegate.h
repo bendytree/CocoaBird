@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootController.h"
+#import "CocoaBird.h"
+
 
 @interface TestCocoaBirdAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (retain) RootController* controller;
+@property (retain) CocoaBird* cocoaBird;
 
 @end

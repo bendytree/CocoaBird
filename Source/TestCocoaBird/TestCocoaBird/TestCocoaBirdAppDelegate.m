@@ -7,19 +7,30 @@
 //
 
 #import "TestCocoaBirdAppDelegate.h"
-
 #import "ASIHTTPRequest.h"
+#import "RootController.h"
+#import "CocoaBird.h"
 
 @implementation TestCocoaBirdAppDelegate
 
-@synthesize window=_window;
+@synthesize window=_window, controller, cocoaBird;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.controller = [[[RootController alloc] init] autorelease];
+    [self.window addSubview:self.controller.view];
+    [self.controller.view setFrame:[[UIScreen mainScreen] applicationFrame]];
+    
+    [CocoaBird setConsumerKey:@"FD36QhvLRLZYPLdl1Qfg" andSecret:@"V6Wx1HK1L8RVYKyA3lbmz36CstMaQ9EnIP7RKoPaE"];
+    
+    if(![CocoaBird isAuthenticated]){
+        [CocoaBird addAuthenticationDelegate:self];
+        [CocoaBird launchAuthentication];
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
-}
+} 
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -60,8 +71,20 @@
      */
 }
 
+#pragma Cocoa Bird
+
+- (void) cocoaBirdAuthenticationEnded
+{
+    NSLog(@"cocoaBirdAuthenticationEnded");
+}
+
 - (void)dealloc
 {
+    [CocoaBird removeAuthenticationDelegate:self];
+    
+    self.controller = nil;
+    self.cocoaBird = nil;
+    
     [_window release];
     [super dealloc];
 }
