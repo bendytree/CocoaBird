@@ -17,6 +17,5 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (retain) RootController* controller;
-@property (retain) CocoaBird* cocoaBird;
 
 @end

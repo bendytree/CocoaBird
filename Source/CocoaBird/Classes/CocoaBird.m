@@ -45,24 +45,24 @@
 
 #pragma Authentication
 
-+ (BOOL) isAuthenticated
++ (BOOL) isLoggedIn
 {
     return [CocoaBirdSettings hasAuthenticationTokens];
 }
 
-+ (void) addAuthenticationDelegate:(NSObject*)_delegate
++ (void) addLoginDelegate:(NSObject*)_delegate selector:(SEL)_selector
 {
-    [CocoaBirdAuthenticator addAuthenticationDelegate:_delegate];
+    [CocoaBirdAuthenticator addLoginDelegate:_delegate selector:_selector];
 }
 
-+ (void) removeAuthenticationDelegate:(NSObject*)_delegate
++ (void) removeLoginDelegate:(NSObject*)_delegate
 {
-    [CocoaBirdAuthenticator removeAuthenticationDelegate:_delegate];
+    [CocoaBirdAuthenticator removeLoginDelegate:_delegate];
 }
 
-+ (void) launchAuthentication
++ (void) launchLogin:(BOOL)animated
 {
-    [CocoaBirdAuthenticator launchAuthentication];
+    [CocoaBirdAuthenticator launchLogin:animated];
 }
 
 

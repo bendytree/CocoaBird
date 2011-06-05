@@ -23,7 +23,7 @@
 
 #pragma API
 
-+ (void) launchAuthentication
++ (void) launchLogin:(BOOL)animated
 {
     UIViewController* controller = [[[CocoaBirdAuthenticatorViewController alloc] init] autorelease];
     [CocoaBirdModal present:controller];
@@ -56,16 +56,16 @@ static NSMutableArray* _authDelegates = NULL;
 
 + (void) sendClosedNotification
 {
-    [self notifyDelegates:@selector(cocoaBirdAuthenticationClosed)];
+    [self notifyDelegates:@selector(cocoaBirdLoginComplete)];
 }
 
-+ (void) addAuthenticationDelegate:(NSObject*)_delegate
++ (void) addLoginDelegate:(NSObject*)_delegate selector:(SEL)_selector
 {
-    [CocoaBirdAuthenticator removeAuthenticationDelegate:_delegate];
+    [CocoaBirdAuthenticator removeLoginDelegate:_delegate];
     [[CocoaBirdAuthenticator authDelegates] addObject:[NSValue valueWithPointer:_delegate]];
 }
 
-+ (void) removeAuthenticationDelegate:(NSObject*)_delegate
++ (void) removeLoginDelegate:(NSObject*)_delegate
 {
     for(int i=0; i<[[CocoaBirdAuthenticator authDelegates] count]; i++){
         NSValue* v = [[CocoaBirdAuthenticator authDelegates] objectAtIndex:i];

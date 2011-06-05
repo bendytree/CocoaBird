@@ -21,10 +21,10 @@
 + (void) setConsumerKey:(NSString*)key andSecret:(NSString*)secret;
 
 //Authentication
-+ (void) launchAuthentication;
-+ (BOOL) isAuthenticated;
-+ (void) addAuthenticationDelegate:(NSObject*)delegate;
-+ (void) removeAuthenticationDelegate:(NSObject*)delegate;
++ (void) launchLogin:(BOOL)animated;
++ (BOOL) isLoggedIn;
++ (void) addLoginDelegate:(NSObject*)delegate selector:(SEL)selector;
++ (void) removeLoginDelegate:(NSObject*)delegate;
 
 @end
 
@@ -33,6 +33,6 @@
 
 @protocol CocoaBirdAuthenticationDelegate
 @optional
-- (void) cocoaBirdAuthenticationClosed;
+- (void) cocoaBirdLoginComplete;
 @end
 

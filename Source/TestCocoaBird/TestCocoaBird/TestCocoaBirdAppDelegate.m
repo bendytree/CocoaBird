@@ -11,26 +11,42 @@
 #import "RootController.h"
 #import "CocoaBird.h"
 
+@interface TestCocoaBirdAppDelegate()
+- (void) showRootView;
+@end
+
 @implementation TestCocoaBirdAppDelegate
 
-@synthesize window=_window, controller, cocoaBird;
+@synthesize window=_window, controller;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.controller = [[[RootController alloc] init] autorelease];
-    [self.window addSubview:self.controller.view];
-    [self.controller.view setFrame:[[UIScreen mainScreen] applicationFrame]];
+    [self showRootView];
     
     [CocoaBird setConsumerKey:@"FD36QhvLRLZYPLdl1Qfg" andSecret:@"V6Wx1HK1L8RVYKyA3lbmz36CstMaQ9EnIP7RKoPaE"];
     
-    if(![CocoaBird isAuthenticated]){
-        [CocoaBird addAuthenticationDelegate:self];
-        [CocoaBird launchAuthentication];
+    if([CocoaBird isLoggedIn] == NO){
+        [CocoaBird addLoginDelegate:self selector:@selector(cocoaBirdLoginComplete)];
+        [CocoaBird launchLogin:NO];
     }
+    
+    [self performSelector:@selector(cocoaBirdLoginComplete) withObject:@"A" withObject:@"B"];
     
     [self.window makeKeyAndVisible];
     return YES;
 } 
+
+- (void) showRootView
+{
+    self.controller = [[[RootController alloc] init] autorelease];
+    [self.window addSubview:self.controller.view];
+    [self.controller.view setFrame:[[UIScreen mainScreen] applicationFrame]];
+}
+
+- (void) cocoaBirdLoginComplete
+{
+    [self showRootView];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -71,19 +87,11 @@
      */
 }
 
-#pragma Cocoa Bird
-
-- (void) cocoaBirdAuthenticationEnded
-{
-    NSLog(@"cocoaBirdAuthenticationEnded");
-}
-
 - (void)dealloc
 {
-    [CocoaBird removeAuthenticationDelegate:self];
+    [CocoaBird removeLoginDelegate:self];
     
     self.controller = nil;
-    self.cocoaBird = nil;
     
     [_window release];
     [super dealloc];

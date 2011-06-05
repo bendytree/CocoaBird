@@ -15,10 +15,10 @@
     
 }
 
-+ (void) launchAuthentication;
++ (void) launchLogin:(BOOL)animated;
 
-+ (void) addAuthenticationDelegate:(NSObject*)delegate;
-+ (void) removeAuthenticationDelegate:(NSObject*)delegate;
++ (void) addLoginDelegate:(NSObject*)_delegate selector:(SEL)_selector;
++ (void) removeLoginDelegate:(NSObject*)delegate;
 + (void) sendClosedNotification;
 
 @end
