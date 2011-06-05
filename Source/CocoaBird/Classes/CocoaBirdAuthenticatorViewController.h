@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "CocoaBirdAuthenticator.h"
+#import "CocoaBirdOAuthTokenRetriever.h"
 
-@interface CocoaBirdAuthenticatorViewController : UIViewController<UIWebViewDelegate> {
+@interface CocoaBirdAuthenticatorViewController : UIViewController<UIWebViewDelegate, CocoaBirdOAuthTokenRetrieverDelegate> {
     
     IBOutlet UIWebView* web;
-    BOOL isFirstLoad;;
+    BOOL hasBegunFirstLoad;
+    BOOL isFirstLoad;
     
 }
+
+@property (retain) CocoaBirdOAuthTokenRetriever* tokenRetriever;
 
 - (IBAction) pressedCancel;
 

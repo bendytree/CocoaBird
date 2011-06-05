@@ -13,10 +13,17 @@
     
 }
 
-+ (void) setOAuthToken:(NSString*)token andSecret:(NSString*)secret;
+//Consumer
++ (void) setConsumerKey:(NSString*)_key andSecret:(NSString*)_secret;
++ (void) assertConsumerKeyAndSecretAreSet;
++ (NSString*) oAuthConsumerKey;
++ (NSString*) oAuthConsumerSecret;
+
+//OAuth Tokey/Secret
++ (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname;
++ (BOOL) hasAuthenticationTokens;
 + (NSString*) oAuthToken;
 + (NSString*) oAuthTokenSecret;
-+ (BOOL) hasAuthenticationTokens;
-+ (void) assertTokensAreSet;
++ (NSString*) screenname;
 
 @end

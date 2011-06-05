@@ -11,22 +11,46 @@
 
 @implementation CocoaBirdSettings
 
-+ (void) setOAuthToken:(NSString*)token andSecret:(NSString*)secret
+
+#pragma Consumer Key/Secret
+
+static NSString* oAuthConsumerKey = NULL;
+static NSString* oAuthConsumerSecret = NULL;
+
++ (void) setConsumerKey:(NSString*)_key andSecret:(NSString*)_secret
 {
+    oAuthConsumerKey = [_key copy];
+    oAuthConsumerSecret = [_secret copy];
+}
+
++ (void) assertConsumerKeyAndSecretAreSet
+{
+    BOOL hasKeyAndSecret = [oAuthConsumerKey length] && [oAuthConsumerSecret length];
+    NSAssert(hasKeyAndSecret, @"You must set your consumer key/secret: [CocoaBird setConsumerKey:@""YOUR_KEY_HERE"" andSecret:@""YOUR_SECRET_HERE""]");
+}
+
++ (NSString*) oAuthConsumerKey
+{
+    return oAuthConsumerKey;
+}
+
++ (NSString*) oAuthConsumerSecret
+{
+    return oAuthConsumerSecret;
+}
+
+
+#pragma Consumer Key/Secret
+
++ (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname
+{
+    NSLog(@"setAuthenticationToken:Secret:Screenname:%@", screenname);
+    
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:token forKey: @"CocoaBird_OAuthToken"];
-    [defaults setObject:secret forKey: @"CocoaBird_OAuthTokenSecret"];
+    [defaults setObject:token forKey: @"CocoaBird_AuthenticationToken"];
+    [defaults setObject:secret forKey: @"CocoaBird_AuthenticationSecret"];
+    [defaults setObject:screenname forKey: @"CocoaBird_AuthenticationScreenname"];
     [defaults synchronize];
-}
-
-+ (NSString*) oAuthToken
-{
-    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_OAuthToken"];
-}
-
-+ (NSString*) oAuthTokenSecret
-{
-    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_OAuthTokenSecret"];
 }
 
 + (BOOL) hasAuthenticationTokens
@@ -34,9 +58,20 @@
     return [[CocoaBirdSettings oAuthToken] length] && [[CocoaBirdSettings oAuthTokenSecret] length];
 }
 
-+ (void) assertTokensAreSet
++ (NSString*) oAuthToken
 {
-    NSAssert([self hasAuthenticationTokens], @"You must set your consumer key/secret: [CocoaBird setConsumerKey:@""YOUR_KEY_HERE"" andSecret:@""YOUR_SECRET_HERE""]");
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationToken"];
 }
+
++ (NSString*) oAuthTokenSecret
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationSecret"];
+}
+
++ (NSString*) screenname
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationScreenname"];
+}
+
 
 @end

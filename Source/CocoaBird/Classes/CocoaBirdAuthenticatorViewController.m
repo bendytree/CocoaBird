@@ -13,23 +13,37 @@
 
 @interface CocoaBirdAuthenticatorViewController (private)
 - (NSString*) findPin;
+- (void) sendUserToAuthorizationPage;
 @end
 
 @implementation CocoaBirdAuthenticatorViewController
+
+@synthesize tokenRetriever;
 
 - (id)init
 {
     self = [super initWithNibName:@"CocoaBirdAuthenticatorViewController" bundle:nil];
     if (self) {
         isFirstLoad = YES;
+        hasBegunFirstLoad = NO;
         
-        [CocoaBirdSettings assertTokensAreSet];
+        [CocoaBirdSettings assertConsumerKeyAndSecretAreSet];
+        
+        self.tokenRetriever = [[[CocoaBirdOAuthTokenRetriever alloc] init] autorelease];
+        self.tokenRetriever.delegate = self;
+        [self.tokenRetriever beginLoadingRequestToken];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    self.tokenRetriever = nil;
+    
+    //otherwise, if a request is in progress then it will blow up
+    web.delegate = nil;
+	[web loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: @""]]];
+    
     [super dealloc];
 }
 
@@ -48,7 +62,10 @@
 {
     [super viewDidLoad];
     
-    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://twitter.com/oauth/authorize"]]];
+    web.delegate = self;
+    
+    if([self.tokenRetriever hasRequestToken])
+        [self sendUserToAuthorizationPage];
 }
 
 - (void)viewDidUnload
@@ -61,7 +78,7 @@
 
 #pragma mark - End Results
 
-- (void) userWantsToQuit
+- (void) quit
 {
     [CocoaBirdModal dismiss:self];
     
@@ -77,7 +94,7 @@
 	char* raw = data ? (char *) [data bytes] : "";
 	
 	if (raw && strstr(raw, "cancel=")) {
-		[self userWantsToQuit];
+		[self quit];
 		return NO;
 	}
 
@@ -92,45 +109,20 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	if (isFirstLoad) {
-		[web performSelector: @selector(stringByEvaluatingJavaScriptFromString:) withObject: @"window.scrollBy(0,200)" afterDelay: 0];
-		isFirstLoad = NO;
+   		isFirstLoad = NO;
+		
+        //scroll to the login area
+        [web performSelector: @selector(stringByEvaluatingJavaScriptFromString:) withObject: @"window.scrollBy(0,200)" afterDelay: 0];
 	} else {
         //Did it work?
 		NSString* pin = [self findPin];
 		if (pin.length) {
-			
-            	[self requestURL:@"http://twitter.com/oauth/access_token" token: [CocoaBirdSettings oAuthToken] onSuccess: @selector(setAccessToken:withData:) onFail: @selector(outhTicketFailed:data:)];
-			
-		}
-        
-        //Could do "copy pin" stuff here
+            [self.tokenRetriever beginLoadingAccessTokenWithPin:pin];			
+		}else{
+            //Could do "copy pin" stuff here if we can't find it
+        }
 	}
 }
-
-- (void) setAccessToken: (OAServiceTicket *) ticket withData: (NSData *) data {
-	if (!ticket.didSucceed || !data) return;
-	
-	NSString *dataString = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease];
-	if (!dataString) return;
-    
-	if (self.pin.length && [dataString rangeOfString: @"oauth_verifier"].location == NSNotFound) dataString = [dataString stringByAppendingFormat: @"&oauth_verifier=%@", self.pin];
-	
-	NSString				*username = [self extractUsernameFromHTTPBody:dataString];
-    
-	if (username.length > 0) {
-		[self setUsername: username password: nil];
-		if ([_delegate respondsToSelector: @selector(storeCachedTwitterOAuthData:forUsername:)]) [(id) _delegate storeCachedTwitterOAuthData: dataString forUsername: username];
-	}
-	
-	[_accessToken release];
-	_accessToken = [[OAToken alloc] initWithHTTPResponseBody:dataString];
-}
-
-
-
-
-
-
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
@@ -138,11 +130,44 @@
 }
 
 
+#pragma mark - Retriever Delegate
+
+- (void) tokenRetrieverGotRequestToken
+{
+    NSLog(@"tokenRetrieverGotRequestToken");
+    
+    [self sendUserToAuthorizationPage];
+}
+
+- (void) tokenRetrieverUnableToGetRequestToken:(NSError*)error
+{
+    NSLog(@"tokenRetrieverUnableToGetRequestToken: %@", error);
+    
+    [self quit];
+}
+
+- (void) tokenRetrieverGotAccessToken:(NSString*)key secret:(NSString*)secret screenname:(NSString*)screenname
+{
+    NSLog(@"tokenRetrieverGotAccessToken");
+    
+    [CocoaBirdSettings setAuthenticationToken:key secret:secret screenname:screenname];
+    
+    [self quit];
+}
+
+- (void) tokenRetrieverUnableToGetAccessToken:(NSError*)error
+{
+    NSLog(@"tokenRetrieverUnableToGetAccessToken: %@", error);
+    
+    [self quit];
+}
+
+
 #pragma mark - Events
 
 - (IBAction) pressedCancel
 {
-    [self userWantsToQuit];
+    [self quit];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -152,6 +177,16 @@
 
 
 #pragma Helpers
+
+- (void) sendUserToAuthorizationPage
+{
+    if(hasBegunFirstLoad) return;
+    
+    NSLog(@"loading url in webview: %@", self.tokenRetriever.authorizationUrl);
+    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.tokenRetriever.authorizationUrl]]];
+    hasBegunFirstLoad = YES;
+}
+
 
 - (NSString*) findPin
 {

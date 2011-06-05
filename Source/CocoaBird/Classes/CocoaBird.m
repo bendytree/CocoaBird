@@ -12,9 +12,6 @@
 
 @implementation CocoaBird
 
-static NSString* oAuthConsumerKey = NULL;
-static NSString* oAuthConsumerSecret = NULL;
-
 @synthesize delegate;
 
 
@@ -42,8 +39,7 @@ static NSString* oAuthConsumerSecret = NULL;
 
 + (void) setConsumerKey:(NSString*)_key andSecret:(NSString*)_secret
 {
-    oAuthConsumerKey = [_key copy];
-    oAuthConsumerSecret = [_secret copy];
+    [CocoaBirdSettings setConsumerKey:_key andSecret:_secret];
 }
 
 
