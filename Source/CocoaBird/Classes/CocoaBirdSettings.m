@@ -40,7 +40,7 @@ static NSString* oAuthConsumerSecret = NULL;
 }
 
 
-#pragma Consumer Key/Secret
+#pragma User Key/Secret
 
 + (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname
 {
@@ -71,6 +71,11 @@ static NSString* oAuthConsumerSecret = NULL;
 + (NSString*) screenname
 {
     return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationScreenname"];
+}
+
++ (void) logout
+{
+    [self setAuthenticationToken:nil secret:nil screenname:nil];
 }
 
 

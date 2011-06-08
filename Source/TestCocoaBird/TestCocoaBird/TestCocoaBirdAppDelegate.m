@@ -20,17 +20,15 @@
 @synthesize window=_window, controller;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [self showRootView];
-    
+{    
     [CocoaBird setConsumerKey:@"FD36QhvLRLZYPLdl1Qfg" andSecret:@"V6Wx1HK1L8RVYKyA3lbmz36CstMaQ9EnIP7RKoPaE"];
     
-    if([CocoaBird isLoggedIn] == NO){
+    if([CocoaBird isLoggedIn]){
+        [self showRootView];
+    }else{
         [CocoaBird addLoginDelegate:self selector:@selector(cocoaBirdLoginComplete)];
         [CocoaBird launchLogin:NO];
     }
-    
-    [self performSelector:@selector(cocoaBirdLoginComplete) withObject:@"A" withObject:@"B"];
     
     [self.window makeKeyAndVisible];
     return YES;

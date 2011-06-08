@@ -12,7 +12,7 @@
 
 @interface CocoaBirdAuthenticator (private)
 
-+ (NSMutableArray*) authDelegates;
++ (NSMutableDictionary*) authDelegates;
 
 @end
 
@@ -33,48 +33,53 @@
 
 #pragma Delegates
 
-static NSMutableArray* _authDelegates = NULL;
-+ (NSMutableArray*) authDelegates
+static NSMutableDictionary* _loginDelegates = NULL;
++ (NSMutableDictionary*) loginDelegates
 {
     @synchronized(self)
     {
-        if(_authDelegates == NULL)
-            _authDelegates = [[NSMutableArray alloc] init];
+        if(_loginDelegates == NULL)
+            _loginDelegates = [[NSMutableDictionary alloc] init];
     }
-    return _authDelegates;
+    return _loginDelegates;
 }
 
-+ (void) notifyDelegates:(SEL)selector
++ (void) notifyDelegatesWithObject:(id)obj1 withObject:(id)obj2
 {
-    for(NSValue* v in [CocoaBirdAuthenticator authDelegates]){
+    for(NSValue* v in [self loginDelegates]){
         NSObject* delegate = [v pointerValue];
+        SEL selector = NSSelectorFromString([[self loginDelegates] objectForKey:v]);
         if([delegate respondsToSelector:selector]){
-            [delegate performSelector:selector];
+            [delegate performSelector:selector withObject:obj1 withObject:obj2];
         }
     }
 }
 
 + (void) sendClosedNotification
 {
-    [self notifyDelegates:@selector(cocoaBirdLoginComplete)];
+    [self notifyDelegatesWithObject:@"" withObject:@""];
 }
 
 + (void) addLoginDelegate:(NSObject*)_delegate selector:(SEL)_selector
 {
-    [CocoaBirdAuthenticator removeLoginDelegate:_delegate];
-    [[CocoaBirdAuthenticator authDelegates] addObject:[NSValue valueWithPointer:_delegate]];
+    [self removeLoginDelegate:_delegate];
+    [[self loginDelegates] setObject:NSStringFromSelector(_selector) forKey:[NSValue valueWithPointer:_delegate]];
 }
 
 + (void) removeLoginDelegate:(NSObject*)_delegate
 {
-    for(int i=0; i<[[CocoaBirdAuthenticator authDelegates] count]; i++){
-        NSValue* v = [[CocoaBirdAuthenticator authDelegates] objectAtIndex:i];
-        if([v pointerValue] == _delegate){
-            [[CocoaBirdAuthenticator authDelegates] removeObjectAtIndex:i];
-            i--;
-        }
-    }
+    NSMutableArray* keysToRemove = [NSMutableArray array];
+    
+    for(NSValue* key in [self loginDelegates])
+        if([key pointerValue] == _delegate)
+            [keysToRemove addObject:key];
+    
+    [[self loginDelegates] removeObjectsForKeys:keysToRemove];    
 }
 
++ (void) removeAllLoginDelegates
+{
+    [[self loginDelegates] removeAllObjects];
+}
 
 @end

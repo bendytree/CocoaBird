@@ -25,5 +25,6 @@
 + (NSString*) oAuthToken;
 + (NSString*) oAuthTokenSecret;
 + (NSString*) screenname;
++ (void) logout;
 
 @end

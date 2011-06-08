@@ -19,6 +19,7 @@
 
 + (void) addLoginDelegate:(NSObject*)_delegate selector:(SEL)_selector;
 + (void) removeLoginDelegate:(NSObject*)delegate;
++ (void) removeAllLoginDelegates;
 + (void) sendClosedNotification;
 
 @end

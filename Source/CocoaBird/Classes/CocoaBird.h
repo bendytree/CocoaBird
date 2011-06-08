@@ -18,21 +18,31 @@
 
 @property (assign) NSObject* delegate;
 
-+ (void) setConsumerKey:(NSString*)key andSecret:(NSString*)secret;
-
 //Authentication
++ (void) setConsumerKey:(NSString*)key andSecret:(NSString*)secret;
 + (void) launchLogin:(BOOL)animated;
++ (void) logout;
 + (BOOL) isLoggedIn;
-+ (void) addLoginDelegate:(NSObject*)delegate selector:(SEL)selector;
-+ (void) removeLoginDelegate:(NSObject*)delegate;
++ (void) addLoginDelegate:(id)delegate selector:(SEL)selector;                  // - (void) loginComplete:(CocoaBirdLoginResult)result error:(NSError*)error;
++ (void) removeLoginDelegate:(id)delegate;
++ (void) removeAllLoginDelegates;
+
+//API
++ (NSArray*) getPublicTimeline;
++ (NSArray*) getPublicTimeline:(NSError**)error;
+//+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector;    // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
+//+ (void) cancelRequest:(NSString*)requestId;
+//+ (void) cancelAllRequests;
 
 @end
 
 
 #pragma Authentication Delegate
 
-@protocol CocoaBirdAuthenticationDelegate
-@optional
-- (void) cocoaBirdLoginComplete;
-@end
+typedef enum {
+    CocoaBirdLoginResultCancelled,
+    CocoaBirdLoginResultError,
+    CocoaBirdLoginResultSuccess,
+} CocoaBirdLoginResult;
+
 

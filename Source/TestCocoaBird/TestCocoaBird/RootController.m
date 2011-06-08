@@ -7,7 +7,8 @@
 //
 
 #import "RootController.h"
-
+#import "CocoaBird.h"
+#import "CBStatus.h"
 
 @implementation RootController
 
@@ -38,7 +39,13 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    NSMutableString* str = [NSMutableString string];
+    NSArray* statuses = [CocoaBird getPublicTimeline];
+    for(CBStatus* status in statuses){
+        [str appendFormat:@"%@ | ", status.text];
+    }
+    txt.text = str;
 }
 
 - (void)viewDidUnload
