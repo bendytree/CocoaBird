@@ -13,7 +13,8 @@
 @class CBRequestData;
 
 typedef enum {
-    CBTwitterResponseTypeStatuses
+    CBTwitterResponseTypeStatuses,
+    CBTwitterResponseTypeStatus
 } CBTwitterResponseType;
 
 

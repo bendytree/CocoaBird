@@ -40,7 +40,7 @@
 {    
     [super viewDidLoad];
     
-    [CocoaBird loadPublicTimeline:self selector:@selector(publicTimelineLoaded:error:)];
+    [CocoaBird getPublicTimeline:self selector:@selector(publicTimelineLoaded:error:)];
 }
 
 - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error

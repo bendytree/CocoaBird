@@ -14,5 +14,8 @@
 }
 
 - (void) applyToRequest:(ASIFormDataRequest*)request;
++ (id) params;
 
 @end
+
+
