@@ -18,28 +18,6 @@
 
 @implementation CocoaBird
 
-@synthesize delegate;
-
-
-#pragma Constructors
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
-- (id) initWithDelegate:(NSObject*)_delegate
-{
-    [self init];
-    if (self) {
-        self.delegate = _delegate;
-    }
-    return self;
-}
-
 
 #pragma Authentication
 
@@ -136,7 +114,7 @@ static SBJSON* _serializer = NULL;
 }
 
 
-+ (ASIFormDataRequest*) buildRequest:(NSString*)url params:(CBPublicTimelineParams*)params
++ (ASIFormDataRequest*) buildRequest:(NSString*)url params:(CBQueryParams*)params
 {
     ASIFormDataRequest* request = [ASIFormDataRequest 
                                    requestWithURL:[NSURL URLWithString:url]
@@ -249,6 +227,186 @@ static SBJSON* _serializer = NULL;
 }
 
 
+#pragma Home Timeline
+
++ (NSArray*) getHomeTimeline
+{
+    return [self getHomeTimeline:nil];
+}
+
++ (NSArray*) getHomeTimeline:(CBHomeTimelineParams*)params
+{
+    return [self getHomeTimeline:params error:nil];
+}
+
++ (NSArray*) getHomeTimeline:(CBHomeTimelineParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/home_timeline.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadHomeTimeline:(id)delegate selector:(SEL)selector           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
+{
+    return [self loadHomeTimeline:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadHomeTimeline:(id)delegate selector:(SEL)selector params:(CBHomeTimelineParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/home_timeline.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
+#pragma User Timeline
+
++ (NSArray*) getUserTimeline
+{
+    return [self getUserTimeline:nil];
+}
+
++ (NSArray*) getUserTimeline:(CBUserTimelineParams*)params
+{
+    return [self getUserTimeline:params error:nil];
+}
+
++ (NSArray*) getUserTimeline:(CBUserTimelineParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/user_timeline.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadUserTimeline:(id)delegate selector:(SEL)selector           // - (void) userTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
+{
+    return [self loadUserTimeline:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadUserTimeline:(id)delegate selector:(SEL)selector params:(CBUserTimelineParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/user_timeline.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
+#pragma Mentions
+
++ (NSArray*) getMentions
+{
+    return [self getMentions:nil];
+}
+
++ (NSArray*) getMentions:(CBMentionsParams*)params
+{
+    return [self getMentions:params error:nil];
+}
+
++ (NSArray*) getMentions:(CBMentionsParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/mentions.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadMentions:(id)delegate selector:(SEL)selector
+{
+    return [self loadMentions:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadMentions:(id)delegate selector:(SEL)selector params:(CBMentionsParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/mentions.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
+#pragma Retweeted By Me
+
++ (NSArray*) getRetweetedByMe
+{
+    return [self getRetweetedByMe:nil];
+}
+
++ (NSArray*) getRetweetedByMe:(CBRetweetedByMeParams*)params
+{
+    return [self getRetweetedByMe:params error:nil];
+}
+
++ (NSArray*) getRetweetedByMe:(CBRetweetedByMeParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweeted_by_me.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadRetweetedByMe:(id)delegate selector:(SEL)selector
+{
+    return [self loadRetweetedByMe:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadRetweetedByMe:(id)delegate selector:(SEL)selector params:(CBRetweetedByMeParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweeted_by_me.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
+#pragma Retweeted To Me
+
++ (NSArray*) getRetweetedToMe
+{
+    return [self getRetweetedToMe:nil];
+}
+
++ (NSArray*) getRetweetedToMe:(CBRetweetedToMeParams*)params
+{
+    return [self getRetweetedToMe:params error:nil];
+}
+
++ (NSArray*) getRetweetedToMe:(CBRetweetedToMeParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweeted_to_me.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadRetweetedToMe:(id)delegate selector:(SEL)selector
+{
+    return [self loadRetweetedToMe:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadRetweetedToMe:(id)delegate selector:(SEL)selector params:(CBRetweetedToMeParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweeted_to_me.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
+#pragma Retweets Of Me
+
++ (NSArray*) getRetweetsOfMe
+{
+    return [self getRetweetsOfMe:nil];
+}
+
++ (NSArray*) getRetweetsOfMe:(CBRetweetsOfMeParams*)params
+{
+    return [self getRetweetsOfMe:params error:nil];
+}
+
++ (NSArray*) getRetweetsOfMe:(CBRetweetsOfMeParams*)params error:(NSError**)error
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweets_of_me.json" params:params];
+    return [self processRequestSynchronous:request type:CBTwitterResponseTypeStatuses error:error];
+}
+
++ (NSString*) loadRetweetsOfMe:(id)delegate selector:(SEL)selector
+{
+    return [self loadRetweetsOfMe:delegate selector:selector params:nil];
+}
+
++ (NSString*) loadRetweetsOfMe:(id)delegate selector:(SEL)selector params:(CBRetweetsOfMeParams*)params
+{
+    ASIFormDataRequest* request = [self buildRequest:@"http://api.twitter.com/1/statuses/retweets_of_me.json" params:params];
+    return [self processRequestAsynchronous:request type:CBTwitterResponseTypeStatuses delegate:delegate selector:selector];
+}
+
+
 #pragma Cancelling Requests
 
 + (void) cancelRequest:(NSString*)requestId
@@ -266,14 +424,5 @@ static SBJSON* _serializer = NULL;
     }
 }
 
-
-#pragma Cleanup
-
-- (void)dealloc {
-    
-    self.delegate = nil;
-    
-    [super dealloc];
-}
 
 @end

@@ -59,6 +59,12 @@
 		BC3D2BC013A0567000C56B9C /* CBPublicTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BBF13A0567000C56B9C /* CBPublicTimelineParams.m */; };
 		BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC213A058B500C56B9C /* CBReflection.m */; };
 		BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */; };
+		BC3D2BC913A1B8B300C56B9C /* CBHomeTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC813A1B8B300C56B9C /* CBHomeTimelineParams.m */; };
+		BC3D2BCC13A1BC5B00C56B9C /* CBUserTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BCB13A1BC5A00C56B9C /* CBUserTimelineParams.m */; };
+		BC3D2BCF13A1BE4F00C56B9C /* CBMentionsParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BCE13A1BE4E00C56B9C /* CBMentionsParams.m */; };
+		BC3D2BD213A1C01200C56B9C /* CBRetweetedByMeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BD113A1C01100C56B9C /* CBRetweetedByMeParams.m */; };
+		BC3D2BD813A1C1B000C56B9C /* CBRetweetedToMeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BD713A1C1AF00C56B9C /* CBRetweetedToMeParams.m */; };
+		BC3D2BDB13A1C1E700C56B9C /* CBRetweetsOfMeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BDA13A1C1E600C56B9C /* CBRetweetsOfMeParams.m */; };
 		BC76989013999CF2009A7FA1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */; };
 		BC76989113999CF2009A7FA1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984513999CF2009A7FA1 /* ASIDataCompressor.m */; };
 		BC76989213999CF2009A7FA1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984713999CF2009A7FA1 /* ASIDataDecompressor.m */; };
@@ -204,6 +210,18 @@
 		BC3D2BC213A058B500C56B9C /* CBReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBReflection.m; sourceTree = "<group>"; };
 		BC3D2BC413A19A0A00C56B9C /* CBRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequestData.h; sourceTree = "<group>"; };
 		BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestData.m; sourceTree = "<group>"; };
+		BC3D2BC713A1B8B200C56B9C /* CBHomeTimelineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomeTimelineParams.h; sourceTree = "<group>"; };
+		BC3D2BC813A1B8B300C56B9C /* CBHomeTimelineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomeTimelineParams.m; sourceTree = "<group>"; };
+		BC3D2BCA13A1BC5A00C56B9C /* CBUserTimelineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUserTimelineParams.h; sourceTree = "<group>"; };
+		BC3D2BCB13A1BC5A00C56B9C /* CBUserTimelineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUserTimelineParams.m; sourceTree = "<group>"; };
+		BC3D2BCD13A1BE4D00C56B9C /* CBMentionsParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMentionsParams.h; sourceTree = "<group>"; };
+		BC3D2BCE13A1BE4E00C56B9C /* CBMentionsParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMentionsParams.m; sourceTree = "<group>"; };
+		BC3D2BD013A1C01000C56B9C /* CBRetweetedByMeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRetweetedByMeParams.h; sourceTree = "<group>"; };
+		BC3D2BD113A1C01100C56B9C /* CBRetweetedByMeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRetweetedByMeParams.m; sourceTree = "<group>"; };
+		BC3D2BD613A1C1AE00C56B9C /* CBRetweetedToMeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRetweetedToMeParams.h; sourceTree = "<group>"; };
+		BC3D2BD713A1C1AF00C56B9C /* CBRetweetedToMeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRetweetedToMeParams.m; sourceTree = "<group>"; };
+		BC3D2BD913A1C1E400C56B9C /* CBRetweetsOfMeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRetweetsOfMeParams.h; sourceTree = "<group>"; };
+		BC3D2BDA13A1C1E600C56B9C /* CBRetweetsOfMeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRetweetsOfMeParams.m; sourceTree = "<group>"; };
 		BC76984113999CF2009A7FA1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		BC76984313999CF2009A7FA1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -456,6 +474,18 @@
 				BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */,
 				BC3D2BBE13A0567000C56B9C /* CBPublicTimelineParams.h */,
 				BC3D2BBF13A0567000C56B9C /* CBPublicTimelineParams.m */,
+				BC3D2BC713A1B8B200C56B9C /* CBHomeTimelineParams.h */,
+				BC3D2BC813A1B8B300C56B9C /* CBHomeTimelineParams.m */,
+				BC3D2BCA13A1BC5A00C56B9C /* CBUserTimelineParams.h */,
+				BC3D2BCB13A1BC5A00C56B9C /* CBUserTimelineParams.m */,
+				BC3D2BCD13A1BE4D00C56B9C /* CBMentionsParams.h */,
+				BC3D2BCE13A1BE4E00C56B9C /* CBMentionsParams.m */,
+				BC3D2BD013A1C01000C56B9C /* CBRetweetedByMeParams.h */,
+				BC3D2BD113A1C01100C56B9C /* CBRetweetedByMeParams.m */,
+				BC3D2BD613A1C1AE00C56B9C /* CBRetweetedToMeParams.h */,
+				BC3D2BD713A1C1AF00C56B9C /* CBRetweetedToMeParams.m */,
+				BC3D2BD913A1C1E400C56B9C /* CBRetweetsOfMeParams.h */,
+				BC3D2BDA13A1C1E600C56B9C /* CBRetweetsOfMeParams.m */,
 			);
 			path = QueryModels;
 			sourceTree = "<group>";
@@ -773,6 +803,12 @@
 				BC3D2BC013A0567000C56B9C /* CBPublicTimelineParams.m in Sources */,
 				BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */,
 				BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */,
+				BC3D2BC913A1B8B300C56B9C /* CBHomeTimelineParams.m in Sources */,
+				BC3D2BCC13A1BC5B00C56B9C /* CBUserTimelineParams.m in Sources */,
+				BC3D2BCF13A1BE4F00C56B9C /* CBMentionsParams.m in Sources */,
+				BC3D2BD213A1C01200C56B9C /* CBRetweetedByMeParams.m in Sources */,
+				BC3D2BD813A1C1B000C56B9C /* CBRetweetedToMeParams.m in Sources */,
+				BC3D2BDB13A1C1E700C56B9C /* CBRetweetsOfMeParams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

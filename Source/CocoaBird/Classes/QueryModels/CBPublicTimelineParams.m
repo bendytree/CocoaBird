@@ -13,4 +13,14 @@
 
 @synthesize trim_user, include_entities;
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        
+        self.include_entities = [NSNumber numberWithBool:YES];
+        
+    }
+    return self;
+}
+
 @end
