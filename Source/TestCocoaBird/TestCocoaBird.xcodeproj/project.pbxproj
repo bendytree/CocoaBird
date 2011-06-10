@@ -55,6 +55,10 @@
 		BC3D2BA4139C29F900C56B9C /* CBPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA3139C29F800C56B9C /* CBPlace.m */; };
 		BC3D2BA7139C2A6600C56B9C /* CBPlaceAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA6139C2A6300C56B9C /* CBPlaceAttributes.m */; };
 		BC3D2BAA139C2BFB00C56B9C /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */; };
+		BC3D2BBD13A0563D00C56B9C /* CBQueryParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */; };
+		BC3D2BC013A0567000C56B9C /* CBPublicTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BBF13A0567000C56B9C /* CBPublicTimelineParams.m */; };
+		BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC213A058B500C56B9C /* CBReflection.m */; };
+		BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */; };
 		BC76989013999CF2009A7FA1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */; };
 		BC76989113999CF2009A7FA1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984513999CF2009A7FA1 /* ASIDataCompressor.m */; };
 		BC76989213999CF2009A7FA1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984713999CF2009A7FA1 /* ASIDataDecompressor.m */; };
@@ -190,8 +194,16 @@
 		BC3D2BA3139C29F800C56B9C /* CBPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPlace.m; sourceTree = "<group>"; };
 		BC3D2BA5139C2A6200C56B9C /* CBPlaceAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPlaceAttributes.h; sourceTree = "<group>"; };
 		BC3D2BA6139C2A6300C56B9C /* CBPlaceAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPlaceAttributes.m; sourceTree = "<group>"; };
-		BC3D2BA8139C2BF800C56B9C /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBBoundingBox.h; sourceTree = "<group>"; };
+		BC3D2BA8139C2BF800C56B9C /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
 		BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBoundingBox.m; sourceTree = "<group>"; };
+		BC3D2BBB13A0563D00C56B9C /* CBQueryParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBQueryParams.h; sourceTree = "<group>"; };
+		BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBQueryParams.m; sourceTree = "<group>"; };
+		BC3D2BBE13A0567000C56B9C /* CBPublicTimelineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPublicTimelineParams.h; sourceTree = "<group>"; };
+		BC3D2BBF13A0567000C56B9C /* CBPublicTimelineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPublicTimelineParams.m; sourceTree = "<group>"; };
+		BC3D2BC113A058B400C56B9C /* CBReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBReflection.h; sourceTree = "<group>"; };
+		BC3D2BC213A058B500C56B9C /* CBReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBReflection.m; sourceTree = "<group>"; };
+		BC3D2BC413A19A0A00C56B9C /* CBRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequestData.h; sourceTree = "<group>"; };
+		BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestData.m; sourceTree = "<group>"; };
 		BC76984113999CF2009A7FA1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		BC76984313999CF2009A7FA1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -289,6 +301,7 @@
 		BC3D2A371399B44D00C56B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC3D2BB313A0386F00C56B9C /* QueryModels */,
 				BC3D2B6B139BF30500C56B9C /* Models */,
 				BC3D2A381399B73300C56B9C /* CocoaBird.h */,
 				BC3D2A391399B73300C56B9C /* CocoaBird.m */,
@@ -303,6 +316,10 @@
 				BC3D2A90139ABADF00C56B9C /* CocoaBirdModal.m */,
 				BC3D2B3F139AEF2800C56B9C /* CocoaBirdOAuthTokenRetriever.h */,
 				BC3D2B40139AEF2900C56B9C /* CocoaBirdOAuthTokenRetriever.m */,
+				BC3D2BC113A058B400C56B9C /* CBReflection.h */,
+				BC3D2BC213A058B500C56B9C /* CBReflection.m */,
+				BC3D2BC413A19A0A00C56B9C /* CBRequestData.h */,
+				BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -430,6 +447,17 @@
 				BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BC3D2BB313A0386F00C56B9C /* QueryModels */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D2BBB13A0563D00C56B9C /* CBQueryParams.h */,
+				BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */,
+				BC3D2BBE13A0567000C56B9C /* CBPublicTimelineParams.h */,
+				BC3D2BBF13A0567000C56B9C /* CBPublicTimelineParams.m */,
+			);
+			path = QueryModels;
 			sourceTree = "<group>";
 		};
 		BC76983F13999CF2009A7FA1 /* Libs */ = {
@@ -741,6 +769,10 @@
 				BC3D2BA4139C29F900C56B9C /* CBPlace.m in Sources */,
 				BC3D2BA7139C2A6600C56B9C /* CBPlaceAttributes.m in Sources */,
 				BC3D2BAA139C2BFB00C56B9C /* CBBoundingBox.m in Sources */,
+				BC3D2BBD13A0563D00C56B9C /* CBQueryParams.m in Sources */,
+				BC3D2BC013A0567000C56B9C /* CBPublicTimelineParams.m in Sources */,
+				BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */,
+				BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

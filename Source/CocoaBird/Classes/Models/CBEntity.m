@@ -7,7 +7,7 @@
 //
 
 #import "CBEntity.h"
-#import <objc/runtime.h>
+#import "CBReflection.h"
 
 
 @interface CBEntity()
@@ -37,56 +37,6 @@
 }
 
 
-#pragma Reflection
-
-+ (bool) class:(Class)classA descendsFrom:(Class)classB
-{
-    while(1)
-    {
-        if(classA == classB) return YES;
-        id superClass = class_getSuperclass(classA);
-        if(classA == superClass) return (superClass == classB);
-        classA = superClass;
-    }
-}
-
-+ (NSArray*) propertyNamesForClass:(Class)cls
-{
-    NSMutableArray* names = [NSMutableArray array];
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList(cls, &outCount);
-    for(i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        const char *propName = property_getName(property);
-        if(propName) {
-            NSString *propertyName = [NSString stringWithCString:propName encoding:NSASCIIStringEncoding];
-            [names addObject:propertyName];
-        }
-    }
-    free(properties);   
-    return names;
-}
-
-+ (Class) getTypeOfProperty:(NSString*)name onClass:(Class)class {
-    
-    objc_property_t property = class_getProperty(class, [name UTF8String]);
-    if (property == NULL)
-        return nil;
-    
-    NSString* attributes = [NSString stringWithCString:property_getAttributes(property) encoding:NSASCIIStringEncoding];
-    NSString* attribute = [[[attributes componentsSeparatedByString:@","] objectAtIndex:0] substringFromIndex:1];
-    
-    if([attribute length] > 3)
-    {
-        NSString* typeName = [attribute substringWithRange:NSMakeRange(2, [attribute length] - 3)];
-        Class cls = NSClassFromString(typeName);
-        return cls;
-    }
-    
-    return [NSNumber class];
-}
-
-
 #pragma Property Binding
 
 - (void) bindProperties
@@ -96,8 +46,8 @@
     
     NSDictionary* arrayClasses = [self arrayPropertyClasses];
     
-    for(NSString* propertyName in [CBEntity propertyNamesForClass:[self class]]){        
-        Class propertyType = [CBEntity getTypeOfProperty:propertyName onClass:[self class]];
+    for(NSString* propertyName in [CBReflection propertyNamesForClass:[self class]]){        
+        Class propertyType = [CBReflection getTypeOfProperty:propertyName onClass:[self class]];
         id dicVal = [self.orig objectForKey:propertyName];
         Class valType = [dicVal class];
         if(!dicVal || [NSNull null] == dicVal) continue;
@@ -105,17 +55,17 @@
         NSLog(@"%@.%@ = '%@'", [self class], propertyName, dicVal);
 
         //Property is a CBEntity
-        if([CBEntity class:propertyType descendsFrom:[CBEntity class]]){
+        if([CBReflection class:propertyType descendsFrom:[CBEntity class]]){
             id newVal = [[[propertyType alloc] initWithDictionary:dicVal] autorelease];
             [self setValue:newVal forKey:propertyName];
             
         // Convert string to date
-        }else if([CBEntity class:propertyType descendsFrom:[NSDate class]]
-           && [CBEntity class:valType descendsFrom:[NSString class]]){
+        }else if([CBReflection class:propertyType descendsFrom:[NSDate class]]
+           && [CBReflection class:valType descendsFrom:[NSString class]]){
             [self setValue:[dateFormatter dateFromString:dicVal] forKey:propertyName];
             
         //Arrays
-        }else if([CBEntity class:propertyType descendsFrom:[NSArray class]]){ 
+        }else if([CBReflection class:propertyType descendsFrom:[NSArray class]]){ 
             //Is a custom type defined?
             if([arrayClasses objectForKey:propertyName]){
                 Class arrayClass = [arrayClasses objectForKey:propertyName];
@@ -133,7 +83,7 @@
             }
         
         // Same type, so just assign
-        }else if([CBEntity class:valType descendsFrom:propertyType]){
+        }else if([CBReflection class:valType descendsFrom:propertyType]){
             [self setValue:dicVal forKey:propertyName];
         }
     }
@@ -144,7 +94,7 @@
 
 - (void) dealloc {
     
-    for(NSString* propertyName in [CBEntity propertyNamesForClass:[self class]]){
+    for(NSString* propertyName in [CBReflection propertyNamesForClass:[self class]]){
         [self setValue:nil forKey:propertyName];
     }
     

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CBPublicTimelineParams.h"
 
 @interface CocoaBird : NSObject {
     
@@ -27,12 +27,16 @@
 + (void) removeLoginDelegate:(id)delegate;
 + (void) removeAllLoginDelegates;
 
-//API
+//Public Timeline
 + (NSArray*) getPublicTimeline;
-+ (NSArray*) getPublicTimeline:(NSError**)error;
-//+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector;    // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-//+ (void) cancelRequest:(NSString*)requestId;
-//+ (void) cancelAllRequests;
++ (NSArray*) getPublicTimeline:(CBPublicTimelineParams*)params;
++ (NSArray*) getPublicTimeline:(CBPublicTimelineParams*)params error:(NSError**)error;
++ (NSString*) loadPublicTimeline:(id)delegate selector:(SEL)selector;           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
++ (NSString*) loadPublicTimeline:(id)delegate selector:(SEL)selector params:(CBPublicTimelineParams*)params;
+
+//Cancelling Requests
++ (void) cancelRequest:(NSString*)requestId;
++ (void) cancelAllRequests;
 
 @end
 
@@ -44,5 +48,15 @@ typedef enum {
     CocoaBirdLoginResultError,
     CocoaBirdLoginResultSuccess,
 } CocoaBirdLoginResult;
+
+
+#pragma Twitter Response Types
+
+typedef enum {
+    CBTwitterResponseTypeStatuses
+} CBTwitterResponseType;
+
+
+
 
 

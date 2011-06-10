@@ -40,12 +40,19 @@
 {    
     [super viewDidLoad];
     
+    [CocoaBird loadPublicTimeline:self selector:@selector(publicTimelineLoaded:error:)];
+}
+
+- (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error
+{
+    NSLog(@"error?: %@", error);
+    
     NSMutableString* str = [NSMutableString string];
-    NSArray* statuses = [CocoaBird getPublicTimeline];
     for(CBStatus* status in statuses){
         [str appendFormat:@"%@ | ", status.text];
     }
     txt.text = str;
+    NSLog(@"New label text: %@", str);
 }
 
 - (void)viewDidUnload
