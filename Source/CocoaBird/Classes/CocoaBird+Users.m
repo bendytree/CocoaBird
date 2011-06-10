@@ -75,4 +75,68 @@
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/show.json" params:params type:CBTwitterResponseTypeUser delegate:delegate selector:selector];    
 }
 
+
+#pragma Get Users By Ids
+
++ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids
+{
+    return [self getUsersByIdsNow:user_ids params:nil];
+}
+
++ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params
+{
+    return [self getUsersByIdsNow:user_ids params:params error:nil];
+}
+
++ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params error:(NSError**)error
+{
+    params = params ? params : [CBGetUsersParams params];
+    params.user_id = [user_ids componentsJoinedByString:@","];
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/lookup.json" params:params type:CBTwitterResponseTypeUsers error:error];
+}
+
++ (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector
+{
+    return [self getUsersByIds:user_ids delegate:delegate selector:selector params:nil];
+}
+
++ (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
+{
+    params = params ? params : [CBGetUsersParams params];
+    params.user_id = [user_ids componentsJoinedByString:@","];
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/lookup.json" params:params type:CBTwitterResponseTypeUsers delegate:delegate selector:selector];    
+}
+
+
+#pragma Get Users By Ids
+
++ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names
+{
+    return [self getUsersByScreenNamesNow:screen_names params:nil];
+}
+
++ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params
+{
+    return [self getUsersByScreenNamesNow:screen_names params:params error:nil];
+}
+
++ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params error:(NSError**)error
+{
+    params = params ? params : [CBGetUsersParams params];
+    params.screen_name = [screen_names componentsJoinedByString:@","];
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/lookup.json" params:params type:CBTwitterResponseTypeUsers error:error];
+}
+
++ (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector
+{
+    return [self getUsersByScreenNames:screen_names delegate:delegate selector:selector params:nil];
+}
+
++ (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
+{
+    params = params ? params : [CBGetUsersParams params];
+    params.screen_name = [screen_names componentsJoinedByString:@","];
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/lookup.json" params:params type:CBTwitterResponseTypeUsers delegate:delegate selector:selector];    
+}
+
 @end

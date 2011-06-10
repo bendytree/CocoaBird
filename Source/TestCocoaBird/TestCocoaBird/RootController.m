@@ -40,8 +40,7 @@
 {    
     [super viewDidLoad];
     
-    unsigned long long x = 66432343424234;
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/destroy/%qu.json", x];
+    NSString* url = [[NSArray arrayWithObjects: [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil] componentsJoinedByString:@","];
     NSLog(@"url: %@", url);
     
     //[CocoaBird getPublicTimeline:self selector:@selector(publicTimelineLoaded:error:)];

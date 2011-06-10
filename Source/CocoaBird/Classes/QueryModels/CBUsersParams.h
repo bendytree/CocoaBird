@@ -18,4 +18,12 @@
 @end
 
 
+@interface CBGetUsersParams : CBQueryParams {}
+@property (retain) NSString* user_id;           // comma separated list of user ids
+@property (retain) NSString* screen_name;       // comma separated list of screen names
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
+@end
+
+
 

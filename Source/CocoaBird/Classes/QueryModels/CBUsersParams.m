@@ -12,3 +12,8 @@
 @implementation CBGetUserParams
 @synthesize user_id, screen_name, skip_status, include_entities;
 @end
+
+
+@implementation CBGetUsersParams
+@synthesize user_id, screen_name, skip_status, include_entities;
+@end
