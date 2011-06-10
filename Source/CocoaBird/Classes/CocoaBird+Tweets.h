@@ -1,5 +1,5 @@
 //
-//  CocoaBird+Tweets.h
+//  CocoaBird+Statuses.h
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/10/11.
@@ -7,58 +7,54 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CocoaBird+Core.h"
+#import "CocoaBirdBase.h"
 #import "CBTweetsParams.h"
+#import "CocoaBird+Core.h"
+
+@class CBStatus;
 
 @interface CocoaBird (Tweets)
 
-//Public Timeline
-+ (NSArray*) getPublicTimelineNow;
-+ (NSArray*) getPublicTimelineNow:(CBPublicTimelineParams*)params;
-+ (NSArray*) getPublicTimelineNow:(CBPublicTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector;           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector params:(CBPublicTimelineParams*)params;
+//Show Status
++ (CBStatus*) getStatusNow:(unsigned long long)id;
++ (CBStatus*) getStatusNow:(unsigned long long)id params:(CBGetStatusParams*)params;
++ (CBStatus*) getStatusNow:(unsigned long long)id params:(CBGetStatusParams*)params error:(NSError**)error;
++ (NSString*) getStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusLoaded:(CBStatus*)status error:(NSError*)error;
++ (NSString*) getStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBGetStatusParams*)params;
 
-//Home Timeline
-+ (NSArray*) getHomeTimelineNow;
-+ (NSArray*) getHomeTimelineNow:(CBHomeTimelineParams*)params;
-+ (NSArray*) getHomeTimelineNow:(CBHomeTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getHomeTimeline:(id)delegate selector:(SEL)selector;           // - (void) homeTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getHomeTimeline:(id)delegate selector:(SEL)selector params:(CBHomeTimelineParams*)params;
+//Update Status
++ (CBStatus*) updateStatusNow:(NSString*)status;
++ (CBStatus*) updateStatusNow:(NSString*)status params:(CBUpdateStatusParams*)params;
++ (CBStatus*) updateStatusNow:(NSString*)status params:(CBUpdateStatusParams*)params error:(NSError**)error;
++ (NSString*) updateStatus:(NSString*)status delegate:(id)delegate selector:(SEL)selector;         // - (void) statusLoaded:(CBStatus*)status error:(NSError*)error;
++ (NSString*) updateStatus:(NSString*)status delegate:(id)delegate selector:(SEL)selector params:(CBUpdateStatusParams*)params;
 
-//User Timeline
-+ (NSArray*) getUserTimelineNow;
-+ (NSArray*) getUserTimelineNow:(CBUserTimelineParams*)params;
-+ (NSArray*) getUserTimelineNow:(CBUserTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getUserTimeline:(id)delegate selector:(SEL)selector;           // - (void) userTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getUserTimeline:(id)delegate selector:(SEL)selector params:(CBUserTimelineParams*)params;
+//Destroy Status
++ (void) destroyStatusNow:(unsigned long long)id;
++ (void) destroyStatusNow:(unsigned long long)id error:(NSError**)error;
++ (NSString*) destroyStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusDestroyed:(NSError*)error;
 
-//Mentions
-+ (NSArray*) getMentionsNow;
-+ (NSArray*) getMentionsNow:(CBMentionsParams*)params;
-+ (NSArray*) getMentionsNow:(CBMentionsParams*)params error:(NSError**)error;
-+ (NSString*) getMentions:(id)delegate selector:(SEL)selector;           // - (void) mentionsLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getMentions:(id)delegate selector:(SEL)selector params:(CBMentionsParams*)params;
+//Retweet
++ (CBStatus*) retweetNow:(unsigned long long)id;
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params;
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params error:(NSError**)error;
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) retweetComplete:(CBStatus*)status error:(NSError*)error;
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetParams*)params;
 
-//Retweeted By Me
-+ (NSArray*) getRetweetedByMeNow;
-+ (NSArray*) getRetweetedByMeNow:(CBRetweetedByMeParams*)params;
-+ (NSArray*) getRetweetedByMeNow:(CBRetweetedByMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetedByMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedByMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetedByMe:(id)delegate selector:(SEL)selector params:(CBRetweetedByMeParams*)params;
+//Retweeted By
++ (NSArray*) getRetweetedByNow:(unsigned long long)id;
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params;
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params error:(NSError**)error;
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusLoaded:(NSArray*)users error:(NSError*)error;
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByParams*)params;
 
-//Retweeted To Me
-+ (NSArray*) getRetweetedToMeNow;
-+ (NSArray*) getRetweetedToMeNow:(CBRetweetedToMeParams*)params;
-+ (NSArray*) getRetweetedToMeNow:(CBRetweetedToMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetedToMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedToMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetedToMe:(id)delegate selector:(SEL)selector params:(CBRetweetedToMeParams*)params;
-
-//Retweets Of Me
-+ (NSArray*) getRetweetsOfMeNow;
-+ (NSArray*) getRetweetsOfMeNow:(CBRetweetsOfMeParams*)params;
-+ (NSArray*) getRetweetsOfMeNow:(CBRetweetsOfMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetsOfMe:(id)delegate selector:(SEL)selector;           // - (void) retweetsOfMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetsOfMe:(id)delegate selector:(SEL)selector params:(CBRetweetsOfMeParams*)params;
+//Retweeted By Ids
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id;
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params;
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params error:(NSError**)error;
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusLoaded:(NSArray*)userIds error:(NSError*)error;
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByIdsParams*)params;
 
 @end
+
+

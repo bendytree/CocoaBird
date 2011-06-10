@@ -1,0 +1,21 @@
+//
+//  CBUsersParams.h
+//  TestCocoaBird
+//
+//  Created by JOSHUA WRIGHT on 6/10/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "CBQueryParams.h"
+
+
+@interface CBGetUserParams : CBQueryParams {}
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
+@end
+
+
+

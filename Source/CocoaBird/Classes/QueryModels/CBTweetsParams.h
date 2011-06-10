@@ -1,5 +1,5 @@
 //
-//  CBTweetsParams.h
+//  CBStatusesParams.h
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/10/11.
@@ -10,72 +10,38 @@
 #import "CBQueryParams.h"
 
 
-@interface CBPublicTimelineParams : CBQueryParams {}
+@interface CBGetStatusParams : CBQueryParams {}
 @property (retain) NSNumber* trim_user;
 @property (retain) NSNumber* include_entities;
 @end
 
 
-@interface CBHomeTimelineParams : CBQueryParams {}
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_entities;
+@interface CBUpdateStatusParams : CBQueryParams {}
+@property (retain) NSString* status;
+@property (retain) NSNumber* in_reply_to_status_id;
+@property (retain) NSNumber* lat;
+@property (retain) NSNumber* long_;      //i'm trying to think of what languages DONT have long as a keyword. Frick'n twitter api.  Who thought 'in_reply_to_status_id' was short enough, but 'longitude' needed to be shortened to 'long'?
+@property (retain) NSString* place_id;
+@property (retain) NSNumber* display_coordinates;
+@property (retain) NSNumber* trim_user;
+@property (retain) NSNumber* include_entities;
 @end
 
 
-@interface CBUserTimelineParams : CBQueryParams {}
-@property (assign) NSNumber* user_id;
-@property (assign) NSString* screen_name;
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_rts;
-@property (assign) NSNumber* include_entities;
+@interface CBRetweetParams : CBQueryParams {}
+@property (retain) NSNumber* trim_user;
+@property (retain) NSNumber* include_entities;
 @end
 
 
-@interface CBMentionsParams : CBQueryParams {}
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_rts;
-@property (assign) NSNumber* include_entities;
+@interface CBRetweetedByParams : CBQueryParams {}
+@property (retain) NSNumber* page;
+@property (retain) NSNumber* count;
 @end
 
 
-@interface CBRetweetedByMeParams : CBQueryParams {}
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_entities;
+@interface CBRetweetedByIdsParams : CBQueryParams {}
+@property (retain) NSNumber* page;
+@property (retain) NSNumber* count;
 @end
-
-
-@interface CBRetweetedToMeParams : CBQueryParams {}
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_entities;
-@end
-
-@interface CBRetweetsOfMeParams : CBQueryParams {}
-@property (assign) NSNumber* since_id;
-@property (assign) NSNumber* max_id;
-@property (assign) NSNumber* count;
-@property (assign) NSNumber* page;
-@property (assign) NSNumber* trim_user;
-@property (assign) NSNumber* include_entities;
-@end
-
 

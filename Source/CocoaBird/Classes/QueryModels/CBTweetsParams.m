@@ -1,5 +1,5 @@
 //
-//  CBTweetsParams.m
+//  CBStatusesParams.m
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/10/11.
@@ -8,39 +8,29 @@
 
 #import "CBTweetsParams.h"
 
-@implementation CBPublicTimelineParams
+
+@implementation CBGetStatusParams
 @synthesize trim_user, include_entities;
 @end
 
 
-@implementation CBHomeTimelineParams
-@synthesize since_id, max_id, count, page, trim_user, include_entities;
+@implementation CBUpdateStatusParams
+@synthesize status, in_reply_to_status_id, lat, long_, place_id, display_coordinates, trim_user, include_entities;
 @end
 
 
-@implementation CBUserTimelineParams
-@synthesize user_id, screen_name, since_id, max_id, count, page, trim_user, include_rts, include_entities;
+@implementation CBRetweetParams
+@synthesize trim_user, include_entities;
 @end
 
 
-@implementation CBMentionsParams
-@synthesize since_id, max_id, count, page, trim_user, include_rts, include_entities;
+@implementation CBRetweetedByParams
+@synthesize page, count;
 @end
 
 
-@implementation CBRetweetedByMeParams
-@synthesize since_id, max_id, count, page, trim_user, include_entities;
+@implementation CBRetweetedByIdsParams
+@synthesize page, count;
 @end
-
-
-@implementation CBRetweetedToMeParams
-@synthesize since_id, max_id, count, page, trim_user, include_entities;
-@end
-
-
-@implementation CBRetweetsOfMeParams
-@synthesize since_id, max_id, count, page, trim_user, include_entities;
-@end
-
 
 

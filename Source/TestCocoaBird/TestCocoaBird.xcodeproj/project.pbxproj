@@ -57,13 +57,13 @@
 		BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC213A058B500C56B9C /* CBReflection.m */; };
 		BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */; };
 		BC3D2BDE13A1CA5600C56B9C /* CocoaBird+Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */; };
-		BC3D2BE113A2554F00C56B9C /* CocoaBird+Tweets.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE013A2554D00C56B9C /* CocoaBird+Tweets.m */; };
+		BC3D2BE113A2554F00C56B9C /* CocoaBird+Timeline.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE013A2554D00C56B9C /* CocoaBird+Timeline.m */; };
 		BC3D2BE413A255C000C56B9C /* CocoaBird+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */; };
 		BC3D2BE713A2588500C56B9C /* CocoaBirdBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE613A2588000C56B9C /* CocoaBirdBase.m */; };
 		BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */; };
 		BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */; };
-		BC3D2BF013A2715E00C56B9C /* CocoaBird+Statuses.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEF13A2715900C56B9C /* CocoaBird+Statuses.m */; };
-		BC3D2BF613A2756700C56B9C /* CBTweetsParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BF513A2756400C56B9C /* CBTweetsParams.m */; };
+		BC3D2BF013A2715E00C56B9C /* CocoaBird+Tweets.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */; };
+		BC3D2BF613A2756700C56B9C /* CBTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */; };
 		BC76989013999CF2009A7FA1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */; };
 		BC76989113999CF2009A7FA1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984513999CF2009A7FA1 /* ASIDataCompressor.m */; };
 		BC76989213999CF2009A7FA1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984713999CF2009A7FA1 /* ASIDataDecompressor.m */; };
@@ -102,7 +102,9 @@
 		BCBEC0161399945300FB5FA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0151399945300FB5FA9 /* main.m */; };
 		BCBEC0191399945300FB5FA9 /* TestCocoaBirdAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */; };
 		BCBEC01C1399945300FB5FA9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBEC01A1399945300FB5FA9 /* MainWindow.xib */; };
-		BCDDF4F113A27B2900F4DB95 /* CBStatusesParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF4F013A27B2900F4DB95 /* CBStatusesParams.m */; };
+		BCDDF4F113A27B2900F4DB95 /* CBTweetsParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */; };
+		BCDDF4FC13A2BFD000F4DB95 /* CBUsersParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */; };
+		BCE73D3713A2C0F2009A3E3F /* CocoaBird+Users.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,8 +209,8 @@
 		BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestData.m; sourceTree = "<group>"; };
 		BC3D2BDC13A1CA5000C56B9C /* CocoaBird+Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Authentication.h"; sourceTree = "<group>"; };
 		BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Authentication.m"; sourceTree = "<group>"; };
-		BC3D2BDF13A2554900C56B9C /* CocoaBird+Tweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Tweets.h"; sourceTree = "<group>"; };
-		BC3D2BE013A2554D00C56B9C /* CocoaBird+Tweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Tweets.m"; sourceTree = "<group>"; };
+		BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CocoaBird+Timeline.h"; sourceTree = "<group>"; };
+		BC3D2BE013A2554D00C56B9C /* CocoaBird+Timeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Timeline.m"; sourceTree = "<group>"; };
 		BC3D2BE213A255B900C56B9C /* CocoaBird+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Core.h"; sourceTree = "<group>"; };
 		BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Core.m"; sourceTree = "<group>"; };
 		BC3D2BE513A2587C00C56B9C /* CocoaBirdBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdBase.h; sourceTree = "<group>"; };
@@ -217,10 +219,10 @@
 		BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+CancellingRequests.m"; sourceTree = "<group>"; };
 		BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+AuthenticationCore.h"; sourceTree = "<group>"; };
 		BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+AuthenticationCore.m"; sourceTree = "<group>"; };
-		BC3D2BEE13A2715300C56B9C /* CocoaBird+Statuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Statuses.h"; sourceTree = "<group>"; };
-		BC3D2BEF13A2715900C56B9C /* CocoaBird+Statuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Statuses.m"; sourceTree = "<group>"; };
-		BC3D2BF413A2756200C56B9C /* CBTweetsParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTweetsParams.h; sourceTree = "<group>"; };
-		BC3D2BF513A2756400C56B9C /* CBTweetsParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTweetsParams.m; sourceTree = "<group>"; };
+		BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CocoaBird+Tweets.h"; sourceTree = "<group>"; };
+		BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Tweets.m"; sourceTree = "<group>"; };
+		BC3D2BF413A2756200C56B9C /* CBTimelineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBTimelineParams.h; sourceTree = "<group>"; };
+		BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTimelineParams.m; sourceTree = "<group>"; };
 		BC76984113999CF2009A7FA1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		BC76984313999CF2009A7FA1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -294,8 +296,12 @@
 		BCBEC0171399945300FB5FA9 /* TestCocoaBirdAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCocoaBirdAppDelegate.h; sourceTree = "<group>"; };
 		BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCocoaBirdAppDelegate.m; sourceTree = "<group>"; };
 		BCBEC01B1399945300FB5FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		BCDDF4EF13A27B2900F4DB95 /* CBStatusesParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStatusesParams.h; sourceTree = "<group>"; };
-		BCDDF4F013A27B2900F4DB95 /* CBStatusesParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStatusesParams.m; sourceTree = "<group>"; };
+		BCDDF4EF13A27B2900F4DB95 /* CBTweetsParams.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBTweetsParams.h; sourceTree = "<group>"; };
+		BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTweetsParams.m; sourceTree = "<group>"; };
+		BCDDF4FA13A2BFCF00F4DB95 /* CBUsersParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUsersParams.h; sourceTree = "<group>"; };
+		BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUsersParams.m; sourceTree = "<group>"; };
+		BCE73D3513A2C0F2009A3E3F /* CocoaBird+Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Users.h"; sourceTree = "<group>"; };
+		BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Users.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,10 +340,12 @@
 				BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */,
 				BC3D2BDC13A1CA5000C56B9C /* CocoaBird+Authentication.h */,
 				BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */,
-				BC3D2BEE13A2715300C56B9C /* CocoaBird+Statuses.h */,
-				BC3D2BEF13A2715900C56B9C /* CocoaBird+Statuses.m */,
-				BC3D2BDF13A2554900C56B9C /* CocoaBird+Tweets.h */,
-				BC3D2BE013A2554D00C56B9C /* CocoaBird+Tweets.m */,
+				BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */,
+				BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */,
+				BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */,
+				BC3D2BE013A2554D00C56B9C /* CocoaBird+Timeline.m */,
+				BCE73D3513A2C0F2009A3E3F /* CocoaBird+Users.h */,
+				BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */,
 				BC3D2A4B1399BA3900C56B9C /* CocoaBirdSettings.h */,
 				BC3D2A4C1399BA3900C56B9C /* CocoaBirdSettings.m */,
 				BC3D2A591399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.h */,
@@ -485,10 +493,12 @@
 			children = (
 				BC3D2BBB13A0563D00C56B9C /* CBQueryParams.h */,
 				BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */,
-				BC3D2BF413A2756200C56B9C /* CBTweetsParams.h */,
-				BC3D2BF513A2756400C56B9C /* CBTweetsParams.m */,
-				BCDDF4EF13A27B2900F4DB95 /* CBStatusesParams.h */,
-				BCDDF4F013A27B2900F4DB95 /* CBStatusesParams.m */,
+				BC3D2BF413A2756200C56B9C /* CBTimelineParams.h */,
+				BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */,
+				BCDDF4EF13A27B2900F4DB95 /* CBTweetsParams.h */,
+				BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */,
+				BCDDF4FA13A2BFCF00F4DB95 /* CBUsersParams.h */,
+				BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */,
 			);
 			path = QueryModels;
 			sourceTree = "<group>";
@@ -804,14 +814,16 @@
 				BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */,
 				BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */,
 				BC3D2BDE13A1CA5600C56B9C /* CocoaBird+Authentication.m in Sources */,
-				BC3D2BE113A2554F00C56B9C /* CocoaBird+Tweets.m in Sources */,
+				BC3D2BE113A2554F00C56B9C /* CocoaBird+Timeline.m in Sources */,
 				BC3D2BE413A255C000C56B9C /* CocoaBird+Core.m in Sources */,
 				BC3D2BE713A2588500C56B9C /* CocoaBirdBase.m in Sources */,
 				BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */,
 				BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */,
-				BC3D2BF013A2715E00C56B9C /* CocoaBird+Statuses.m in Sources */,
-				BC3D2BF613A2756700C56B9C /* CBTweetsParams.m in Sources */,
-				BCDDF4F113A27B2900F4DB95 /* CBStatusesParams.m in Sources */,
+				BC3D2BF013A2715E00C56B9C /* CocoaBird+Tweets.m in Sources */,
+				BC3D2BF613A2756700C56B9C /* CBTimelineParams.m in Sources */,
+				BCDDF4F113A27B2900F4DB95 /* CBTweetsParams.m in Sources */,
+				BCDDF4FC13A2BFD000F4DB95 /* CBUsersParams.m in Sources */,
+				BCE73D3713A2C0F2009A3E3F /* CocoaBird+Users.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

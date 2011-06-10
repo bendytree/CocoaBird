@@ -9,9 +9,24 @@
 #import "CocoaBirdBase.h"
 #import "CocoaBird+Authentication.h"
 #import "CocoaBird+Tweets.h"
+#import "CocoaBird+Timeline.h"
 #import "CocoaBird+CancellingRequests.h"
 
+#import "CBStatus.h"
+#import "CBUser.h"
+#import "CBCoordinates.h"
+#import "CBEntities.h"
+#import "CBMediaEntity.h"
+#import "CBMediaSizes.h"
+#import "CBMediaSize.h"
+#import "CBUrlEntity.h"
+#import "CBUserMentionEntity.h"
+#import "CBHashTagEntity.h"
+#import "CBPlace.h"
+#import "CBPlaceAttributes.h"
+#import "CBBoundingBox.h"
 
-
-
+#import "CBTimelineParams.h"
+#import "CBTweetsParams.h"
+#import "CBUsersParams.h"
 
