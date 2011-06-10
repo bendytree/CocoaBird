@@ -34,6 +34,27 @@
 + (void) destroyStatusNow:(unsigned long long)id error:(NSError**)error;
 + (NSString*) destroyStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusDestroyed:(NSError*)error;
 
+//Retweet
++ (CBStatus*) retweetNow:(unsigned long long)id;
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params;
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params error:(NSError**)error;
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) retweetComplete:(CBStatus*)status error:(NSError*)error;
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetParams*)params;
+
+//Retweeted By
++ (NSArray*) getRetweetedByNow:(unsigned long long)id;
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params;
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params error:(NSError**)error;
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusLoaded:(NSArray*)users error:(NSError*)error;
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByParams*)params;
+
+//Retweeted By Ids
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id;
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params;
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params error:(NSError**)error;
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusLoaded:(NSArray*)userIds error:(NSError*)error;
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByIdsParams*)params;
+
 @end
 
 

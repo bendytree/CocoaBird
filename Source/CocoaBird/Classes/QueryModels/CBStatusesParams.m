@@ -19,3 +19,18 @@
 @end
 
 
+@implementation CBRetweetParams
+@synthesize trim_user, include_entities;
+@end
+
+
+@implementation CBRetweetedByParams
+@synthesize page, count;
+@end
+
+
+@implementation CBRetweetedByIdsParams
+@synthesize page, count;
+@end
+
+

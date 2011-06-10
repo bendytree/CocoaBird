@@ -108,8 +108,19 @@ static SBJSON* _serializer = NULL;
         return statuses;
     }else if(type == CBTwitterResponseTypeStatus){
         return [[[CBStatus alloc] initWithDictionary:responseObj] autorelease];
+    }else if(type == CBTwitterResponseTypeUsers){
+        NSArray* userDics = responseObj;
+        NSMutableArray* users = [NSMutableArray array];
+        for(NSDictionary* userDic in userDics){
+            CBUser* user = [[[CBUser alloc] initWithDictionary:userDic] autorelease];
+            [users addObject:user];
+        }
+        return users;
+    }else if(type == CBTwitterResponseTypeNatural){
+        return responseObj;
     }
     
+    NSLog(@"should not have gotten this far... processResponse:type:error:");
     return nil;
 }
 

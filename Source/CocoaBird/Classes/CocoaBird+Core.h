@@ -13,6 +13,8 @@
 @class CBRequestData;
 
 typedef enum {
+    CBTwitterResponseTypeNatural,  // such as array of strings or numbers
+    CBTwitterResponseTypeUsers,
     CBTwitterResponseTypeStatuses,
     CBTwitterResponseTypeStatus,
     CBTwitterResponseTypeNone

@@ -99,4 +99,95 @@
     return [self processRequestAsynchronous:url params:params type:CBTwitterResponseTypeStatus delegate:delegate selector:selector];    
 }
 
+
+#pragma Retweet
+
++ (CBStatus*) retweetNow:(unsigned long long)id
+{
+    return [self retweetNow:id params:nil];
+}
+
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params
+{
+    return [self retweetNow:id params:params error:nil];
+}
+
++ (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params error:(NSError**)error
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/retweet/%qu.json", id];
+    return [self processRequestSynchronous:url params:params type:CBTwitterResponseTypeStatus error:error];
+}
+
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
+{
+    return [self retweet:id delegate:delegate selector:selector params:nil];
+}
+
++ (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetParams*)params
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/retweet/%qu.json", id];
+    return [self processRequestAsynchronous:url params:params type:CBTwitterResponseTypeStatus delegate:delegate selector:selector];    
+}
+
+
+#pragma Retweeted By
+
++ (NSArray*) getRetweetedByNow:(unsigned long long)id
+{
+    return [self getRetweetedByNow:id params:nil];
+}
+
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params
+{
+    return [self getRetweetedByNow:id params:params error:nil];
+}
+
++ (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params error:(NSError**)error
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
+    return [self processRequestSynchronous:url params:params type:CBTwitterResponseTypeUsers error:error];
+}
+
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
+{
+    return [self getRetweetedBy:id delegate:delegate selector:selector params:nil];
+}
+
++ (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByParams*)params
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
+    return [self processRequestAsynchronous:url params:params type:CBTwitterResponseTypeUsers delegate:delegate selector:selector];    
+}
+
+
+#pragma Retweeted By Ids
+
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id
+{
+    return [self getRetweetedByIdsNow:id params:nil];
+}
+
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params
+{
+    return [self getRetweetedByIdsNow:id params:params error:nil];
+}
+
++ (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params error:(NSError**)error
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
+    return [self processRequestSynchronous:url params:params type:CBTwitterResponseTypeNatural error:error];
+}
+
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
+{
+    return [self getRetweetedByIds:id delegate:delegate selector:selector params:nil];
+}
+
++ (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByIdsParams*)params
+{
+    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
+    return [self processRequestAsynchronous:url params:params type:CBTwitterResponseTypeNatural delegate:delegate selector:selector];    
+}
+
+
 @end

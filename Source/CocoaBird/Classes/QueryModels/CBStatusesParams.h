@@ -27,3 +27,21 @@
 @property (retain) NSNumber* include_entities;
 @end
 
+
+@interface CBRetweetParams : CBQueryParams {}
+@property (retain) NSNumber* trim_user;
+@property (retain) NSNumber* include_entities;
+@end
+
+
+@interface CBRetweetedByParams : CBQueryParams {}
+@property (retain) NSNumber* page;
+@property (retain) NSNumber* count;
+@end
+
+
+@interface CBRetweetedByIdsParams : CBQueryParams {}
+@property (retain) NSNumber* page;
+@property (retain) NSNumber* count;
+@end
+
