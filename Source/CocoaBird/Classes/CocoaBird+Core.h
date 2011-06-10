@@ -15,6 +15,7 @@
 typedef enum {
     CBTwitterResponseTypeNatural,  // such as array of strings or numbers
     CBTwitterResponseTypeUsers,
+    CBTwitterResponseTypeUser,
     CBTwitterResponseTypeStatuses,
     CBTwitterResponseTypeStatus,
     CBTwitterResponseTypeNone

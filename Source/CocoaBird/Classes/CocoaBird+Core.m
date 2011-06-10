@@ -116,6 +116,8 @@ static SBJSON* _serializer = NULL;
             [users addObject:user];
         }
         return users;
+    }else if(type == CBTwitterResponseTypeUser){
+        return [[[CBUser alloc] initWithDictionary:responseObj] autorelease];
     }else if(type == CBTwitterResponseTypeNatural){
         return responseObj;
     }
