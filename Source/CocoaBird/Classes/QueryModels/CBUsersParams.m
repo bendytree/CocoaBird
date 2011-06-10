@@ -17,3 +17,7 @@
 @implementation CBGetUsersParams
 @synthesize user_id, screen_name, skip_status, include_entities;
 @end
+
+@implementation CBSearchUsersParams
+@synthesize q, per_page, page, include_entities, skip_status;
+@end

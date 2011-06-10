@@ -26,4 +26,13 @@
 @end
 
 
+@interface CBSearchUsersParams : CBQueryParams {}
+@property (retain) NSString* q;
+@property (retain) NSNumber* per_page;
+@property (retain) NSNumber* page;
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
+@end
+
+
 

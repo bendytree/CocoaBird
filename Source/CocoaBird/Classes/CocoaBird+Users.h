@@ -26,18 +26,25 @@
 + (NSString*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) userLoaded:(CBUser*)status error:(NSError*)error;
 + (NSString*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetUserParams*)params;
 
-//Get Users By Id
-+ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids;
-+ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params;
-+ (CBUser*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params error:(NSError**)error;
+//Get Users By Ids
++ (NSArray*) getUsersByIdsNow:(NSArray*)user_ids;
++ (NSArray*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params;
++ (NSArray*) getUsersByIdsNow:(NSArray*)user_ids params:(CBGetUsersParams*)params error:(NSError**)error;
 + (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
 + (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params;
 
 //Get Users By Screen Names
-+ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names;
-+ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params;
-+ (CBUser*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params error:(NSError**)error;
++ (NSArray*) getUsersByScreenNamesNow:(NSArray*)screen_names;
++ (NSArray*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params;
++ (NSArray*) getUsersByScreenNamesNow:(NSArray*)screen_names params:(CBGetUsersParams*)params error:(NSError**)error;
 + (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
 + (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params;
+
+//Search Users
++ (NSArray*) searchUsersNow:(NSString*)query;
++ (NSArray*) searchUsersNow:(NSString*)query params:(CBSearchUsersParams*)params;
++ (NSArray*) searchUsersNow:(NSString*)query params:(CBSearchUsersParams*)params error:(NSError**)error;
++ (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
++ (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params;
 
 @end
