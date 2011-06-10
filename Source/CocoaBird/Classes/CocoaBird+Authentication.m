@@ -12,8 +12,8 @@
 #import "CocoaBirdAuthenticatorViewController.h"
 #import "CocoaBird+AuthenticationCore.h"
 
-@implementation CocoaBird (Authentication)
 
+@implementation CocoaBird (Authentication)
 
 #pragma Authentication
 

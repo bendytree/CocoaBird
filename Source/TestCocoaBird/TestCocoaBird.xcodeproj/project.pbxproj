@@ -332,6 +332,7 @@
 		BC3D2A371399B44D00C56B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC76983F13999CF2009A7FA1 /* Libs */,
 				BC3D2BB313A0386F00C56B9C /* QueryModels */,
 				BC3D2B6B139BF30500C56B9C /* Models */,
 				BC3D2A381399B73300C56B9C /* CocoaBird.h */,
@@ -521,7 +522,8 @@
 				BC7698BC13999F67009A7FA1 /* Reachability */,
 				BC76984013999CF2009A7FA1 /* asi-http-request */,
 			);
-			path = Libs;
+			name = Libs;
+			path = ../Libs;
 			sourceTree = "<group>";
 		};
 		BC76984013999CF2009A7FA1 /* asi-http-request */ = {
@@ -680,7 +682,6 @@
 			isa = PBXGroup;
 			children = (
 				BC3D2A371399B44D00C56B9C /* Classes */,
-				BC76983F13999CF2009A7FA1 /* Libs */,
 			);
 			name = CocoaBird;
 			path = ../CocoaBird;

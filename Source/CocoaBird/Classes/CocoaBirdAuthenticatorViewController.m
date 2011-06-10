@@ -78,11 +78,11 @@
 
 #pragma mark - End Results
 
-- (void) quit
+- (void) quit:(CocoaBirdLoginResult)result error:(NSError*)error
 {
     [CocoaBirdModal dismiss:self];
     
-    [CocoaBird sendClosedNotification];
+    [CocoaBird sendClosedNotification:result error:error];
 }
 
 
@@ -94,7 +94,7 @@
 	char* raw = data ? (char *) [data bytes] : "";
 	
 	if (raw && strstr(raw, "cancel=")) {
-		[self quit];
+		[self quit:CocoaBirdLoginResultCancelled error:nil];
 		return NO;
 	}
 
@@ -143,7 +143,7 @@
 {
     NSLog(@"tokenRetrieverUnableToGetRequestToken: %@", error);
     
-    [self quit];
+    [self quit:CocoaBirdLoginResultError error:error];
 }
 
 - (void) tokenRetrieverGotAccessToken:(NSString*)key secret:(NSString*)secret screenname:(NSString*)screenname
@@ -152,14 +152,14 @@
     
     [CocoaBirdSettings setAuthenticationToken:key secret:secret screenname:screenname];
     
-    [self quit];
+    [self quit:CocoaBirdLoginResultSuccess error:nil];
 }
 
 - (void) tokenRetrieverUnableToGetAccessToken:(NSError*)error
 {
     NSLog(@"tokenRetrieverUnableToGetAccessToken: %@", error);
     
-    [self quit];
+    [self quit:CocoaBirdLoginResultError error:error];
 }
 
 
@@ -167,7 +167,7 @@
 
 - (IBAction) pressedCancel
 {
-    [self quit];
+    [self quit:CocoaBirdLoginResultCancelled error:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -33,7 +33,7 @@ static NSMutableDictionary* _loginDelegates = NULL;
     }
 }
 
-+ (void) sendClosedNotification
++ (void) sendClosedNotification:(CocoaBirdLoginResult)result error:(NSError*)error
 {
     [self notifyDelegatesWithObject:@"" withObject:@""];
 }

@@ -15,7 +15,7 @@
 + (void) launchLogin:(BOOL)animated;
 + (void) logout;
 + (BOOL) isLoggedIn;
-+ (void) addLoginDelegate:(id)delegate selector:(SEL)selector;                  // - (void) loginComplete:(CocoaBirdLoginResult)result error:(NSError*)error;
++ (void) addLoginDelegate:(id)delegate selector:(SEL)selector;      // - (void) loginComplete:(CocoaBirdLoginResult)result error:(NSError*)error;
 + (void) removeLoginDelegate:(id)delegate;
 + (void) removeAllLoginDelegates;
 
