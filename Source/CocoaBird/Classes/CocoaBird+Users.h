@@ -47,4 +47,6 @@
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params;
 
+// TODO: suggestions, profile images, contributors (see http://dev.twitter.com/doc/get/users/suggestions)
+
 @end
