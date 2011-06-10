@@ -10,7 +10,6 @@
 		BC3D2A341399B2A500C56B9C /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2A321399B2A500C56B9C /* RootController.m */; };
 		BC3D2A351399B2A500C56B9C /* RootController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D2A331399B2A500C56B9C /* RootController.xib */; };
 		BC3D2A4D1399BA3900C56B9C /* CocoaBirdSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2A4C1399BA3900C56B9C /* CocoaBirdSettings.m */; };
-		BC3D2A581399BF3000C56B9C /* CocoaBirdAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2A571399BF3000C56B9C /* CocoaBirdAuthenticator.m */; };
 		BC3D2A5C1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2A5A1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.m */; };
 		BC3D2A5D1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D2A5B1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.xib */; };
 		BC3D2A91139ABADF00C56B9C /* CocoaBirdModal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2A90139ABADF00C56B9C /* CocoaBirdModal.m */; };
@@ -69,6 +68,7 @@
 		BC3D2BE413A255C000C56B9C /* CocoaBird+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */; };
 		BC3D2BE713A2588500C56B9C /* CocoaBirdBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE613A2588000C56B9C /* CocoaBirdBase.m */; };
 		BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */; };
+		BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */; };
 		BC76989013999CF2009A7FA1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */; };
 		BC76989113999CF2009A7FA1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984513999CF2009A7FA1 /* ASIDataCompressor.m */; };
 		BC76989213999CF2009A7FA1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984713999CF2009A7FA1 /* ASIDataDecompressor.m */; };
@@ -116,8 +116,6 @@
 		BC3D2A381399B73300C56B9C /* CocoaBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBird.h; sourceTree = "<group>"; };
 		BC3D2A4B1399BA3900C56B9C /* CocoaBirdSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdSettings.h; sourceTree = "<group>"; };
 		BC3D2A4C1399BA3900C56B9C /* CocoaBirdSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSettings.m; sourceTree = "<group>"; };
-		BC3D2A561399BF3000C56B9C /* CocoaBirdAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdAuthenticator.h; sourceTree = "<group>"; };
-		BC3D2A571399BF3000C56B9C /* CocoaBirdAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdAuthenticator.m; sourceTree = "<group>"; };
 		BC3D2A591399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdAuthenticatorViewController.h; sourceTree = "<group>"; };
 		BC3D2A5A1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdAuthenticatorViewController.m; sourceTree = "<group>"; };
 		BC3D2A5B1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CocoaBirdAuthenticatorViewController.xib; sourceTree = "<group>"; };
@@ -235,6 +233,8 @@
 		BC3D2BE613A2588000C56B9C /* CocoaBirdBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdBase.m; sourceTree = "<group>"; };
 		BC3D2BE813A25EF300C56B9C /* CocoaBird+CancellingRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+CancellingRequests.h"; sourceTree = "<group>"; };
 		BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+CancellingRequests.m"; sourceTree = "<group>"; };
+		BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+AuthenticationCore.h"; sourceTree = "<group>"; };
+		BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+AuthenticationCore.m"; sourceTree = "<group>"; };
 		BC76984113999CF2009A7FA1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		BC76984313999CF2009A7FA1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -341,14 +341,14 @@
 				BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */,
 				BC3D2BE813A25EF300C56B9C /* CocoaBird+CancellingRequests.h */,
 				BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */,
+				BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */,
+				BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */,
 				BC3D2BDC13A1CA5000C56B9C /* CocoaBird+Authentication.h */,
 				BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */,
 				BC3D2BDF13A2554900C56B9C /* CocoaBird+Tweets.h */,
 				BC3D2BE013A2554D00C56B9C /* CocoaBird+Tweets.m */,
 				BC3D2A4B1399BA3900C56B9C /* CocoaBirdSettings.h */,
 				BC3D2A4C1399BA3900C56B9C /* CocoaBirdSettings.m */,
-				BC3D2A561399BF3000C56B9C /* CocoaBirdAuthenticator.h */,
-				BC3D2A571399BF3000C56B9C /* CocoaBirdAuthenticator.m */,
 				BC3D2A591399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.h */,
 				BC3D2A5A1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.m */,
 				BC3D2A5B1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.xib */,
@@ -778,7 +778,6 @@
 				BC7698CD1399A2CF009A7FA1 /* ASIHTTPRequest.m in Sources */,
 				BC3D2A341399B2A500C56B9C /* RootController.m in Sources */,
 				BC3D2A4D1399BA3900C56B9C /* CocoaBirdSettings.m in Sources */,
-				BC3D2A581399BF3000C56B9C /* CocoaBirdAuthenticator.m in Sources */,
 				BC3D2A5C1399E6EA00C56B9C /* CocoaBirdAuthenticatorViewController.m in Sources */,
 				BC3D2A91139ABADF00C56B9C /* CocoaBirdModal.m in Sources */,
 				BC3D2B2C139AED9000C56B9C /* NSMutableURLRequest+Parameters.m in Sources */,
@@ -835,6 +834,7 @@
 				BC3D2BE413A255C000C56B9C /* CocoaBird+Core.m in Sources */,
 				BC3D2BE713A2588500C56B9C /* CocoaBirdBase.m in Sources */,
 				BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */,
+				BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

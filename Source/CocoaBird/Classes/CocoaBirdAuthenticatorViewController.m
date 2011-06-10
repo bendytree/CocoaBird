@@ -8,8 +8,8 @@
 
 #import "CocoaBirdAuthenticatorViewController.h"
 #import "CocoaBirdModal.h"
-#import "CocoaBirdAuthenticator.h"
 #import "CocoaBirdSettings.h"
+#import "CocoaBird+AuthenticationCore.h"
 
 @interface CocoaBirdAuthenticatorViewController (private)
 - (NSString*) findPin;
@@ -82,7 +82,7 @@
 {
     [CocoaBirdModal dismiss:self];
     
-    [CocoaBirdAuthenticator sendClosedNotification];
+    [CocoaBird sendClosedNotification];
 }
 
 

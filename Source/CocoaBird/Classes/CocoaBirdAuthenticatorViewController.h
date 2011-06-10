@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CocoaBirdAuthenticator.h"
 #import "CocoaBirdOAuthTokenRetriever.h"
 
 @interface CocoaBirdAuthenticatorViewController : UIViewController<UIWebViewDelegate, CocoaBirdOAuthTokenRetrieverDelegate> {

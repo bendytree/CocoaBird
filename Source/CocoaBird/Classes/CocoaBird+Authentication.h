@@ -21,8 +21,6 @@
 
 @end
 
-#pragma Authentication Delegate
-
 typedef enum {
     CocoaBirdLoginResultCancelled,
     CocoaBirdLoginResultError,
