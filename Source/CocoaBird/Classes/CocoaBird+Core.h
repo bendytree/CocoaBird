@@ -14,7 +14,8 @@
 
 typedef enum {
     CBTwitterResponseTypeStatuses,
-    CBTwitterResponseTypeStatus
+    CBTwitterResponseTypeStatus,
+    CBTwitterResponseTypeNone
 } CBTwitterResponseType;
 
 

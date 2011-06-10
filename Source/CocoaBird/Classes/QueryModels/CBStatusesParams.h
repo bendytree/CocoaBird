@@ -10,8 +10,7 @@
 #import "CBQueryParams.h"
 
 
-@interface CBShowStatusParams : CBQueryParams {}
-@property (retain) NSNumber* id;
+@interface CBGetStatusParams : CBQueryParams {}
 @property (retain) NSNumber* trim_user;
 @property (retain) NSNumber* include_entities;
 @end

@@ -90,6 +90,9 @@ static SBJSON* _serializer = NULL;
 
 + (id) processResponse:(NSString*)response type:(CBTwitterResponseType)type error:(NSError**)error
 {    
+    if(type == CBTwitterResponseTypeNone)
+        return nil;
+    
     id responseObj = [[self serializer] objectWithString:response error:error];
     
     if(!responseObj)
@@ -150,7 +153,12 @@ static SBJSON* _serializer = NULL;
     CBRequestData* data = [self getRequestDataAndRemove:request];    
     NSError* error = nil;
     id result = [self processResponse:[request responseString] type:data.type error:&error];
-    [data.delegate performSelector:data.selector withObject:result withObject:error];
+    
+    if(data.type == CBTwitterResponseTypeNone){
+        [data.delegate performSelector:data.selector withObject:error];
+    }else{
+        [data.delegate performSelector:data.selector withObject:result withObject:error];
+    }
 }
 
 + (void) requestFailed:(ASIHTTPRequest *)request

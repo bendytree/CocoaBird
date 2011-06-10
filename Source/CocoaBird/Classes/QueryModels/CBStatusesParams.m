@@ -9,8 +9,8 @@
 #import "CBStatusesParams.h"
 
 
-@implementation CBShowStatusParams
-@synthesize id, trim_user, include_entities;
+@implementation CBGetStatusParams
+@synthesize trim_user, include_entities;
 @end
 
 
