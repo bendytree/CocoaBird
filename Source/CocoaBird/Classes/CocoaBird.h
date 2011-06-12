@@ -26,7 +26,3 @@
 #import "CBPlaceAttributes.h"
 #import "CBBoundingBox.h"
 
-#import "CBTimelineParams.h"
-#import "CBTweetsParams.h"
-#import "CBUsersParams.h"
-

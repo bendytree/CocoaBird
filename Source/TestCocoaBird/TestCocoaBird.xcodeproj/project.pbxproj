@@ -53,7 +53,6 @@
 		BC3D2BA4139C29F900C56B9C /* CBPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA3139C29F800C56B9C /* CBPlace.m */; };
 		BC3D2BA7139C2A6600C56B9C /* CBPlaceAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA6139C2A6300C56B9C /* CBPlaceAttributes.m */; };
 		BC3D2BAA139C2BFB00C56B9C /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */; };
-		BC3D2BBD13A0563D00C56B9C /* CBQueryParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */; };
 		BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC213A058B500C56B9C /* CBReflection.m */; };
 		BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */; };
 		BC3D2BDE13A1CA5600C56B9C /* CocoaBird+Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */; };
@@ -63,7 +62,6 @@
 		BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */; };
 		BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */; };
 		BC3D2BF013A2715E00C56B9C /* CocoaBird+Tweets.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */; };
-		BC3D2BF613A2756700C56B9C /* CBTimelineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */; };
 		BC76989013999CF2009A7FA1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */; };
 		BC76989113999CF2009A7FA1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984513999CF2009A7FA1 /* ASIDataCompressor.m */; };
 		BC76989213999CF2009A7FA1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC76984713999CF2009A7FA1 /* ASIDataDecompressor.m */; };
@@ -95,6 +93,16 @@
 		BC7698CB1399A2CF009A7FA1 /* ASIFormDataRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7698C61399A2CF009A7FA1 /* ASIFormDataRequest+OAuth.m */; };
 		BC7698CC1399A2CF009A7FA1 /* ASIHTTPRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7698C81399A2CF009A7FA1 /* ASIHTTPRequest+OAuth.m */; };
 		BC7698CD1399A2CF009A7FA1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7698C91399A2CF009A7FA1 /* ASIHTTPRequest.m */; };
+		BCA3A17F13A54393008F4511 /* CocoaBird+Account.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A17E13A54393008F4511 /* CocoaBird+Account.m */; };
+		BCA3A18213A5448C008F4511 /* CBQueryParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A18113A5448B008F4511 /* CBQueryParams.m */; };
+		BCA3A18513A54838008F4511 /* CBRateLimitStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A18413A54838008F4511 /* CBRateLimitStatus.m */; };
+		BCA3A18813A54C5B008F4511 /* CBAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A18713A54C5B008F4511 /* CBAccountSettings.m */; };
+		BCA3A18B13A54CB3008F4511 /* CBSleepTime.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A18A13A54CB3008F4511 /* CBSleepTime.m */; };
+		BCA3A18E13A54EEA008F4511 /* CBTimeZone.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A18D13A54EEA008F4511 /* CBTimeZone.m */; };
+		BCA3A19113A55115008F4511 /* CBTrendLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19013A55115008F4511 /* CBTrendLocation.m */; };
+		BCA3A19413A55214008F4511 /* CBPlaceType.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19313A55214008F4511 /* CBPlaceType.m */; };
+		BCA3A19713A55719008F4511 /* CocoaBird+Trends.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19613A55717008F4511 /* CocoaBird+Trends.m */; };
+		BCA3A19A13A559BF008F4511 /* CBTrendsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */; };
 		BCBEC0091399945300FB5FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC0081399945300FB5FA9 /* UIKit.framework */; };
 		BCBEC00B1399945300FB5FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00A1399945300FB5FA9 /* Foundation.framework */; };
 		BCBEC00D1399945300FB5FA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00C1399945300FB5FA9 /* CoreGraphics.framework */; };
@@ -102,8 +110,6 @@
 		BCBEC0161399945300FB5FA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0151399945300FB5FA9 /* main.m */; };
 		BCBEC0191399945300FB5FA9 /* TestCocoaBirdAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */; };
 		BCBEC01C1399945300FB5FA9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBEC01A1399945300FB5FA9 /* MainWindow.xib */; };
-		BCDDF4F113A27B2900F4DB95 /* CBTweetsParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */; };
-		BCDDF4FC13A2BFD000F4DB95 /* CBUsersParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */; };
 		BCE73D3713A2C0F2009A3E3F /* CocoaBird+Users.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */; };
 /* End PBXBuildFile section */
 
@@ -201,15 +207,13 @@
 		BC3D2BA6139C2A6300C56B9C /* CBPlaceAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPlaceAttributes.m; sourceTree = "<group>"; };
 		BC3D2BA8139C2BF800C56B9C /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
 		BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBoundingBox.m; sourceTree = "<group>"; };
-		BC3D2BBB13A0563D00C56B9C /* CBQueryParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBQueryParams.h; sourceTree = "<group>"; };
-		BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBQueryParams.m; sourceTree = "<group>"; };
 		BC3D2BC113A058B400C56B9C /* CBReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBReflection.h; sourceTree = "<group>"; };
 		BC3D2BC213A058B500C56B9C /* CBReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBReflection.m; sourceTree = "<group>"; };
 		BC3D2BC413A19A0A00C56B9C /* CBRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequestData.h; sourceTree = "<group>"; };
 		BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestData.m; sourceTree = "<group>"; };
 		BC3D2BDC13A1CA5000C56B9C /* CocoaBird+Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Authentication.h"; sourceTree = "<group>"; };
 		BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Authentication.m"; sourceTree = "<group>"; };
-		BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CocoaBird+Timeline.h"; sourceTree = "<group>"; };
+		BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Timeline.h"; sourceTree = "<group>"; };
 		BC3D2BE013A2554D00C56B9C /* CocoaBird+Timeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Timeline.m"; sourceTree = "<group>"; };
 		BC3D2BE213A255B900C56B9C /* CocoaBird+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Core.h"; sourceTree = "<group>"; };
 		BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Core.m"; sourceTree = "<group>"; };
@@ -219,10 +223,8 @@
 		BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+CancellingRequests.m"; sourceTree = "<group>"; };
 		BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+AuthenticationCore.h"; sourceTree = "<group>"; };
 		BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+AuthenticationCore.m"; sourceTree = "<group>"; };
-		BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CocoaBird+Tweets.h"; sourceTree = "<group>"; };
+		BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Tweets.h"; sourceTree = "<group>"; };
 		BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Tweets.m"; sourceTree = "<group>"; };
-		BC3D2BF413A2756200C56B9C /* CBTimelineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBTimelineParams.h; sourceTree = "<group>"; };
-		BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTimelineParams.m; sourceTree = "<group>"; };
 		BC76984113999CF2009A7FA1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		BC76984213999CF2009A7FA1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		BC76984313999CF2009A7FA1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -285,6 +287,26 @@
 		BC7698C81399A2CF009A7FA1 /* ASIHTTPRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASIHTTPRequest+OAuth.m"; sourceTree = "<group>"; };
 		BC7698C91399A2CF009A7FA1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
 		BC7698CE1399A34E009A7FA1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		BCA3A17D13A54393008F4511 /* CocoaBird+Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Account.h"; sourceTree = "<group>"; };
+		BCA3A17E13A54393008F4511 /* CocoaBird+Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Account.m"; sourceTree = "<group>"; };
+		BCA3A18013A5448B008F4511 /* CBQueryParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBQueryParams.h; sourceTree = "<group>"; };
+		BCA3A18113A5448B008F4511 /* CBQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBQueryParams.m; sourceTree = "<group>"; };
+		BCA3A18313A54838008F4511 /* CBRateLimitStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRateLimitStatus.h; sourceTree = "<group>"; };
+		BCA3A18413A54838008F4511 /* CBRateLimitStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRateLimitStatus.m; sourceTree = "<group>"; };
+		BCA3A18613A54C5A008F4511 /* CBAccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAccountSettings.h; path = Models/CBAccountSettings.h; sourceTree = "<group>"; };
+		BCA3A18713A54C5B008F4511 /* CBAccountSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAccountSettings.m; path = Models/CBAccountSettings.m; sourceTree = "<group>"; };
+		BCA3A18913A54CB3008F4511 /* CBSleepTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSleepTime.h; sourceTree = "<group>"; };
+		BCA3A18A13A54CB3008F4511 /* CBSleepTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSleepTime.m; sourceTree = "<group>"; };
+		BCA3A18C13A54EEA008F4511 /* CBTimeZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTimeZone.h; sourceTree = "<group>"; };
+		BCA3A18D13A54EEA008F4511 /* CBTimeZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTimeZone.m; sourceTree = "<group>"; };
+		BCA3A18F13A55115008F4511 /* CBTrendLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTrendLocation.h; sourceTree = "<group>"; };
+		BCA3A19013A55115008F4511 /* CBTrendLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrendLocation.m; sourceTree = "<group>"; };
+		BCA3A19213A55213008F4511 /* CBPlaceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPlaceType.h; sourceTree = "<group>"; };
+		BCA3A19313A55214008F4511 /* CBPlaceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPlaceType.m; sourceTree = "<group>"; };
+		BCA3A19513A55716008F4511 /* CocoaBird+Trends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Trends.h"; sourceTree = "<group>"; };
+		BCA3A19613A55717008F4511 /* CocoaBird+Trends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Trends.m"; sourceTree = "<group>"; };
+		BCA3A19813A559BD008F4511 /* CBTrendsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTrendsResponse.h; sourceTree = "<group>"; };
+		BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrendsResponse.m; sourceTree = "<group>"; };
 		BCBEC0041399945300FB5FA9 /* TestCocoaBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCocoaBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBEC0081399945300FB5FA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCBEC00A1399945300FB5FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -296,10 +318,6 @@
 		BCBEC0171399945300FB5FA9 /* TestCocoaBirdAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCocoaBirdAppDelegate.h; sourceTree = "<group>"; };
 		BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCocoaBirdAppDelegate.m; sourceTree = "<group>"; };
 		BCBEC01B1399945300FB5FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		BCDDF4EF13A27B2900F4DB95 /* CBTweetsParams.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBTweetsParams.h; sourceTree = "<group>"; };
-		BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTweetsParams.m; sourceTree = "<group>"; };
-		BCDDF4FA13A2BFCF00F4DB95 /* CBUsersParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUsersParams.h; sourceTree = "<group>"; };
-		BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUsersParams.m; sourceTree = "<group>"; };
 		BCE73D3513A2C0F2009A3E3F /* CocoaBird+Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Users.h"; sourceTree = "<group>"; };
 		BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Users.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -327,23 +345,26 @@
 			isa = PBXGroup;
 			children = (
 				BC76983F13999CF2009A7FA1 /* Libs */,
-				BC3D2BB313A0386F00C56B9C /* QueryModels */,
 				BC3D2B6B139BF30500C56B9C /* Models */,
 				BC3D2A381399B73300C56B9C /* CocoaBird.h */,
 				BC3D2BE513A2587C00C56B9C /* CocoaBirdBase.h */,
 				BC3D2BE613A2588000C56B9C /* CocoaBirdBase.m */,
-				BC3D2BE213A255B900C56B9C /* CocoaBird+Core.h */,
-				BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */,
-				BC3D2BE813A25EF300C56B9C /* CocoaBird+CancellingRequests.h */,
-				BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */,
-				BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */,
-				BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */,
+				BCA3A17D13A54393008F4511 /* CocoaBird+Account.h */,
+				BCA3A17E13A54393008F4511 /* CocoaBird+Account.m */,
 				BC3D2BDC13A1CA5000C56B9C /* CocoaBird+Authentication.h */,
 				BC3D2BDD13A1CA5400C56B9C /* CocoaBird+Authentication.m */,
-				BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */,
-				BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */,
+				BC3D2BEB13A268AA00C56B9C /* CocoaBird+AuthenticationCore.h */,
+				BC3D2BEC13A268B000C56B9C /* CocoaBird+AuthenticationCore.m */,
+				BC3D2BE813A25EF300C56B9C /* CocoaBird+CancellingRequests.h */,
+				BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */,
+				BC3D2BE213A255B900C56B9C /* CocoaBird+Core.h */,
+				BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */,
 				BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */,
 				BC3D2BE013A2554D00C56B9C /* CocoaBird+Timeline.m */,
+				BCA3A19513A55716008F4511 /* CocoaBird+Trends.h */,
+				BCA3A19613A55717008F4511 /* CocoaBird+Trends.m */,
+				BC3D2BEE13A2715300C56B9C /* CocoaBird+Tweets.h */,
+				BC3D2BEF13A2715900C56B9C /* CocoaBird+Tweets.m */,
 				BCE73D3513A2C0F2009A3E3F /* CocoaBird+Users.h */,
 				BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */,
 				BC3D2A4B1399BA3900C56B9C /* CocoaBirdSettings.h */,
@@ -359,6 +380,10 @@
 				BC3D2BC213A058B500C56B9C /* CBReflection.m */,
 				BC3D2BC413A19A0A00C56B9C /* CBRequestData.h */,
 				BC3D2BC513A19A0C00C56B9C /* CBRequestData.m */,
+				BCA3A18013A5448B008F4511 /* CBQueryParams.h */,
+				BCA3A18113A5448B008F4511 /* CBQueryParams.m */,
+				BCA3A18613A54C5A008F4511 /* CBAccountSettings.h */,
+				BCA3A18713A54C5B008F4511 /* CBAccountSettings.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -484,23 +509,20 @@
 				BC3D2BA6139C2A6300C56B9C /* CBPlaceAttributes.m */,
 				BC3D2BA8139C2BF800C56B9C /* CBBoundingBox.h */,
 				BC3D2BA9139C2BF900C56B9C /* CBBoundingBox.m */,
+				BCA3A18313A54838008F4511 /* CBRateLimitStatus.h */,
+				BCA3A18413A54838008F4511 /* CBRateLimitStatus.m */,
+				BCA3A18913A54CB3008F4511 /* CBSleepTime.h */,
+				BCA3A18A13A54CB3008F4511 /* CBSleepTime.m */,
+				BCA3A18C13A54EEA008F4511 /* CBTimeZone.h */,
+				BCA3A18D13A54EEA008F4511 /* CBTimeZone.m */,
+				BCA3A18F13A55115008F4511 /* CBTrendLocation.h */,
+				BCA3A19013A55115008F4511 /* CBTrendLocation.m */,
+				BCA3A19213A55213008F4511 /* CBPlaceType.h */,
+				BCA3A19313A55214008F4511 /* CBPlaceType.m */,
+				BCA3A19813A559BD008F4511 /* CBTrendsResponse.h */,
+				BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		BC3D2BB313A0386F00C56B9C /* QueryModels */ = {
-			isa = PBXGroup;
-			children = (
-				BC3D2BBB13A0563D00C56B9C /* CBQueryParams.h */,
-				BC3D2BBC13A0563D00C56B9C /* CBQueryParams.m */,
-				BC3D2BF413A2756200C56B9C /* CBTimelineParams.h */,
-				BC3D2BF513A2756400C56B9C /* CBTimelineParams.m */,
-				BCDDF4EF13A27B2900F4DB95 /* CBTweetsParams.h */,
-				BCDDF4F013A27B2900F4DB95 /* CBTweetsParams.m */,
-				BCDDF4FA13A2BFCF00F4DB95 /* CBUsersParams.h */,
-				BCDDF4FB13A2BFD000F4DB95 /* CBUsersParams.m */,
-			);
-			path = QueryModels;
 			sourceTree = "<group>";
 		};
 		BC76983F13999CF2009A7FA1 /* Libs */ = {
@@ -810,7 +832,6 @@
 				BC3D2BA4139C29F900C56B9C /* CBPlace.m in Sources */,
 				BC3D2BA7139C2A6600C56B9C /* CBPlaceAttributes.m in Sources */,
 				BC3D2BAA139C2BFB00C56B9C /* CBBoundingBox.m in Sources */,
-				BC3D2BBD13A0563D00C56B9C /* CBQueryParams.m in Sources */,
 				BC3D2BC313A058B600C56B9C /* CBReflection.m in Sources */,
 				BC3D2BC613A19A0E00C56B9C /* CBRequestData.m in Sources */,
 				BC3D2BDE13A1CA5600C56B9C /* CocoaBird+Authentication.m in Sources */,
@@ -820,10 +841,17 @@
 				BC3D2BEA13A25EFB00C56B9C /* CocoaBird+CancellingRequests.m in Sources */,
 				BC3D2BED13A268BA00C56B9C /* CocoaBird+AuthenticationCore.m in Sources */,
 				BC3D2BF013A2715E00C56B9C /* CocoaBird+Tweets.m in Sources */,
-				BC3D2BF613A2756700C56B9C /* CBTimelineParams.m in Sources */,
-				BCDDF4F113A27B2900F4DB95 /* CBTweetsParams.m in Sources */,
-				BCDDF4FC13A2BFD000F4DB95 /* CBUsersParams.m in Sources */,
 				BCE73D3713A2C0F2009A3E3F /* CocoaBird+Users.m in Sources */,
+				BCA3A17F13A54393008F4511 /* CocoaBird+Account.m in Sources */,
+				BCA3A18213A5448C008F4511 /* CBQueryParams.m in Sources */,
+				BCA3A18513A54838008F4511 /* CBRateLimitStatus.m in Sources */,
+				BCA3A18813A54C5B008F4511 /* CBAccountSettings.m in Sources */,
+				BCA3A18B13A54CB3008F4511 /* CBSleepTime.m in Sources */,
+				BCA3A18E13A54EEA008F4511 /* CBTimeZone.m in Sources */,
+				BCA3A19113A55115008F4511 /* CBTrendLocation.m in Sources */,
+				BCA3A19413A55214008F4511 /* CBPlaceType.m in Sources */,
+				BCA3A19713A55719008F4511 /* CocoaBird+Trends.m in Sources */,
+				BCA3A19A13A559BF008F4511 /* CBTrendsResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

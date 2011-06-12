@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CBQueryParams.h"
 
 @interface CocoaBird : NSObject {
     

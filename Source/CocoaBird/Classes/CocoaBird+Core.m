@@ -14,6 +14,9 @@
 #import "CBStatus.h"
 #import "ASIFormDataRequest.h"
 #import "CBRequestData.h"
+#import "CBRateLimitStatus.h"
+#import "CBAccountSettings.h"
+#import "CBTrendsResponse.h"
 
 @implementation CocoaBird (Core)
 
@@ -120,6 +123,12 @@ static SBJSON* _serializer = NULL;
         return [[[CBUser alloc] initWithDictionary:responseObj] autorelease];
     }else if(type == CBTwitterResponseTypeNatural){
         return responseObj;
+    }else if(type == CBTwitterResponseTypeRateLimitStatus){
+        return [[[CBRateLimitStatus alloc] initWithDictionary:responseObj] autorelease];
+    }else if(type == CBTwitterResponseTypeAccountSettings){
+        return [[[CBAccountSettings alloc] initWithDictionary:responseObj] autorelease];
+    }else if(type == CBTwitterResponseTypeTrends){
+        return [[[CBTrendsResponse alloc] initWithDictionary:responseObj] autorelease];
     }
     
     NSLog(@"should not have gotten this far... processResponse:type:error:");
