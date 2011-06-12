@@ -7,9 +7,12 @@
 //
 
 #import "CocoaBirdBase.h"
+#import "CocoaBird+Account.h"
 #import "CocoaBird+Authentication.h"
 #import "CocoaBird+Tweets.h"
 #import "CocoaBird+Timeline.h"
+#import "CocoaBird+Trends.h"
+#import "CocoaBird+LocalTrends.h"
 #import "CocoaBird+CancellingRequests.h"
 
 #import "CBStatus.h"

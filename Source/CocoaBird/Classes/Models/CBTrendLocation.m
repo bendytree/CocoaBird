@@ -11,6 +11,6 @@
 
 @implementation CBTrendLocation
 
-@synthesize name, woeid, placeType, country, url, countryCode;
+@synthesize name, woeid, placeType, country, url, countryCode, parentid;
 
 @end

@@ -39,10 +39,34 @@
 
 #pragma Property Binding
 
+static NSDateFormatter* _dateFormatter = NULL;
++ (NSDateFormatter*) dateFormatter
+{
+    @synchronized(self)
+    {
+        if(_dateFormatter == NULL)
+            _dateFormatter = [[NSDateFormatter alloc] init];
+    }
+    return _dateFormatter;
+}
+
++ (NSDate*) parseDate:(NSString*)str
+{
+    NSDateFormatter* df = [CBEntity dateFormatter];
+    NSDate* date = nil;
+    [df setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
+    date = [df dateFromString:str];
+    if(date) return date;
+    
+    [df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+    date = [df dateFromString:str];
+    if(date) return date;
+    
+    return nil;
+}
+
 - (void) bindProperties
 {
-    NSDateFormatter* dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-    [dateFormatter setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
     
     NSDictionary* arrayClasses = [self arrayPropertyClasses];
     
@@ -62,7 +86,7 @@
         // Convert string to date
         }else if([CBReflection class:propertyType descendsFrom:[NSDate class]]
            && [CBReflection class:valType descendsFrom:[NSString class]]){
-            [self setValue:[dateFormatter dateFromString:dicVal] forKey:propertyName];
+            [self setValue:[CBEntity parseDate:dicVal] forKey:propertyName];
             
         //Arrays
         }else if([CBReflection class:propertyType descendsFrom:[NSArray class]]){ 

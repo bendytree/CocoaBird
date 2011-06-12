@@ -17,6 +17,8 @@
 #import "CBRateLimitStatus.h"
 #import "CBAccountSettings.h"
 #import "CBTrendsResponse.h"
+#import "CBTrendLocation.h"
+#import "CBTrendForLocation.h"
 
 @implementation CocoaBird (Core)
 
@@ -129,6 +131,22 @@ static SBJSON* _serializer = NULL;
         return [[[CBAccountSettings alloc] initWithDictionary:responseObj] autorelease];
     }else if(type == CBTwitterResponseTypeTrends){
         return [[[CBTrendsResponse alloc] initWithDictionary:responseObj] autorelease];
+    }else if(type == CBTwitterResponseTypeTrendLocations){
+        NSArray* dics = responseObj;
+        NSMutableArray* trendLocations = [NSMutableArray array];
+        for(NSDictionary* dic in dics){
+            CBTrendLocation* trendLocation = [[[CBTrendLocation alloc] initWithDictionary:dic] autorelease];
+            [trendLocations addObject:trendLocation];
+        }
+        return trendLocations;
+    }else if(type == CBTwitterResponseTypeTrendsForLocation){
+        NSArray* dics = responseObj;
+        NSMutableArray* trendsForLocation = [NSMutableArray array];
+        for(NSDictionary* dic in dics){
+            CBTrendForLocation* trendForLocation = [[[CBTrendForLocation alloc] initWithDictionary:dic] autorelease];
+            [trendsForLocation addObject:trendForLocation];
+        }
+        return trendsForLocation;        
     }
     
     NSLog(@"should not have gotten this far... processResponse:type:error:");

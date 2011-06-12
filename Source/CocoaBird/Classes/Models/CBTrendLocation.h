@@ -20,5 +20,6 @@
 @property (retain) NSString* country;
 @property (retain) NSString* url;
 @property (retain) NSString* countryCode;
+@property (retain) NSNumber* parentid;
 
 @end

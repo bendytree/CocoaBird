@@ -21,6 +21,8 @@ typedef enum {
     CBTwitterResponseTypeRateLimitStatus,
     CBTwitterResponseTypeAccountSettings,
     CBTwitterResponseTypeTrends,
+    CBTwitterResponseTypeTrendLocations,
+    CBTwitterResponseTypeTrendsForLocation,
     CBTwitterResponseTypeNone
 } CBTwitterResponseType;
 
