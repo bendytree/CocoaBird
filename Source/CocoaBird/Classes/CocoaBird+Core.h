@@ -14,24 +14,17 @@
 
 typedef enum {
     CBTwitterResponseTypeNatural,  // such as array of strings or numbers
-    CBTwitterResponseTypeUsers,
-    CBTwitterResponseTypeUser,
-    CBTwitterResponseTypeStatuses,
-    CBTwitterResponseTypeStatus,
-    CBTwitterResponseTypeRateLimitStatus,
-    CBTwitterResponseTypeAccountSettings,
-    CBTwitterResponseTypeTrends,
-    CBTwitterResponseTypeTrendLocations,
-    CBTwitterResponseTypeTrendsForLocation,
-    CBTwitterResponseTypeNone
+    CBTwitterResponseTypeVoid,
+    CBTwitterResponseTypeArray,
+    CBTwitterResponseTypeObject
 } CBTwitterResponseType;
 
 
 @interface CocoaBird (Core)
 
 //Processing Requests
-+ (id) processRequestSynchronous:(NSString*)url params:(CBQueryParams*)params type:(CBTwitterResponseType)type error:(NSError**)error;
-+ (NSString*) processRequestAsynchronous:(NSString*)url params:(CBQueryParams*)params type:(CBTwitterResponseType)type delegate:(id)delegate selector:(SEL)selector;
++ (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error;
++ (NSString*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
 + (CBRequestData*) getRequestDataAndRemoveById:(NSString*)requestId;
 + (NSMutableArray*) currentRequests;
 

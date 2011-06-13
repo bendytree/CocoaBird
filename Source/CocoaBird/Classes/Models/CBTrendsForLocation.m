@@ -6,11 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CBTrendForLocation.h"
+#import "CBTrendsForLocation.h"
 #import "CBTrendLocation.h"
 #import "CBTrend.h"
 
-@implementation CBTrendForLocation
+@implementation CBTrendsForLocation
 
 @synthesize created_at, trends, locations, as_of;
 

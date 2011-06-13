@@ -13,7 +13,7 @@
     
 }
 
-- (void) applyToRequest:(ASIFormDataRequest*)request;
+- (NSDictionary*) toDictionary;
 + (id) params;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CocoaBird+LocalTrends.h"
-
+#import "CBModels.h"
 
 @implementation CBTrendLocationsParams
 @synthesize lat, long_;
@@ -30,7 +30,7 @@
 
 + (NSArray*) getTrendLocationsNow:(CBTrendLocationsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends/available.json" params:params type:CBTwitterResponseTypeTrendLocations error:error];
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends/available.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendLocation class] error:error];
 }
 
 + (NSString*) getTrendLocations:(id)delegate selector:(SEL)selector
@@ -40,7 +40,7 @@
 
 + (NSString*) getTrendLocations:(id)delegate selector:(SEL)selector params:(CBTrendLocationsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends/available.json" params:params type:CBTwitterResponseTypeTrendLocations delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends/available.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendLocation class] delegate:delegate selector:selector];
 }
 
 
@@ -54,13 +54,13 @@
 + (NSArray*) getTrendsForLocationNow:(int)woeid error:(NSError**)error
 {
     NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/trends/%i.json", woeid];
-    return [self processRequestSynchronous:url params:nil type:CBTwitterResponseTypeTrendsForLocation error:error];
+    return [self processRequestSynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBTrendsForLocation class] error:error];
 }
 
 + (NSString*) getTrendsForLocation:(int)woeid delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/trends/%i.json", woeid];
-    return [self processRequestAsynchronous:url params:nil type:CBTwitterResponseTypeTrendsForLocation delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBTrendsForLocation class] delegate:delegate selector:selector];    
 }
 
 

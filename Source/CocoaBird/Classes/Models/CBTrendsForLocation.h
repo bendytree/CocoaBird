@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CBEntity.h"
 
-@interface CBTrendForLocation : CBEntity {
+@interface CBTrendsForLocation : CBEntity {
     
 }
 

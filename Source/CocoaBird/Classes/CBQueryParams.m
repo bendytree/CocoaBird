@@ -17,9 +17,9 @@
     return [[[self alloc] init] autorelease];
 }
 
-
-- (void) applyToRequest:(ASIFormDataRequest*)request
+- (NSDictionary*) toDictionary
 {
+    NSMutableDictionary* dic = [NSMutableDictionary dictionary];
     for(NSString* propertyName in [CBReflection propertyNamesForClass:[self class]]){
         id val = [self valueForKey:propertyName];
         if(val && val != [NSNull null])
@@ -28,9 +28,10 @@
             if([propertyName characterAtIndex:[propertyName length]-1] == '_')
                 propertyName = [propertyName substringToIndex:[propertyName length]-1];
             
-            [self setValue:val forKey:propertyName];
+            [dic setObject:val forKey:propertyName];
         }
     }
+    return dic;
 }
 
 

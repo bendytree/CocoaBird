@@ -104,8 +104,11 @@
 		BCA3A19713A55719008F4511 /* CocoaBird+Trends.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19613A55717008F4511 /* CocoaBird+Trends.m */; };
 		BCA3A19A13A559BF008F4511 /* CBTrendsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */; };
 		BCA3A19D13A55F0B008F4511 /* CocoaBird+LocalTrends.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19B13A55F08008F4511 /* CocoaBird+LocalTrends.m */; };
-		BCA3A1A013A56633008F4511 /* CBTrendForLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19F13A56633008F4511 /* CBTrendForLocation.m */; };
+		BCA3A1A013A56633008F4511 /* CBTrendsForLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A19F13A56633008F4511 /* CBTrendsForLocation.m */; };
 		BCA3A1A313A56A16008F4511 /* CBTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A1A213A56A15008F4511 /* CBTrend.m */; };
+		BCA3A1A613A58648008F4511 /* CocoaBird+Lists.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A1A413A58642008F4511 /* CocoaBird+Lists.m */; };
+		BCA3A1A913A5A8A8008F4511 /* CBLists.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A1A813A5A8A5008F4511 /* CBLists.m */; };
+		BCA3A1AC13A5A953008F4511 /* CBList.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3A1AB13A5A951008F4511 /* CBList.m */; };
 		BCBEC0091399945300FB5FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC0081399945300FB5FA9 /* UIKit.framework */; };
 		BCBEC00B1399945300FB5FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00A1399945300FB5FA9 /* Foundation.framework */; };
 		BCBEC00D1399945300FB5FA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00C1399945300FB5FA9 /* CoreGraphics.framework */; };
@@ -312,10 +315,17 @@
 		BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrendsResponse.m; sourceTree = "<group>"; };
 		BCA3A19B13A55F08008F4511 /* CocoaBird+LocalTrends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+LocalTrends.m"; sourceTree = "<group>"; };
 		BCA3A19C13A55F09008F4511 /* CocoaBird+LocalTrends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+LocalTrends.h"; sourceTree = "<group>"; };
-		BCA3A19E13A56632008F4511 /* CBTrendForLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTrendForLocation.h; sourceTree = "<group>"; };
-		BCA3A19F13A56633008F4511 /* CBTrendForLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrendForLocation.m; sourceTree = "<group>"; };
+		BCA3A19E13A56632008F4511 /* CBTrendsForLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBTrendsForLocation.h; sourceTree = "<group>"; };
+		BCA3A19F13A56633008F4511 /* CBTrendsForLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrendsForLocation.m; sourceTree = "<group>"; };
 		BCA3A1A113A56A14008F4511 /* CBTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTrend.h; sourceTree = "<group>"; };
 		BCA3A1A213A56A15008F4511 /* CBTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTrend.m; sourceTree = "<group>"; };
+		BCA3A1A413A58642008F4511 /* CocoaBird+Lists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Lists.m"; sourceTree = "<group>"; };
+		BCA3A1A513A58644008F4511 /* CocoaBird+Lists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Lists.h"; sourceTree = "<group>"; };
+		BCA3A1A713A5A8A4008F4511 /* CBLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLists.h; sourceTree = "<group>"; };
+		BCA3A1A813A5A8A5008F4511 /* CBLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLists.m; sourceTree = "<group>"; };
+		BCA3A1AA13A5A94F008F4511 /* CBList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBList.h; sourceTree = "<group>"; };
+		BCA3A1AB13A5A951008F4511 /* CBList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBList.m; sourceTree = "<group>"; };
+		BCA3A1AD13A5AB07008F4511 /* CBModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBModels.h; sourceTree = "<group>"; };
 		BCBEC0041399945300FB5FA9 /* TestCocoaBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCocoaBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBEC0081399945300FB5FA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCBEC00A1399945300FB5FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -368,6 +378,8 @@
 				BC3D2BE913A25EF800C56B9C /* CocoaBird+CancellingRequests.m */,
 				BC3D2BE213A255B900C56B9C /* CocoaBird+Core.h */,
 				BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */,
+				BCA3A1A513A58644008F4511 /* CocoaBird+Lists.h */,
+				BCA3A1A413A58642008F4511 /* CocoaBird+Lists.m */,
 				BCA3A19C13A55F09008F4511 /* CocoaBird+LocalTrends.h */,
 				BCA3A19B13A55F08008F4511 /* CocoaBird+LocalTrends.m */,
 				BC3D2BDF13A2554900C56B9C /* CocoaBird+Timeline.h */,
@@ -492,6 +504,7 @@
 		BC3D2B6B139BF30500C56B9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCA3A1AD13A5AB07008F4511 /* CBModels.h */,
 				BC3D2B6C139BF38000C56B9C /* CBStatus.h */,
 				BC3D2B6D139BF38000C56B9C /* CBStatus.m */,
 				BC3D2B84139C187700C56B9C /* CBEntity.h */,
@@ -532,10 +545,14 @@
 				BCA3A19313A55214008F4511 /* CBPlaceType.m */,
 				BCA3A19813A559BD008F4511 /* CBTrendsResponse.h */,
 				BCA3A19913A559BE008F4511 /* CBTrendsResponse.m */,
-				BCA3A19E13A56632008F4511 /* CBTrendForLocation.h */,
-				BCA3A19F13A56633008F4511 /* CBTrendForLocation.m */,
+				BCA3A19E13A56632008F4511 /* CBTrendsForLocation.h */,
+				BCA3A19F13A56633008F4511 /* CBTrendsForLocation.m */,
 				BCA3A1A113A56A14008F4511 /* CBTrend.h */,
 				BCA3A1A213A56A15008F4511 /* CBTrend.m */,
+				BCA3A1A713A5A8A4008F4511 /* CBLists.h */,
+				BCA3A1A813A5A8A5008F4511 /* CBLists.m */,
+				BCA3A1AA13A5A94F008F4511 /* CBList.h */,
+				BCA3A1AB13A5A951008F4511 /* CBList.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -868,8 +885,11 @@
 				BCA3A19713A55719008F4511 /* CocoaBird+Trends.m in Sources */,
 				BCA3A19A13A559BF008F4511 /* CBTrendsResponse.m in Sources */,
 				BCA3A19D13A55F0B008F4511 /* CocoaBird+LocalTrends.m in Sources */,
-				BCA3A1A013A56633008F4511 /* CBTrendForLocation.m in Sources */,
+				BCA3A1A013A56633008F4511 /* CBTrendsForLocation.m in Sources */,
 				BCA3A1A313A56A16008F4511 /* CBTrend.m in Sources */,
+				BCA3A1A613A58648008F4511 /* CocoaBird+Lists.m in Sources */,
+				BCA3A1A913A5A8A8008F4511 /* CBLists.m in Sources */,
+				BCA3A1AC13A5A953008F4511 /* CBList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

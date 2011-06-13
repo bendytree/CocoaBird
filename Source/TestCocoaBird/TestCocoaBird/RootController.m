@@ -40,8 +40,7 @@
 {    
     [super viewDidLoad];
     
-    
-    
+    [CocoaBird getListsNow];
 }
 
 

@@ -11,9 +11,9 @@
 
 @implementation CBRequestData
 
-@synthesize id, request, type, delegate, selector;
+@synthesize id, request, type, class, delegate, selector;
 
-- (id) initWithId:(NSString*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type delegate:(id)_delegate selector:(SEL)_selector
+- (id) initWithId:(NSString*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector
 {
     self = [super init];
     if (self) {
@@ -21,6 +21,7 @@
         self.id = _id;
         self.request = _request;
         self.type = _type;
+        self.class = _class;
         self.delegate = _delegate;
         self.selector = _selector;
         
@@ -33,6 +34,7 @@
     self.id = nil;
     self.request = nil;
     self.type = 0;
+    self.class = nil;
     self.delegate = nil;
     self.selector = nil;
     

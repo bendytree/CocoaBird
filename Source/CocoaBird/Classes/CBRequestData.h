@@ -15,11 +15,12 @@
     
 }
 
-- (id) initWithId:(NSString*)id request:(ASIFormDataRequest*)request type:(CBTwitterResponseType)type delegate:(id)delegate selector:(SEL)selector;
+- (id) initWithId:(NSString*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector;
 
 @property (retain) NSString* id;
 @property (retain) ASIFormDataRequest* request;
 @property (assign) CBTwitterResponseType type;
+@property (retain) Class class;
 @property (assign) id delegate;
 @property (assign) SEL selector;
 
