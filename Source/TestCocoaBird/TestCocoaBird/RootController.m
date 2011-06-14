@@ -39,15 +39,15 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
+
     
-    CBIsUserMemberOfListParams* params = [CBIsUserMemberOfListParams params];
-    params.slug = @"comedians";
-    params.owner_screen_name = @"gregstarling";
+    CBRemoveMemberFromListParams* params = [CBRemoveMemberFromListParams params];
+    params.slug = @"test";
+    params.owner_screen_name = @"crookedwoody";
     params.screen_name = @"bendytree";
     NSError* error = nil;
-    CBUser* user = [CocoaBird isUserMemberOfListNow:params error:&error];
+    [CocoaBird removeMemberFromListNow:params error:&error];
     NSLog(@"error: %@", error);
-    NSLog(@"name: %@", user.name);
 }
 
 

@@ -124,8 +124,8 @@ static NSString *urlEncode(id object) {
     }else{
         ASIFormDataRequest* request = [ASIFormDataRequest 
                                        requestWithURL:[NSURL URLWithString:url]
-                                       consumerKey:@"1234" //not_needed? [CocoaBirdSettings oAuthConsumerKey]
-                                       consumerSecret:@"1234" //not_needed? [CocoaBirdSettings oAuthConsumerSecret]
+                                       consumerKey: [CocoaBirdSettings oAuthConsumerKey]
+                                       consumerSecret: [CocoaBirdSettings oAuthConsumerSecret]
                                        token:[CocoaBirdSettings oAuthToken]
                                        tokenSecret: [CocoaBirdSettings oAuthTokenSecret]];
         for(NSString* key in paramsDic){

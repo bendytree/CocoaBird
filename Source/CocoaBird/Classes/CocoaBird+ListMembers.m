@@ -18,6 +18,18 @@
 @synthesize list_id, slug, owner_id, owner_screen_name, user_id, screen_name, include_entities, skip_status;
 @end
 
+@implementation CBAddMemberToListParams
+@synthesize list_id, slug, owner_id, owner_screen_name, user_id, screen_name;
+@end
+
+@implementation CBAddMembersToListParams
+@synthesize list_id, slug, owner_id, owner_screen_name, user_id, screen_name;
+@end
+
+@implementation CBRemoveMemberFromListParams
+@synthesize list_id, slug, owner_id, owner_screen_name, user_id, screen_name;
+@end
+
 
 
 @implementation CocoaBird (ListMembers)
@@ -122,6 +134,14 @@
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBListMembers class] delegate:delegate selector:selector];    
 }
 
+
+#pragma User Is Member of List
+
++ (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params
+{
+    return [self isUserMemberOfListNow:params error:nil];
+}
+
 + (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params error:(NSError**)error
 {
     return [self processRequestSynchronous:@"http://api.twitter.com/1/lists/members/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
@@ -131,5 +151,55 @@
 {
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }
+
+
+#pragma Add Member to List
+
++ (CBUser*) addMemberToListNow:(CBAddMemberToListParams*)params
+{
+    return [self addMemberToListNow:params error:nil];
+}
+
++ (CBUser*) addMemberToListNow:(CBAddMemberToListParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/lists/members/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+}
+
++ (NSString*) addMemberToList:(CBAddMemberToListParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Add Members to List
+
++ (NSArray*) addMembersToListNow:(CBAddMembersToListParams*)params
+{
+    return [self addMembersToListNow:params error:nil];
+}
+
++ (NSArray*) addMembersToListNow:(CBAddMembersToListParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/lists/members/create_all.json" method:@"POST" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+}
+
++ (NSString*) addMembersToList:(CBAddMembersToListParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members/create_all.json" method:@"POST" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Remove Member From List
+
++ (void) removeMemberFromListNow:(CBRemoveMemberFromListParams*)params error:(NSError**)error
+{
+    [self processRequestSynchronous:@"http://api.twitter.com/1/lists/members/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil error:error];
+}
+
++ (NSString*) removeMemberFromList:(CBRemoveMemberFromListParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    
+}
+
 
 @end
