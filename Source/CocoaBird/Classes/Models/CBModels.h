@@ -30,3 +30,4 @@
 #import "CBTrend.h"
 #import "CBLists.h"
 #import "CBList.h"
+#import "CBListMembers.h"

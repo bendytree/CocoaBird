@@ -14,6 +14,7 @@
 #import "CocoaBird+Trends.h"
 #import "CocoaBird+LocalTrends.h"
 #import "CocoaBird+CancellingRequests.h"
+#import "CocoaBird+ListMembers.h"
 #import "CocoaBird+Lists.h"
 
 #import "CBModels.h"
