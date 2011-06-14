@@ -21,6 +21,17 @@
 @property (retain) NSNumber* skip_status;
 @end
 
+@interface CBIsUserMemberOfListParams : CBQueryParams {}
+@property (retain) NSNumber* list_id;
+@property (retain) NSString* slug;
+@property (retain) NSNumber* owner_id;
+@property (retain) NSString* owner_screen_name;
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* include_entities;
+@property (retain) NSNumber* skip_status;
+@end
+
 @interface CocoaBird (ListMembers)
 
 //List by Id
@@ -43,5 +54,11 @@
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug screenName:(NSString*)screen_name params:(CBGetListMembersParams*)params error:(NSError**)error;
 + (NSString*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
 + (NSString*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
+
+
+//User Is Member of List
++ (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params error:(NSError**)error;
++ (NSString*) isUserMemberOfList:(CBIsUserMemberOfListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) isMemberOfListLoaded:(CBUser*)user error:(NSError*)error;
+
 
 @end

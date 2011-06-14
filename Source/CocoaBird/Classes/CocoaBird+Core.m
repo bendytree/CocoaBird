@@ -115,7 +115,12 @@ static NSString *urlEncode(id object) {
     
     if([method isEqualToString:@"GET"]){
         url = [self appendQueryString:paramsDic toUrl:url];
-        return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:url]];
+        return [ASIHTTPRequest 
+                                       requestWithURL:[NSURL URLWithString:url]
+                                       consumerKey: [CocoaBirdSettings oAuthConsumerKey]
+                                       consumerSecret: [CocoaBirdSettings oAuthConsumerSecret]
+                                       token:[CocoaBirdSettings oAuthToken]
+                                       tokenSecret: [CocoaBirdSettings oAuthTokenSecret]];
     }else{
         ASIFormDataRequest* request = [ASIFormDataRequest 
                                        requestWithURL:[NSURL URLWithString:url]
@@ -141,6 +146,11 @@ static NSString *urlEncode(id object) {
     
     if(!responseObj)
         return nil;
+    
+    if([responseObj respondsToSelector:@selector(valueForKey:)] && [responseObj valueForKey:@"error"]){
+        *error = [NSError errorWithDomain:@"" code:0 userInfo:[NSDictionary dictionaryWithObject:[responseObj valueForKey:@"error"] forKey:@"message"]];
+        return nil;
+    }
     
     if(type == CBTwitterResponseTypeNatural)
         return responseObj;

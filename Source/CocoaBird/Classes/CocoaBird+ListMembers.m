@@ -14,6 +14,10 @@
 @synthesize list_id, slug, owner_id, owner_screen_name, cursor, include_entities, skip_status;
 @end
 
+@implementation CBIsUserMemberOfListParams
+@synthesize list_id, slug, owner_id, owner_screen_name, user_id, screen_name, include_entities, skip_status;
+@end
+
 
 
 @implementation CocoaBird (ListMembers)
@@ -118,5 +122,14 @@
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBListMembers class] delegate:delegate selector:selector];    
 }
 
++ (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/lists/members/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+}
+
++ (NSString*) isUserMemberOfList:(CBIsUserMemberOfListParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/members/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+}
 
 @end

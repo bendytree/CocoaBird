@@ -40,7 +40,14 @@
 {    
     [super viewDidLoad];
     
-    [CocoaBird getListsNow];
+    CBIsUserMemberOfListParams* params = [CBIsUserMemberOfListParams params];
+    params.slug = @"comedians";
+    params.owner_screen_name = @"gregstarling";
+    params.screen_name = @"bendytree";
+    NSError* error = nil;
+    CBUser* user = [CocoaBird isUserMemberOfListNow:params error:&error];
+    NSLog(@"error: %@", error);
+    NSLog(@"name: %@", user.name);
 }
 
 
