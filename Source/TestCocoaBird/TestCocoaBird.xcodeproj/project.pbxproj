@@ -118,6 +118,8 @@
 		BCBEC01C1399945300FB5FA9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBEC01A1399945300FB5FA9 /* MainWindow.xib */; };
 		BCD511AC13A6F57A00EE196E /* CocoaBird+ListMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511AB13A6F57A00EE196E /* CocoaBird+ListMembers.m */; };
 		BCD511B013A6F6A700EE196E /* CBListMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511AF13A6F6A700EE196E /* CBListMembers.m */; };
+		BCD511B313A8250F00EE196E /* CocoaBird+ListSubscribers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B213A8250F00EE196E /* CocoaBird+ListSubscribers.m */; };
+		BCD511B613A8263900EE196E /* CBListSubscribers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B513A8263900EE196E /* CBListSubscribers.m */; };
 		BCE73D3713A2C0F2009A3E3F /* CocoaBird+Users.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */; };
 /* End PBXBuildFile section */
 
@@ -343,6 +345,10 @@
 		BCD511AB13A6F57A00EE196E /* CocoaBird+ListMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+ListMembers.m"; sourceTree = "<group>"; };
 		BCD511AE13A6F6A700EE196E /* CBListMembers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBListMembers.h; sourceTree = "<group>"; };
 		BCD511AF13A6F6A700EE196E /* CBListMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBListMembers.m; sourceTree = "<group>"; };
+		BCD511B113A8250F00EE196E /* CocoaBird+ListSubscribers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+ListSubscribers.h"; sourceTree = "<group>"; };
+		BCD511B213A8250F00EE196E /* CocoaBird+ListSubscribers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+ListSubscribers.m"; sourceTree = "<group>"; };
+		BCD511B413A8263800EE196E /* CBListSubscribers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBListSubscribers.h; sourceTree = "<group>"; };
+		BCD511B513A8263900EE196E /* CBListSubscribers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBListSubscribers.m; sourceTree = "<group>"; };
 		BCE73D3513A2C0F2009A3E3F /* CocoaBird+Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Users.h"; sourceTree = "<group>"; };
 		BCE73D3613A2C0F2009A3E3F /* CocoaBird+Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Users.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,6 +392,8 @@
 				BC3D2BE313A255BD00C56B9C /* CocoaBird+Core.m */,
 				BCD511AA13A6F57A00EE196E /* CocoaBird+ListMembers.h */,
 				BCD511AB13A6F57A00EE196E /* CocoaBird+ListMembers.m */,
+				BCD511B113A8250F00EE196E /* CocoaBird+ListSubscribers.h */,
+				BCD511B213A8250F00EE196E /* CocoaBird+ListSubscribers.m */,
 				BCA3A1A513A58644008F4511 /* CocoaBird+Lists.h */,
 				BCA3A1A413A58642008F4511 /* CocoaBird+Lists.m */,
 				BCA3A19C13A55F09008F4511 /* CocoaBird+LocalTrends.h */,
@@ -563,6 +571,8 @@
 				BCA3A1AB13A5A951008F4511 /* CBList.m */,
 				BCD511AE13A6F6A700EE196E /* CBListMembers.h */,
 				BCD511AF13A6F6A700EE196E /* CBListMembers.m */,
+				BCD511B413A8263800EE196E /* CBListSubscribers.h */,
+				BCD511B513A8263900EE196E /* CBListSubscribers.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -902,6 +912,8 @@
 				BCA3A1AC13A5A953008F4511 /* CBList.m in Sources */,
 				BCD511AC13A6F57A00EE196E /* CocoaBird+ListMembers.m in Sources */,
 				BCD511B013A6F6A700EE196E /* CBListMembers.m in Sources */,
+				BCD511B313A8250F00EE196E /* CocoaBird+ListSubscribers.m in Sources */,
+				BCD511B613A8263900EE196E /* CBListSubscribers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

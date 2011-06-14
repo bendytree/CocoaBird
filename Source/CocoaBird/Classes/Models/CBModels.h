@@ -31,3 +31,4 @@
 #import "CBLists.h"
 #import "CBList.h"
 #import "CBListMembers.h"
+#import "CBListSubscribers.h"
