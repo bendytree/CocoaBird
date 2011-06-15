@@ -125,6 +125,7 @@
 		BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */; };
 		BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */; };
 		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
+		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -363,6 +364,8 @@
 		BCD5130713A83F7900EE196E /* CocoaBird+Friendship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Friendship.h"; sourceTree = "<group>"; };
 		BCD5130913A8451D00EE196E /* CBFriendship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFriendship.h; sourceTree = "<group>"; };
 		BCD5130A13A8451D00EE196E /* CBFriendship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFriendship.m; sourceTree = "<group>"; };
+		BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Favorites.h"; sourceTree = "<group>"; };
+		BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Favorites.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -560,6 +563,8 @@
 				BCD5120913A82B5E00EE196E /* CocoaBird+Core.m */,
 				BCD5130413A82D9C00EE196E /* CocoaBird+DirectMessages.h */,
 				BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */,
+				BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */,
+				BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */,
 				BCD5130713A83F7900EE196E /* CocoaBird+Friendship.h */,
 				BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
@@ -953,6 +958,7 @@
 				BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */,
 				BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */,
 				BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */,
+				BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

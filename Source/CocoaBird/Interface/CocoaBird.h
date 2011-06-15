@@ -19,6 +19,7 @@
 #import "CocoaBird+ListSubscribers.h"
 #import "CocoaBird+DirectMessages.h"
 #import "CocoaBird+Friendship.h"
+#import "CocoaBird+Favorites.h"
 
 #import "CBModels.h"
 
