@@ -16,6 +16,8 @@
 #import "CocoaBird+CancellingRequests.h"
 #import "CocoaBird+ListMembers.h"
 #import "CocoaBird+Lists.h"
+#import "CocoaBird+ListSubscribers.h"
+#import "CocoaBird+DirectMessages.h"
 
 #import "CBModels.h"
 
