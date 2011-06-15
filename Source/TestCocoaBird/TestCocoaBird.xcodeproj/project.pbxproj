@@ -121,6 +121,8 @@
 		BCD512FD13A82B5E00EE196E /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5129313A82B5E00EE196E /* OAToken.m */; };
 		BCD512FE13A82B5E00EE196E /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5129513A82B5E00EE196E /* OATokenManager.m */; };
 		BCD512FF13A82B5E00EE196E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5129913A82B5E00EE196E /* Reachability.m */; };
+		BCD5130213A82C6200EE196E /* CBDirectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130113A82C6200EE196E /* CBDirectMessage.m */; };
+		BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -351,6 +353,10 @@
 		BCD5129613A82B5E00EE196E /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		BCD5129813A82B5E00EE196E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		BCD5129913A82B5E00EE196E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BCD5130013A82C6200EE196E /* CBDirectMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDirectMessage.h; sourceTree = "<group>"; };
+		BCD5130113A82C6200EE196E /* CBDirectMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDirectMessage.m; sourceTree = "<group>"; };
+		BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+DirectMessages.m"; sourceTree = "<group>"; };
+		BCD5130413A82D9C00EE196E /* CocoaBird+DirectMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+DirectMessages.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,12 +451,15 @@
 		BCD511B713A82B5E00EE196E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCD511D213A82B5E00EE196E /* CBModels.h */,
 				BCD511B813A82B5E00EE196E /* CBAccountSettings.h */,
 				BCD511B913A82B5E00EE196E /* CBAccountSettings.m */,
 				BCD511BA13A82B5E00EE196E /* CBBoundingBox.h */,
 				BCD511BB13A82B5E00EE196E /* CBBoundingBox.m */,
 				BCD511BC13A82B5E00EE196E /* CBCoordinates.h */,
 				BCD511BD13A82B5E00EE196E /* CBCoordinates.m */,
+				BCD5130013A82C6200EE196E /* CBDirectMessage.h */,
+				BCD5130113A82C6200EE196E /* CBDirectMessage.m */,
 				BCD511BE13A82B5E00EE196E /* CBEntities.h */,
 				BCD511BF13A82B5E00EE196E /* CBEntities.m */,
 				BCD511C013A82B5E00EE196E /* CBEntity.h */,
@@ -471,7 +480,6 @@
 				BCD511CF13A82B5E00EE196E /* CBMediaSize.m */,
 				BCD511D013A82B5E00EE196E /* CBMediaSizes.h */,
 				BCD511D113A82B5E00EE196E /* CBMediaSizes.m */,
-				BCD511D213A82B5E00EE196E /* CBModels.h */,
 				BCD511D313A82B5E00EE196E /* CBPlace.h */,
 				BCD511D413A82B5E00EE196E /* CBPlace.m */,
 				BCD511D513A82B5E00EE196E /* CBPlaceAttributes.h */,
@@ -542,6 +550,8 @@
 				BCD5120713A82B5E00EE196E /* CocoaBird+CancellingRequests.m */,
 				BCD5120813A82B5E00EE196E /* CocoaBird+Core.h */,
 				BCD5120913A82B5E00EE196E /* CocoaBird+Core.m */,
+				BCD5130413A82D9C00EE196E /* CocoaBird+DirectMessages.h */,
+				BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
 				BCD5120B13A82B5E00EE196E /* CocoaBird+ListMembers.m */,
 				BCD5120C13A82B5E00EE196E /* CocoaBird+Lists.h */,
@@ -929,6 +939,8 @@
 				BCD512FD13A82B5E00EE196E /* OAToken.m in Sources */,
 				BCD512FE13A82B5E00EE196E /* OATokenManager.m in Sources */,
 				BCD512FF13A82B5E00EE196E /* Reachability.m in Sources */,
+				BCD5130213A82C6200EE196E /* CBDirectMessage.m in Sources */,
+				BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

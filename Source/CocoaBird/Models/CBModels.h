@@ -32,3 +32,4 @@
 #import "CBList.h"
 #import "CBListMembers.h"
 #import "CBListSubscribers.h"
+#import "CBDirectMessage.h"
