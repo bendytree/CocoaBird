@@ -39,7 +39,7 @@
 @synthesize list_id, slug, owner_screen_name, owner_id, name, description, mode;
 @end
 
-@implementation CBDestroyListParams
+@implementation CBDeleteListParams
 @synthesize list_id, slug, owner_screen_name, owner_id;
 @end
 
@@ -570,70 +570,70 @@
 }
 
 
-#pragma Destroy List by Id
+#pragma delete List by Id
 
-+ (void) destroyListByIdNow:(int)list_id
++ (void) deleteListByIdNow:(int)list_id
 {
-    [self destroyListByIdNow:list_id error:nil];
+    [self deleteListByIdNow:list_id error:nil];
 }
 
-+ (void) destroyListByIdNow:(int)list_id error:(NSError**)error
++ (void) deleteListByIdNow:(int)list_id error:(NSError**)error
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
     [self processRequestSynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
-+ (NSString*) destroyListById:(int)list_id delegate:(id)delegate selector:(SEL)selector
++ (NSString*) deleteListById:(int)list_id delegate:(id)delegate selector:(SEL)selector
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    
 }
 
 
-#pragma Destroy List by Name & User Id
+#pragma delete List by Name & User Id
 
-+ (void) destroyListByNameNow:(NSString*)slug userId:(int)user_id
++ (void) deleteListByNameNow:(NSString*)slug userId:(int)user_id
 {
-    [self destroyListByNameNow:slug userId:user_id error:nil];
+    [self deleteListByNameNow:slug userId:user_id error:nil];
 }
 
-+ (void) destroyListByNameNow:(NSString*)slug userId:(int)user_id error:(NSError**)error
++ (void) deleteListByNameNow:(NSString*)slug userId:(int)user_id error:(NSError**)error
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
     [self processRequestSynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
-+ (NSString*) destroyListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector
++ (NSString*) deleteListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    
 }
 
 
-#pragma Destroy List by Name & Screen Name
+#pragma delete List by Name & Screen Name
 
-+ (void) destroyListByNameNow:(NSString*)slug screenName:(NSString*)screen_name
++ (void) deleteListByNameNow:(NSString*)slug screenName:(NSString*)screen_name
 {
-    [self destroyListByNameNow:slug screenName:screen_name error:nil];
+    [self deleteListByNameNow:slug screenName:screen_name error:nil];
 }
 
-+ (void) destroyListByNameNow:(NSString*)slug screenName:(NSString*)screen_name error:(NSError**)error
++ (void) deleteListByNameNow:(NSString*)slug screenName:(NSString*)screen_name error:(NSError**)error
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
     [self processRequestSynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"update" params:params type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
-+ (NSString*) destroyListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
++ (NSString*) deleteListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
 {
-    CBDestroyListParams* params = [CBDestroyListParams params];
+    CBDeleteListParams* params = [CBDeleteListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/lists/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    

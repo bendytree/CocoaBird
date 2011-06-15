@@ -66,7 +66,7 @@
 @property (retain) NSString* mode;
 @end
 
-@interface CBDestroyListParams : CBQueryParams {}
+@interface CBDeleteListParams : CBQueryParams {}
 @property (retain) NSNumber* list_id;
 @property (retain) NSString* slug;
 @property (retain) NSString* owner_screen_name;
@@ -188,19 +188,19 @@
 + (CBList*) updateListByNameNow:(NSString*)slug screenName:(NSString*)screen_name params:(CBUpdateListParams*)params error:(NSError**)error;
 + (NSString*) updateListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBUpdateListParams*)params;           // - (void) listUpdated:(CBList*)list error:(NSError*)error;
 
-//Destroy List by Id
-+ (void) destroyListByIdNow:(int)list_id;
-+ (void) destroyListByIdNow:(int)list_id error:(NSError**)error;
-+ (NSString*) destroyListById:(int)list_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listDestroyed:(NSError*)error;
+//Delete List by Id
++ (void) deleteListByIdNow:(int)list_id;
++ (void) deleteListByIdNow:(int)list_id error:(NSError**)error;
++ (NSString*) deleteListById:(int)list_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listDeleted:(NSError*)error;
 
-//Destroy List by Name & User Id
-+ (void) destroyListByNameNow:(NSString*)slug userId:(int)user_id;
-+ (void) destroyListByNameNow:(NSString*)slug userId:(int)user_id error:(NSError**)error;
-+ (NSString*) destroyListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listDestroyed:(NSError*)error;
+//Delete List by Name & User Id
++ (void) deleteListByNameNow:(NSString*)slug userId:(int)user_id;
++ (void) deleteListByNameNow:(NSString*)slug userId:(int)user_id error:(NSError**)error;
++ (NSString*) deleteListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listDeleted:(NSError*)error;
 
-//Destroy List by Name & Screen Name
-+ (void) destroyListByNameNow:(NSString*)slug screenName:(NSString*)screen_name;
-+ (void) destroyListByNameNow:(NSString*)slug screenName:(NSString*)screen_name error:(NSError**)error;
-+ (NSString*) destroyListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) listDestroyed:(NSError*)error;
+//Delete List by Name & Screen Name
++ (void) deleteListByNameNow:(NSString*)slug screenName:(NSString*)screen_name;
++ (void) deleteListByNameNow:(NSString*)slug screenName:(NSString*)screen_name error:(NSError**)error;
++ (NSString*) deleteListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) listDeleted:(NSError*)error;
 
 @end

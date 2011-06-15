@@ -69,10 +69,10 @@
 + (NSString*) updateStatus:(NSString*)status delegate:(id)delegate selector:(SEL)selector;         // - (void) statusLoaded:(CBStatus*)status error:(NSError*)error;
 + (NSString*) updateStatus:(NSString*)status delegate:(id)delegate selector:(SEL)selector params:(CBUpdateStatusParams*)params;
 
-//Destroy Status
-+ (void) destroyStatusNow:(unsigned long long)id;
-+ (void) destroyStatusNow:(unsigned long long)id error:(NSError**)error;
-+ (NSString*) destroyStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusDestroyed:(NSError*)error;
+//Delete Status
++ (void) deleteStatusNow:(unsigned long long)id;
++ (void) deleteStatusNow:(unsigned long long)id error:(NSError**)error;
++ (NSString*) deleteStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) statusDeleted:(NSError*)error;
 
 //Retweet
 + (CBStatus*) retweetNow:(unsigned long long)id;

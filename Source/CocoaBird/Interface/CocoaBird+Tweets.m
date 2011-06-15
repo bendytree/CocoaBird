@@ -101,28 +101,23 @@
 
 
 
-#pragma Destroy Status
+#pragma Delete Status
 
-+ (void) destroyStatusNow:(unsigned long long)id
++ (void) deleteStatusNow:(unsigned long long)id
 {    
-    [self destroyStatusNow:id error:nil];
+    [self deleteStatusNow:id error:nil];
 }
 
-+ (void) destroyStatusNow:(unsigned long long)id error:(NSError**)error
++ (void) deleteStatusNow:(unsigned long long)id error:(NSError**)error
 {
     NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/destroy/%qu.json", id];
     [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
-+ (NSString*) destroyStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
-{
-    return [self getStatus:id delegate:delegate selector:selector params:nil];
-}
-
-+ (NSString*) destroyStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBGetStatusParams*)params
++ (NSString*) deleteStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/destroy/%qu.json", id];
-    return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    
 }
 
 
