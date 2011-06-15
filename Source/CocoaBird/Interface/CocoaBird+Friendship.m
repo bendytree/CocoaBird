@@ -22,6 +22,14 @@
 @synthesize source_id, source_screen_name, target_id, target_screen_name;
 @end
 
+@implementation CBGetFriendIdsParams
+@synthesize user_id, screen_name, cursor;
+@end
+
+@implementation CBGetFollowerIdsParams
+@synthesize user_id, screen_name, cursor;
+@end
+
 
 @implementation CocoaBird (Friendship)
 
@@ -179,6 +187,32 @@
 + (NSString*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/friendships/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendship class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Get Friend Ids
+
++ (NSArray*) getFriendIdsByUserIdNow:(CBGetFriendIdsParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/friends/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendIds class] error:error];
+}
+
++ (NSString*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/friends/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendIds class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Get Follower Ids
+
++ (NSArray*) getFollowerIdsByUserIdNow:(CBGetFollowerIdsParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/followers/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFollowerIds class] error:error];
+}
+
++ (NSString*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/followers/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFollowerIds class] delegate:delegate selector:selector];    
 }
 
 

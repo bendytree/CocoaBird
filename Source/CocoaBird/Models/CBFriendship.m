@@ -26,3 +26,12 @@
 @implementation CBFriendship
 @synthesize relationship;
 @end
+
+@implementation CBFriendIds
+@synthesize ids, previous_cursor, previous_cursor_str, next_cursor, next_cursor_str;
+@end
+
+@implementation CBFollowerIds
+@synthesize ids, previous_cursor, previous_cursor_str, next_cursor, next_cursor_str;
+@end
+

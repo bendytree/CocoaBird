@@ -33,6 +33,18 @@
 @property (retain) NSString* target_screen_name;
 @end
 
+@interface CBGetFriendIdsParams : CBQueryParams {}
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* cursor;
+@end
+
+@interface CBGetFollowerIdsParams : CBQueryParams {}
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* cursor;
+@end
+
 
 @interface CocoaBird (Friendship)
 
@@ -65,6 +77,14 @@
 + (NSString*) getFriendshipFromUserId:(int)source_id to:(int)target_id delegate:(id)delegate selector:(SEL)selector;    // - (void) friendshipLoaded:(CBFriendship*)friendship error:(NSError*)error;
 + (NSString*) getFriendshipFromScreenName:(NSString*)source_screen_name to:(NSString*)target_screen_name delegate:(id)delegate selector:(SEL)selector;
 + (NSString*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector;
+
+//Get Friend Ids
++ (NSArray*) getFriendIdsByUserIdNow:(CBGetFriendIdsParams*)params error:(NSError**)error;
++ (NSString*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
+
+//Get Follower Ids
++ (NSArray*) getFollowerIdsByUserIdNow:(CBGetFollowerIdsParams*)params error:(NSError**)error;
++ (NSString*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
 
 
 @end

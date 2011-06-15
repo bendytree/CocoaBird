@@ -40,4 +40,22 @@
 @property (retain) CBRelationship* relationship;
 @end
 
+@interface CBFriendIds : CBEntity {}
+@property (retain) NSArray* ids;
+@property (retain) NSNumber* previous_cursor;
+@property (retain) NSString* previous_cursor_str;
+@property (retain) NSNumber* next_cursor;
+@property (retain) NSString* next_cursor_str;
+@end
+
+@interface CBFollowerIds : CBEntity {}
+@property (retain) NSArray* ids;
+@property (retain) NSNumber* previous_cursor;
+@property (retain) NSString* previous_cursor_str;
+@property (retain) NSNumber* next_cursor;
+@property (retain) NSString* next_cursor_str;
+@end
+
+
+
 
