@@ -33,3 +33,4 @@
 #import "CBListMembers.h"
 #import "CBListSubscribers.h"
 #import "CBDirectMessage.h"
+#import "CBFriendship.h"

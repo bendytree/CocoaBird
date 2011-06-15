@@ -123,6 +123,8 @@
 		BCD512FF13A82B5E00EE196E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5129913A82B5E00EE196E /* Reachability.m */; };
 		BCD5130213A82C6200EE196E /* CBDirectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130113A82C6200EE196E /* CBDirectMessage.m */; };
 		BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */; };
+		BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */; };
+		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,6 +359,10 @@
 		BCD5130113A82C6200EE196E /* CBDirectMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDirectMessage.m; sourceTree = "<group>"; };
 		BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+DirectMessages.m"; sourceTree = "<group>"; };
 		BCD5130413A82D9C00EE196E /* CocoaBird+DirectMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+DirectMessages.h"; sourceTree = "<group>"; };
+		BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Friendship.m"; sourceTree = "<group>"; };
+		BCD5130713A83F7900EE196E /* CocoaBird+Friendship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Friendship.h"; sourceTree = "<group>"; };
+		BCD5130913A8451D00EE196E /* CBFriendship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFriendship.h; sourceTree = "<group>"; };
+		BCD5130A13A8451D00EE196E /* CBFriendship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFriendship.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,6 +516,8 @@
 				BCD511EE13A82B5E00EE196E /* CBUser.m */,
 				BCD511EF13A82B5E00EE196E /* CBUserMentionEntity.h */,
 				BCD511F013A82B5E00EE196E /* CBUserMentionEntity.m */,
+				BCD5130913A8451D00EE196E /* CBFriendship.h */,
+				BCD5130A13A8451D00EE196E /* CBFriendship.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,6 +560,8 @@
 				BCD5120913A82B5E00EE196E /* CocoaBird+Core.m */,
 				BCD5130413A82D9C00EE196E /* CocoaBird+DirectMessages.h */,
 				BCD5130313A82D9C00EE196E /* CocoaBird+DirectMessages.m */,
+				BCD5130713A83F7900EE196E /* CocoaBird+Friendship.h */,
+				BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
 				BCD5120B13A82B5E00EE196E /* CocoaBird+ListMembers.m */,
 				BCD5120C13A82B5E00EE196E /* CocoaBird+Lists.h */,
@@ -941,6 +951,8 @@
 				BCD512FF13A82B5E00EE196E /* Reachability.m in Sources */,
 				BCD5130213A82C6200EE196E /* CBDirectMessage.m in Sources */,
 				BCD5130513A82D9C00EE196E /* CocoaBird+DirectMessages.m in Sources */,
+				BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */,
+				BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
