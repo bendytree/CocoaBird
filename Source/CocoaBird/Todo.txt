@@ -1,0 +1,34 @@
+
+
+...very simple interfaces for...
+/Block
+/Geo
+/Notifications
+/Spam Reporting
+/Saved Searches
+/Legal
+/Help
+
+
+Search API (one method)
+
+
+
+Intents
+Easy tweet, follow, etc without oauth or anything
+- format the request for them
+- pop up a uiwebview for them
+http://dev.twitter.com/pages/intents
+
+
+
+UIImage for tweet buttons
+
+
+
+use https?
+
+
+fix nsstring* and use context instead for async
+
+

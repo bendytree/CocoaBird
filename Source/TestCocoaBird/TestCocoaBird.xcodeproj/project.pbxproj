@@ -126,6 +126,7 @@
 		BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */; };
 		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
 		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
+		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -366,6 +367,7 @@
 		BCD5130A13A8451D00EE196E /* CBFriendship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFriendship.m; sourceTree = "<group>"; };
 		BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Favorites.h"; sourceTree = "<group>"; };
 		BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Favorites.m"; sourceTree = "<group>"; };
+		BCD5131213A85C0300EE196E /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +454,7 @@
 				BCD511B713A82B5E00EE196E /* Models */,
 				BCD511FF13A82B5E00EE196E /* Interface */,
 				BCD511F113A82B5E00EE196E /* Helpers */,
+				BCD5131213A85C0300EE196E /* Todo.txt */,
 			);
 			name = CocoaBird;
 			path = ../CocoaBird;
@@ -843,6 +846,7 @@
 				BC3D2A351399B2A500C56B9C /* RootController.xib in Resources */,
 				BCD512B913A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.xib in Resources */,
 				BCD512FC13A82B5E00EE196E /* OATestServer.rb in Resources */,
+				BCD5131313A85C0400EE196E /* Todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
