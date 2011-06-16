@@ -134,6 +134,9 @@
 		BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */; };
 		BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */; };
 		BCEB643113A9A97900E8893D /* CBSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643013A9A97900E8893D /* CBSavedSearch.m */; };
+		BCEB643413A9AC7B00E8893D /* CocoaBird+Legal.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */; };
+		BCEB643713A9ACF700E8893D /* CBTermsOfService.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643613A9ACF700E8893D /* CBTermsOfService.m */; };
+		BCEB643A13A9ADC700E8893D /* CBPrivacy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643913A9ADC600E8893D /* CBPrivacy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -389,6 +392,12 @@
 		BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+SavedSearches.m"; sourceTree = "<group>"; };
 		BCEB642F13A9A97900E8893D /* CBSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSavedSearch.h; sourceTree = "<group>"; };
 		BCEB643013A9A97900E8893D /* CBSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSavedSearch.m; sourceTree = "<group>"; };
+		BCEB643213A9AC7B00E8893D /* CocoaBird+Legal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Legal.h"; sourceTree = "<group>"; };
+		BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Legal.m"; sourceTree = "<group>"; };
+		BCEB643513A9ACF700E8893D /* CBTermsOfService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTermsOfService.h; sourceTree = "<group>"; };
+		BCEB643613A9ACF700E8893D /* CBTermsOfService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTermsOfService.m; sourceTree = "<group>"; };
+		BCEB643813A9ADC600E8893D /* CBPrivacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPrivacy.h; sourceTree = "<group>"; };
+		BCEB643913A9ADC600E8893D /* CBPrivacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPrivacy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,6 +558,10 @@
 				BCD511EE13A82B5E00EE196E /* CBUser.m */,
 				BCD511EF13A82B5E00EE196E /* CBUserMentionEntity.h */,
 				BCD511F013A82B5E00EE196E /* CBUserMentionEntity.m */,
+				BCEB643513A9ACF700E8893D /* CBTermsOfService.h */,
+				BCEB643613A9ACF700E8893D /* CBTermsOfService.m */,
+				BCEB643813A9ADC600E8893D /* CBPrivacy.h */,
+				BCEB643913A9ADC600E8893D /* CBPrivacy.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -599,6 +612,8 @@
 				BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */,
 				BC19053D13A9829100274631 /* CocoaBird+Geo.h */,
 				BC19053C13A9829100274631 /* CocoaBird+Geo.m */,
+				BCEB643213A9AC7B00E8893D /* CocoaBird+Legal.h */,
+				BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
 				BCD5120B13A82B5E00EE196E /* CocoaBird+ListMembers.m */,
 				BCD5120C13A82B5E00EE196E /* CocoaBird+Lists.h */,
@@ -1005,6 +1020,9 @@
 				BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */,
 				BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */,
 				BCEB643113A9A97900E8893D /* CBSavedSearch.m in Sources */,
+				BCEB643413A9AC7B00E8893D /* CocoaBird+Legal.m in Sources */,
+				BCEB643713A9ACF700E8893D /* CBTermsOfService.m in Sources */,
+				BCEB643A13A9ADC700E8893D /* CBPrivacy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

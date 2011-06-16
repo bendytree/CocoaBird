@@ -36,3 +36,6 @@
 #import "CBFriendship.h"
 #import "CBGeoSearchResponse.h"
 #import "CBSavedSearch.h"
+#import "CBTermsOfService.h"
+#import "CBPrivacy.h"
+

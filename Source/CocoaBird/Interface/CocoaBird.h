@@ -25,6 +25,7 @@
 #import "CocoaBird+Notification.h"
 #import "CocoaBird+ReportSpam.h"
 #import "CocoaBird+SavedSearches.h"
+#import "CocoaBird+Legal.h"
 
 #import "CBModels.h"
 
