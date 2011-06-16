@@ -9,8 +9,6 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-UIImage for tweet buttons
-
 use https?
 
 fix nsstring* and use context instead for async
@@ -24,5 +22,8 @@ consistent namespacing for models and helpers
 should "Now" be used for syncronous?
 
 should params be first (before delegate)?
+
+wrap uiwebview for custom look of oauth login
+
 
 
