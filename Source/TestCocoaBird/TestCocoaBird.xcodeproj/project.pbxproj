@@ -130,6 +130,7 @@
 		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
 		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
 		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
+		BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -377,6 +378,8 @@
 		BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Favorites.h"; sourceTree = "<group>"; };
 		BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Favorites.m"; sourceTree = "<group>"; };
 		BCD5131213A85C0300EE196E /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		BCEB642213A9A45F00E8893D /* CocoaBird+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Notification.h"; sourceTree = "<group>"; };
+		BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Notification.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +596,8 @@
 				BCD5120F13A82B5E00EE196E /* CocoaBird+ListSubscribers.m */,
 				BCD5121013A82B5E00EE196E /* CocoaBird+LocalTrends.h */,
 				BCD5121113A82B5E00EE196E /* CocoaBird+LocalTrends.m */,
+				BCEB642213A9A45F00E8893D /* CocoaBird+Notification.h */,
+				BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */,
 				BCD5121413A82B5E00EE196E /* CocoaBird+Timeline.h */,
 				BCD5121513A82B5E00EE196E /* CocoaBird+Timeline.m */,
 				BCD5121613A82B5E00EE196E /* CocoaBird+Trends.h */,
@@ -981,6 +986,7 @@
 				BC19053A13A977FE00274631 /* CocoaBird+Block.m in Sources */,
 				BC19053E13A9829100274631 /* CocoaBird+Geo.m in Sources */,
 				BC19054113A984F800274631 /* CBGeoSearchResponse.m in Sources */,
+				BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

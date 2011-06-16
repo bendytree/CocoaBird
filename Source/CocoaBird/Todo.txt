@@ -1,7 +1,6 @@
 
 
 ...very simple interfaces for...
-/Geo
 /Notifications
 /Spam Reporting
 /Saved Searches

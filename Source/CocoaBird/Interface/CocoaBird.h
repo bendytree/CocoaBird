@@ -22,6 +22,7 @@
 #import "CocoaBird+Favorites.h"
 #import "CocoaBird+Block.h"
 #import "CocoaBird+Geo.h"
+#import "CocoaBird+Notification.h"
 
 #import "CBModels.h"
 
