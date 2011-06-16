@@ -1,13 +1,7 @@
 
 
-...very simple interfaces for...
-/Legal
-/Help
-
 
 Search API (one method)
-
-
 
 Intents
 Easy tweet, follow, etc without oauth or anything
@@ -15,24 +9,20 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-
-
 UIImage for tweet buttons
-
-
 
 use https?
 
-
 fix nsstring* and use context instead for async
-
-
 
 widespread serialization
 
-
-
 generic requests with generic responses (for flexibility)
 
+consistent namespacing for models and helpers
+
+should "Now" be used for syncronous?
+
+should params be first (before delegate)?
 
 

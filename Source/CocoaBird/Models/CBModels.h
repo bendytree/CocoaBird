@@ -38,4 +38,6 @@
 #import "CBSavedSearch.h"
 #import "CBTermsOfService.h"
 #import "CBPrivacy.h"
+#import "CBHelpConfiguration.h"
+#import "CBLanguage.h"
 

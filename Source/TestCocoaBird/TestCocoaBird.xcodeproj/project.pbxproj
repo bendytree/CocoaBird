@@ -137,6 +137,9 @@
 		BCEB643413A9AC7B00E8893D /* CocoaBird+Legal.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */; };
 		BCEB643713A9ACF700E8893D /* CBTermsOfService.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643613A9ACF700E8893D /* CBTermsOfService.m */; };
 		BCEB643A13A9ADC700E8893D /* CBPrivacy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643913A9ADC600E8893D /* CBPrivacy.m */; };
+		BCEB643D13A9AF2900E8893D /* CocoaBird+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643C13A9AF2900E8893D /* CocoaBird+Help.m */; };
+		BCEB644013A9B12D00E8893D /* CBHelpConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643F13A9B12D00E8893D /* CBHelpConfiguration.m */; };
+		BCEB644313A9B24600E8893D /* CBLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB644213A9B24600E8893D /* CBLanguage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +401,12 @@
 		BCEB643613A9ACF700E8893D /* CBTermsOfService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTermsOfService.m; sourceTree = "<group>"; };
 		BCEB643813A9ADC600E8893D /* CBPrivacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPrivacy.h; sourceTree = "<group>"; };
 		BCEB643913A9ADC600E8893D /* CBPrivacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPrivacy.m; sourceTree = "<group>"; };
+		BCEB643B13A9AF2800E8893D /* CocoaBird+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Help.h"; sourceTree = "<group>"; };
+		BCEB643C13A9AF2900E8893D /* CocoaBird+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Help.m"; sourceTree = "<group>"; };
+		BCEB643E13A9B12D00E8893D /* CBHelpConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHelpConfiguration.h; sourceTree = "<group>"; };
+		BCEB643F13A9B12D00E8893D /* CBHelpConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHelpConfiguration.m; sourceTree = "<group>"; };
+		BCEB644113A9B24600E8893D /* CBLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLanguage.h; sourceTree = "<group>"; };
+		BCEB644213A9B24600E8893D /* CBLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLanguage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,6 +571,10 @@
 				BCEB643613A9ACF700E8893D /* CBTermsOfService.m */,
 				BCEB643813A9ADC600E8893D /* CBPrivacy.h */,
 				BCEB643913A9ADC600E8893D /* CBPrivacy.m */,
+				BCEB643E13A9B12D00E8893D /* CBHelpConfiguration.h */,
+				BCEB643F13A9B12D00E8893D /* CBHelpConfiguration.m */,
+				BCEB644113A9B24600E8893D /* CBLanguage.h */,
+				BCEB644213A9B24600E8893D /* CBLanguage.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -612,6 +625,8 @@
 				BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */,
 				BC19053D13A9829100274631 /* CocoaBird+Geo.h */,
 				BC19053C13A9829100274631 /* CocoaBird+Geo.m */,
+				BCEB643B13A9AF2800E8893D /* CocoaBird+Help.h */,
+				BCEB643C13A9AF2900E8893D /* CocoaBird+Help.m */,
 				BCEB643213A9AC7B00E8893D /* CocoaBird+Legal.h */,
 				BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
@@ -1023,6 +1038,9 @@
 				BCEB643413A9AC7B00E8893D /* CocoaBird+Legal.m in Sources */,
 				BCEB643713A9ACF700E8893D /* CBTermsOfService.m in Sources */,
 				BCEB643A13A9ADC700E8893D /* CBPrivacy.m in Sources */,
+				BCEB643D13A9AF2900E8893D /* CocoaBird+Help.m in Sources */,
+				BCEB644013A9B12D00E8893D /* CBHelpConfiguration.m in Sources */,
+				BCEB644313A9B24600E8893D /* CBLanguage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
