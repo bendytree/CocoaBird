@@ -35,3 +35,4 @@
 #import "CBDirectMessage.h"
 #import "CBFriendship.h"
 #import "CBGeoSearchResponse.h"
+#import "CBSavedSearch.h"

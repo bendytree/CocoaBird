@@ -132,6 +132,8 @@
 		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
 		BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */; };
 		BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */; };
+		BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */; };
+		BCEB643113A9A97900E8893D /* CBSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB643013A9A97900E8893D /* CBSavedSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -383,6 +385,10 @@
 		BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Notification.m"; sourceTree = "<group>"; };
 		BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+ReportSpam.h"; sourceTree = "<group>"; };
 		BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+ReportSpam.m"; sourceTree = "<group>"; };
+		BCEB642913A9A86A00E8893D /* CocoaBird+SavedSearches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+SavedSearches.h"; sourceTree = "<group>"; };
+		BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+SavedSearches.m"; sourceTree = "<group>"; };
+		BCEB642F13A9A97900E8893D /* CBSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSavedSearch.h; sourceTree = "<group>"; };
+		BCEB643013A9A97900E8893D /* CBSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSavedSearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +527,8 @@
 				BCD511DA13A82B5E00EE196E /* CBRateLimitStatus.m */,
 				BCD511DB13A82B5E00EE196E /* CBRequestData.h */,
 				BCD511DC13A82B5E00EE196E /* CBRequestData.m */,
+				BCEB642F13A9A97900E8893D /* CBSavedSearch.h */,
+				BCEB643013A9A97900E8893D /* CBSavedSearch.m */,
 				BCD511DD13A82B5E00EE196E /* CBSleepTime.h */,
 				BCD511DE13A82B5E00EE196E /* CBSleepTime.m */,
 				BCD511DF13A82B5E00EE196E /* CBStatus.h */,
@@ -603,6 +611,8 @@
 				BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */,
 				BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */,
 				BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */,
+				BCEB642913A9A86A00E8893D /* CocoaBird+SavedSearches.h */,
+				BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */,
 				BCD5121413A82B5E00EE196E /* CocoaBird+Timeline.h */,
 				BCD5121513A82B5E00EE196E /* CocoaBird+Timeline.m */,
 				BCD5121613A82B5E00EE196E /* CocoaBird+Trends.h */,
@@ -993,6 +1003,8 @@
 				BC19054113A984F800274631 /* CBGeoSearchResponse.m in Sources */,
 				BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */,
 				BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */,
+				BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */,
+				BCEB643113A9A97900E8893D /* CBSavedSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
