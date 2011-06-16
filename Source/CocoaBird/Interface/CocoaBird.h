@@ -21,6 +21,7 @@
 #import "CocoaBird+Friendship.h"
 #import "CocoaBird+Favorites.h"
 #import "CocoaBird+Block.h"
+#import "CocoaBird+Geo.h"
 
 #import "CBModels.h"
 

@@ -1,7 +1,6 @@
 
 
 ...very simple interfaces for...
-/Block
 /Geo
 /Notifications
 /Spam Reporting
@@ -30,5 +29,14 @@ use https?
 
 
 fix nsstring* and use context instead for async
+
+
+
+widespread serialization
+
+
+
+generic requests with generic responses (for flexibility)
+
 
 
