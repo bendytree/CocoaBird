@@ -1,7 +1,6 @@
 
 
 ...very simple interfaces for...
-/Notifications
 /Spam Reporting
 /Saved Searches
 /Legal

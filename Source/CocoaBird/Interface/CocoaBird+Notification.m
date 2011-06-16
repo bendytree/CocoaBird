@@ -10,11 +10,11 @@
 #import "CocoaBirdSettings.h"
 
 
-@implementation CBEnableNotificationsParams : CBQueryParams {}
+@implementation CBEnableNotificationsParams
 @synthesize user_id, screen_name, include_entities, skip_status;
 @end
 
-@implementation CBDisableNotificationsParams : CBQueryParams {}
+@implementation CBDisableNotificationsParams
 @synthesize user_id, screen_name, include_entities, skip_status;
 @end
 
