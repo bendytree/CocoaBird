@@ -13,13 +13,16 @@
 @synthesize user_id, screen_name, skip_status, include_entities;
 @end
 
-
 @implementation CBGetUsersParams
 @synthesize user_id, screen_name, skip_status, include_entities;
 @end
 
 @implementation CBSearchUsersParams
 @synthesize q, per_page, page, include_entities, skip_status;
+@end
+
+@implementation CBGetSuggestedUsersParams
+@synthesize lang;
 @end
 
 
@@ -186,6 +189,18 @@
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/search.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
 }
 
+
+#pragma Get Suggested Users 
+
++ (NSArray*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+}
+
++ (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
+}
 
 
 @end

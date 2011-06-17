@@ -18,14 +18,12 @@
 @property (retain) NSNumber* include_entities;
 @end
 
-
 @interface CBGetUsersParams : CBQueryParams {}
 @property (retain) NSString* user_id;           // comma separated list of user ids
 @property (retain) NSString* screen_name;       // comma separated list of screen names
 @property (retain) NSNumber* skip_status;
 @property (retain) NSNumber* include_entities;
 @end
-
 
 @interface CBSearchUsersParams : CBQueryParams {}
 @property (retain) NSString* q;
@@ -35,8 +33,9 @@
 @property (retain) NSNumber* include_entities;
 @end
 
-
-
+@interface CBGetSuggestedUsersParams : CBQueryParams {}
+@property (retain) NSString* lang;
+@end
 
 
 
@@ -77,6 +76,11 @@
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params;
 
-// TODO: suggestions, profile images, contributors (see http://dev.twitter.com/doc/get/users/suggestions)
+// TODO: profile images, contributors (see http://dev.twitter.com/doc/get/users/suggestions)
+
+//Get Suggested Users 
++ (NSArray*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error;
++ (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) suggestedUsersLoaded:(NSArray*)users error:(NSError*)error;
+
 
 @end
