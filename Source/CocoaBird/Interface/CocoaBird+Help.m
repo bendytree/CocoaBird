@@ -17,12 +17,12 @@
 
 + (NSString*) testNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil error:error];
 }
 
 + (NSString*) test:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil delegate:delegate selector:selector];    
 }
 
 
@@ -30,12 +30,12 @@
 
 + (CBHelpConfiguration*) getHelpConfigurationNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] error:error];
 }
 
 + (NSString*) getHelpConfiguration:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] delegate:delegate selector:selector];    
 }
 
 
@@ -43,12 +43,12 @@
 
 + (NSArray*) getLanguagesNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] error:error];
 }
 
 + (NSString*) getLanguages:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] delegate:delegate selector:selector];    
 }
 
 

@@ -44,7 +44,7 @@
 
 + (CBUser*) verifyCredentialsNow:(CBVerifyCredentialsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/verify_credentials.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/verify_credentials.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
 + (NSString*) verifyCredentials:(id)delegate selector:(SEL)selector
@@ -54,7 +54,7 @@
 
 + (NSString*) verifyCredentials:(id)delegate selector:(SEL)selector params:(CBVerifyCredentialsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/verify_credentials.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/verify_credentials.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
 }
 
 
@@ -67,12 +67,12 @@
 
 + (CBRateLimitStatus*) getRateLimitStatusNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/rate_limit_status.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBRateLimitStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/rate_limit_status.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBRateLimitStatus class] error:error];
 }
 
 + (NSString*) getRateLimitStatus:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/rate_limit_status.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBRateLimitStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/rate_limit_status.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBRateLimitStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -90,7 +90,7 @@
 
 + (CBAccountSettings*) getAccountSettingsNow:(CBAccountSettingsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/settings.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBAccountSettings class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/settings.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBAccountSettings class] error:error];
 }
 
 + (NSString*) getAccountSettings:(id)delegate selector:(SEL)selector
@@ -100,7 +100,7 @@
 
 + (NSString*) getAccountSettings:(id)delegate selector:(SEL)selector params:(CBAccountSettingsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/settings.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBAccountSettings class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/settings.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBAccountSettings class] delegate:delegate selector:selector];
 }
 
 
@@ -119,7 +119,7 @@
 
 + (CBUser*) updateProfileNow:(CBUpdateProfileParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/update_profile.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/update_profile.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
 + (NSString*) updateProfile:(id)delegate selector:(SEL)selector
@@ -129,7 +129,7 @@
 
 + (NSString*) updateProfile:(id)delegate selector:(SEL)selector params:(CBUpdateProfileParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/update_profile.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/update_profile.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
 }
 
 
@@ -137,12 +137,12 @@
 
 + (CBAccountTotals*) getAccountTotalsNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] error:error];
 }
 
 + (NSString*) getAccountTotals:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] delegate:delegate selector:selector];
 }
 
 
@@ -150,12 +150,12 @@
 
 + (CBUser*) updateProfileColorsNow:(CBUpdateProfileColorsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
 + (NSString*) updateProfileColors:(CBUpdateProfileColorsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
 }
 
 

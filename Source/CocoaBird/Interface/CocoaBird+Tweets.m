@@ -51,7 +51,7 @@
 
 + (CBStatus*) getStatusNow:(unsigned long long)id params:(CBGetStatusParams*)params error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/show/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/show/%qu.json", id];
     return [self processRequestSynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
 }
 
@@ -62,7 +62,7 @@
 
 + (NSString*) getStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBGetStatusParams*)params
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/show/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/show/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];    
 }
 
@@ -84,7 +84,7 @@
 {
     params = params ? params : [CBUpdateStatusParams params];
     params.status = status;
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/statuses/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
 }
 
 + (NSString*) updateStatus:(NSString*)status delegate:(id)delegate selector:(SEL)selector
@@ -96,7 +96,7 @@
 {
     params = params ? params : [CBUpdateStatusParams params];
     params.status = status;
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/statuses/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -110,13 +110,13 @@
 
 + (void) deleteStatusNow:(unsigned long long)id error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/destroy/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/destroy/%qu.json", id];
     [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
 + (NSString*) deleteStatus:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/destroy/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/destroy/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeVoid class:nil delegate:delegate selector:selector];    
 }
 
@@ -135,7 +135,7 @@
 
 + (CBStatus*) retweetNow:(unsigned long long)id params:(CBRetweetParams*)params error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/retweet/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/retweet/%qu.json", id];
     return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
 }
 
@@ -146,7 +146,7 @@
 
 + (NSString*) retweet:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetParams*)params
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/retweet/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/retweet/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];    
 }
 
@@ -165,7 +165,7 @@
 
 + (NSArray*) getRetweetedByNow:(unsigned long long)id params:(CBRetweetedByParams*)params error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
     return [self processRequestSynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
@@ -176,7 +176,7 @@
 
 + (NSString*) getRetweetedBy:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByParams*)params
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/%qu/retweeted_by.json", id];
     return [self processRequestAsynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
 }
 
@@ -195,7 +195,7 @@
 
 + (NSArray*) getRetweetedByIdsNow:(unsigned long long)id params:(CBRetweetedByIdsParams*)params error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
     return [self processRequestSynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeNatural class:nil error:error];
 }
 
@@ -206,7 +206,7 @@
 
 + (NSString*) getRetweetedByIds:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBRetweetedByIdsParams*)params
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/statuses/%qu/retweeted_by/ids.json", id];
     return [self processRequestAsynchronous:url method:@"GET" params:params type:CBTwitterResponseTypeNatural class:nil delegate:delegate selector:selector];    
 }
 

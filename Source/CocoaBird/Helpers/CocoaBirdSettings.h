@@ -18,6 +18,8 @@
 + (void) assertConsumerKeyAndSecretAreSet;
 + (NSString*) oAuthConsumerKey;
 + (NSString*) oAuthConsumerSecret;
++ (void) setUseSSL:(BOOL)useSSL;
++ (BOOL) useSSL;
 
 //OAuth Tokey/Secret
 + (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname;

@@ -28,6 +28,7 @@
 #import "CocoaBird+Legal.h"
 #import "CocoaBird+Help.h"
 #import "CocoaBird+Search.h"
+#import "CocoaBird+Security.h"
 
 #import "CBModels.h"
 

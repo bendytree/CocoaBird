@@ -39,7 +39,7 @@
 
 + (NSArray*) getDirectMessagesNow:(CBGetDirectMessagesParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/direct_messages.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/direct_messages.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] error:error];
 }
 
 + (NSString*) getDirectMessages:(id)delegate selector:(SEL)selector
@@ -49,7 +49,7 @@
 
 + (NSString*) getDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetDirectMessagesParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/direct_messages.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/direct_messages.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] delegate:delegate selector:selector];
 }
 
 
@@ -67,7 +67,7 @@
 
 + (NSArray*) getSentDirectMessagesNow:(CBGetSentDirectMessagesParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/direct_messages/sent.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/direct_messages/sent.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] error:error];
 }
 
 + (NSString*) getSentDirectMessages:(id)delegate selector:(SEL)selector
@@ -77,7 +77,7 @@
 
 + (NSString*) getSentDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetSentDirectMessagesParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/direct_messages/sent.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/direct_messages/sent.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBDirectMessage class] delegate:delegate selector:selector];
 }
 
 
@@ -116,7 +116,7 @@
 
 + (CBDirectMessage*) sendDirectMessageNow:(CBSendDirectMessageParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/direct_messages/new.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBDirectMessage class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/direct_messages/new.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBDirectMessage class] error:error];
 }
 
 + (NSString*) sendDirectMessage:(NSString*)text toUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -137,7 +137,7 @@
 
 + (NSString*) sendDirectMessage:(id)delegate selector:(SEL)selector params:(CBSendDirectMessageParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/direct_messages/new.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBDirectMessage class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/direct_messages/new.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBDirectMessage class] delegate:delegate selector:selector];
 }
 
 
@@ -150,13 +150,13 @@
 
 + (CBDirectMessage*) deleteDirectMessageNow:(unsigned long long)id error:(NSError**)error
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/direct_messages/destroy/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/direct_messages/destroy/%qu.json", id];
     return [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeVoid class:nil error:error];
 }
 
 + (NSString*) deleteDirectMessage:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
 {
-    NSString* url = [NSString stringWithFormat:@"http://api.twitter.com/1/direct_messages/destroy/%qu.json", id];
+    NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/direct_messages/destroy/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBDirectMessage class] delegate:delegate selector:selector];    
 }
 

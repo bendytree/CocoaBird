@@ -27,12 +27,12 @@
 
 + (CBUser*) enableNotificationsNow:(CBEnableNotificationsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/notifications/follow.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/notifications/follow.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
 + (NSString*) enableNotifications:(CBEnableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/notifications/follow.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/notifications/follow.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 
@@ -40,12 +40,12 @@
 
 + (CBUser*) disableNotificationsNow:(CBDisableNotificationsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/notifications/leave.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/notifications/leave.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
 + (NSString*) disableNotifications:(CBDisableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/notifications/leave.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/notifications/leave.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 

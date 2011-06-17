@@ -16,6 +16,7 @@
 
 static NSString* oAuthConsumerKey = NULL;
 static NSString* oAuthConsumerSecret = NULL;
+static BOOL useSSL = YES;
 
 + (void) setConsumerKey:(NSString*)_key andSecret:(NSString*)_secret
 {
@@ -37,6 +38,16 @@ static NSString* oAuthConsumerSecret = NULL;
 + (NSString*) oAuthConsumerSecret
 {
     return oAuthConsumerSecret;
+}
+
++ (void) setUseSSL:(BOOL)_useSSL
+{
+    useSSL = _useSSL;
+}
+
++ (BOOL) useSSL
+{
+    return useSSL;
 }
 
 

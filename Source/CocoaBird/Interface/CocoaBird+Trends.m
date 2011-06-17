@@ -30,7 +30,7 @@
 
 + (CBTrendsResponse*) getTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
 + (NSString*) getTrends:(id)delegate selector:(SEL)selector
@@ -40,7 +40,7 @@
 
 + (NSString*) getTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
 
 
@@ -58,7 +58,7 @@
 
 + (CBTrendsResponse*) getCurrentTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
 + (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector
@@ -68,7 +68,7 @@
 
 + (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
 
 
@@ -86,7 +86,7 @@
 
 + (CBTrendsResponse*) getDailyTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
 + (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector
@@ -96,7 +96,7 @@
 
 + (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
 
 
@@ -114,7 +114,7 @@
 
 + (CBTrendsResponse*) getWeeklyTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
 + (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector
@@ -124,7 +124,7 @@
 
 + (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
 
 @end

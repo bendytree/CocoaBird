@@ -29,6 +29,7 @@
 		BCC7602313ABF31500144B4C /* CBSuggestedUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602213ABF31500144B4C /* CBSuggestedUsers.m */; };
 		BCC7602613ABF7DB00144B4C /* CBSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602513ABF7DA00144B4C /* CBSearchResults.m */; };
 		BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */; };
+		BCC7602C13ABFEF000144B4C /* CocoaBird+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602B13ABFEF000144B4C /* CocoaBird+Security.m */; };
 		BCD5129A13A82B5E00EE196E /* CBAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B913A82B5E00EE196E /* CBAccountSettings.m */; };
 		BCD5129B13A82B5E00EE196E /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BB13A82B5E00EE196E /* CBBoundingBox.m */; };
 		BCD5129C13A82B5E00EE196E /* CBCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BD13A82B5E00EE196E /* CBCoordinates.m */; };
@@ -183,6 +184,8 @@
 		BCC7602513ABF7DA00144B4C /* CBSearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSearchResults.m; sourceTree = "<group>"; };
 		BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Search.m"; sourceTree = "<group>"; };
 		BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Search.h"; sourceTree = "<group>"; };
+		BCC7602A13ABFEF000144B4C /* CocoaBird+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Security.h"; sourceTree = "<group>"; };
+		BCC7602B13ABFEF000144B4C /* CocoaBird+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Security.m"; sourceTree = "<group>"; };
 		BCD511B813A82B5E00EE196E /* CBAccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountSettings.h; sourceTree = "<group>"; };
 		BCD511B913A82B5E00EE196E /* CBAccountSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountSettings.m; sourceTree = "<group>"; };
 		BCD511BA13A82B5E00EE196E /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
@@ -668,6 +671,8 @@
 				BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */,
 				BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */,
 				BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */,
+				BCC7602A13ABFEF000144B4C /* CocoaBird+Security.h */,
+				BCC7602B13ABFEF000144B4C /* CocoaBird+Security.m */,
 				BCD5121413A82B5E00EE196E /* CocoaBird+Timeline.h */,
 				BCD5121513A82B5E00EE196E /* CocoaBird+Timeline.m */,
 				BCD5121613A82B5E00EE196E /* CocoaBird+Trends.h */,
@@ -1071,6 +1076,7 @@
 				BCC7602313ABF31500144B4C /* CBSuggestedUsers.m in Sources */,
 				BCC7602613ABF7DB00144B4C /* CBSearchResults.m in Sources */,
 				BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */,
+				BCC7602C13ABFEF000144B4C /* CocoaBird+Security.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

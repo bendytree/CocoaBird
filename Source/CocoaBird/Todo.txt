@@ -1,15 +1,11 @@
 
 
 
-Search API (one method)
-
 Intents
 Easy tweet, follow, etc without oauth or anything
 - format the request for them
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
-
-use https?
 
 fix nsstring* and use context instead for async
 
@@ -25,5 +21,5 @@ should params be first (before delegate)?
 
 wrap uiwebview for custom look of oauth login
 
-
+notifications are correct?
 

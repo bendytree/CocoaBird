@@ -111,6 +111,8 @@ static NSString *urlEncode(id object) {
 
 + (ASIFormDataRequest*) buildRequest:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params
 {
+    url = [NSString stringWithFormat:@"%@%@", [CocoaBirdSettings useSSL] ? @"https://" : @"http://", url];
+    
     NSDictionary* paramsDic = [params toDictionary];
     
     if([method isEqualToString:@"GET"]){
