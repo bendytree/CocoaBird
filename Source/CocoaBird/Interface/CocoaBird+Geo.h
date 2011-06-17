@@ -52,23 +52,23 @@
 
 //Search Geo
 + (CBGeoSearchResponse*) searchGeoNow:(CBSearchGeoParams*)params error:(NSError**)error;
-+ (NSString*) searchGeo:(id)delegate selector:(SEL)selector params:(CBSearchGeoParams*)params;    // - (void) geoLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
++ (CBRequestId*) searchGeo:(id)delegate selector:(SEL)selector params:(CBSearchGeoParams*)params;    // - (void) geoLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
 
 //Search for Similar Places
 + (CBGeoSearchResponse*) searchForSimilarPlacesNow:(CBSearchForSimilarPlacesParams*)params error:(NSError**)error;
-+ (NSString*) searchForSimilarPlaces:(id)delegate selector:(SEL)selector params:(CBSearchForSimilarPlacesParams*)params;    // - (void) similarPlacesLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
++ (CBRequestId*) searchForSimilarPlaces:(id)delegate selector:(SEL)selector params:(CBSearchForSimilarPlacesParams*)params;    // - (void) similarPlacesLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
 
 //Reverse Geocode
 + (CBGeoSearchResponse*) reverseGeocodeNow:(CBReverseGeocodeParams*)params error:(NSError**)error;
-+ (NSString*) reverseGeocode:(id)delegate selector:(SEL)selector params:(CBReverseGeocodeParams*)params;    // - (void) reverseGeocodeLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
++ (CBRequestId*) reverseGeocode:(id)delegate selector:(SEL)selector params:(CBReverseGeocodeParams*)params;    // - (void) reverseGeocodeLoaded:(CBGeoSearchResponse*)response error:(NSError*)error;
 
 //Get Place
 + (CBPlace*) getPlaceNow:(NSString*)place_id error:(NSError**)error;
-+ (NSString*) getPlace:(NSString*)place_id delegate:(id)delegate selector:(SEL)selector;    // - (void) placeLoaded:(CBPlace*)place error:(NSError*)error;
++ (CBRequestId*) getPlace:(NSString*)place_id delegate:(id)delegate selector:(SEL)selector;    // - (void) placeLoaded:(CBPlace*)place error:(NSError*)error;
 
 //Create Place
 + (CBPlace*) createPlaceNow:(CBCreatePlaceParams*)params error:(NSError**)error;
-+ (NSString*) createPlace:(CBCreatePlaceParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) placeCreated:(CBPlace*)place error:(NSError*)error;
++ (CBRequestId*) createPlace:(CBCreatePlaceParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) placeCreated:(CBPlace*)place error:(NSError*)error;
 
 @end
 

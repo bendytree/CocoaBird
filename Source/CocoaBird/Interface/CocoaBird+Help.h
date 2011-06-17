@@ -17,15 +17,15 @@
 
 //Test
 + (NSString*) testNow:(NSError**)error;
-+ (NSString*) test:(id)delegate selector:(SEL)selector;    // - (void) testLoaded:(NSString*)result error:(NSError*)error;
++ (CBRequestId*) test:(id)delegate selector:(SEL)selector;    // - (void) testLoaded:(NSString*)result error:(NSError*)error;
 
 //Get Help Configuration
 + (CBHelpConfiguration*) getHelpConfigurationNow:(NSError**)error;
-+ (NSString*) getHelpConfiguration:(id)delegate selector:(SEL)selector;    // - (void) configurationLoaded:(CBHelpConfiguration*)configuration error:(NSError*)error;
++ (CBRequestId*) getHelpConfiguration:(id)delegate selector:(SEL)selector;    // - (void) configurationLoaded:(CBHelpConfiguration*)configuration error:(NSError*)error;
 
 //Get Languages
 + (NSArray*) getLanguagesNow:(NSError**)error;
-+ (NSString*) getLanguages:(id)delegate selector:(SEL)selector;    // - (void) languagesLoaded:(NSArray*)languages error:(NSError*)error;
++ (CBRequestId*) getLanguages:(id)delegate selector:(SEL)selector;    // - (void) languagesLoaded:(NSArray*)languages error:(NSError*)error;
 
 @end
 

@@ -64,21 +64,21 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/friendships/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
-+ (NSString*) followById:(int)user_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) followById:(int)user_id delegate:(id)delegate selector:(SEL)selector
 {
     CBFollowParams* params = [CBFollowParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
     return [self follow:self selector:selector params:params];
 }
 
-+ (NSString*) followByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) followByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
 {
     CBFollowParams* params = [CBFollowParams params];
     params.screen_name = screen_name;
     return [self follow:self selector:selector params:params];
 }
 
-+ (NSString*) follow:(id)delegate selector:(SEL)selector params:(CBFollowParams*)params
++ (CBRequestId*) follow:(id)delegate selector:(SEL)selector params:(CBFollowParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/friendships/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }
@@ -115,21 +115,21 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/friendships/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
-+ (NSString*) unfollowById:(int)user_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) unfollowById:(int)user_id delegate:(id)delegate selector:(SEL)selector
 {
     CBUnfollowParams* params = [CBUnfollowParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
     return [self unfollow:self selector:selector params:params];
 }
 
-+ (NSString*) unfollowByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) unfollowByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
 {
     CBUnfollowParams* params = [CBUnfollowParams params];
     params.screen_name = screen_name;
     return [self unfollow:self selector:selector params:params];
 }
 
-+ (NSString*) unfollow:(id)delegate selector:(SEL)selector params:(CBUnfollowParams*)params
++ (CBRequestId*) unfollow:(id)delegate selector:(SEL)selector params:(CBUnfollowParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/friendships/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }
@@ -168,7 +168,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/friendships/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendship class] error:error];
 }
 
-+ (NSString*) getFriendshipFromUserId:(int)source_id to:(int)target_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFriendshipFromUserId:(int)source_id to:(int)target_id delegate:(id)delegate selector:(SEL)selector
 {
     CBGetFriendshipParams* params = [CBGetFriendshipParams params];
     params.source_id = [NSNumber numberWithInt:source_id];
@@ -176,7 +176,7 @@
     return [self getFriendship:params delegate:delegate selector:selector];
 }
 
-+ (NSString*) getFriendshipFromScreenName:(NSString*)source_screen_name to:(NSString*)target_screen_name delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFriendshipFromScreenName:(NSString*)source_screen_name to:(NSString*)target_screen_name delegate:(id)delegate selector:(SEL)selector
 {
     CBGetFriendshipParams* params = [CBGetFriendshipParams params];
     params.source_screen_name = source_screen_name;
@@ -184,7 +184,7 @@
     return [self getFriendship:params delegate:delegate selector:selector];
 }
 
-+ (NSString*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/friendships/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendship class] delegate:delegate selector:selector];    
 }
@@ -197,7 +197,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/friends/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendIds class] error:error];
 }
 
-+ (NSString*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/friends/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFriendIds class] delegate:delegate selector:selector];    
 }
@@ -210,7 +210,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/followers/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFollowerIds class] error:error];
 }
 
-+ (NSString*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/followers/ids.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBFollowerIds class] delegate:delegate selector:selector];    
 }

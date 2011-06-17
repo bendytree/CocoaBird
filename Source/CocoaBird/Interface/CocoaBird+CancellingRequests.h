@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "CocoaBirdBase.h"
 
+@class CBRequestId;
+
 @interface CocoaBird (CancellingRequests)
 
-+ (void) cancelRequest:(NSString*)requestId;
++ (void) cancelRequest:(CBRequestId*)requestId;
 + (void) cancelAllRequests;
++ (void) cancelAllRequestsForDelegate:(id)delegate;
 
 @end

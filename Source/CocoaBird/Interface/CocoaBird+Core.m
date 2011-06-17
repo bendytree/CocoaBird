@@ -187,7 +187,7 @@ static NSString *urlEncode(id object) {
     return [self processResponse:[request responseString] type:type class:cls error:error];
 }
 
-+ (NSString*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
 {
     ASIFormDataRequest* request = [self buildRequest:url method:method params:params];
     
@@ -198,7 +198,7 @@ static NSString *urlEncode(id object) {
     [request startAsynchronous];
     [request setDelegate:self];
     
-    return id;
+    return [CBRequestId stringWithString:id];
 }
 
 + (void) requestFinished:(ASIHTTPRequest *)request

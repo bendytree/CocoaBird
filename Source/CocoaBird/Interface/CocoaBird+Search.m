@@ -25,7 +25,7 @@
     return [self processRequestSynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSearchResults class] error:error];
 }
 
-+ (NSString*) searchStatuses:(CBSearchStatusesParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) searchStatuses:(CBSearchStatusesParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSearchResults class] delegate:delegate selector:selector];    
 }

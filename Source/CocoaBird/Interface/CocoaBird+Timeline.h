@@ -86,49 +86,49 @@
 + (NSArray*) getPublicTimelineNow;
 + (NSArray*) getPublicTimelineNow:(CBPublicTimelineParams*)params;
 + (NSArray*) getPublicTimelineNow:(CBPublicTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector;           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getPublicTimeline:(id)delegate selector:(SEL)selector params:(CBPublicTimelineParams*)params;
++ (CBRequestId*) getPublicTimeline:(id)delegate selector:(SEL)selector;           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getPublicTimeline:(id)delegate selector:(SEL)selector params:(CBPublicTimelineParams*)params;
 
 //Home Timeline
 + (NSArray*) getHomeTimelineNow;
 + (NSArray*) getHomeTimelineNow:(CBHomeTimelineParams*)params;
 + (NSArray*) getHomeTimelineNow:(CBHomeTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getHomeTimeline:(id)delegate selector:(SEL)selector;           // - (void) homeTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getHomeTimeline:(id)delegate selector:(SEL)selector params:(CBHomeTimelineParams*)params;
++ (CBRequestId*) getHomeTimeline:(id)delegate selector:(SEL)selector;           // - (void) homeTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getHomeTimeline:(id)delegate selector:(SEL)selector params:(CBHomeTimelineParams*)params;
 
 //User Timeline
 + (NSArray*) getUserTimelineNow;
 + (NSArray*) getUserTimelineNow:(CBUserTimelineParams*)params;
 + (NSArray*) getUserTimelineNow:(CBUserTimelineParams*)params error:(NSError**)error;
-+ (NSString*) getUserTimeline:(id)delegate selector:(SEL)selector;           // - (void) userTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getUserTimeline:(id)delegate selector:(SEL)selector params:(CBUserTimelineParams*)params;
++ (CBRequestId*) getUserTimeline:(id)delegate selector:(SEL)selector;           // - (void) userTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getUserTimeline:(id)delegate selector:(SEL)selector params:(CBUserTimelineParams*)params;
 
 //Mentions
 + (NSArray*) getMentionsNow;
 + (NSArray*) getMentionsNow:(CBMentionsParams*)params;
 + (NSArray*) getMentionsNow:(CBMentionsParams*)params error:(NSError**)error;
-+ (NSString*) getMentions:(id)delegate selector:(SEL)selector;           // - (void) mentionsLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getMentions:(id)delegate selector:(SEL)selector params:(CBMentionsParams*)params;
++ (CBRequestId*) getMentions:(id)delegate selector:(SEL)selector;           // - (void) mentionsLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getMentions:(id)delegate selector:(SEL)selector params:(CBMentionsParams*)params;
 
 //Retweeted By Me
 + (NSArray*) getRetweetedByMeNow;
 + (NSArray*) getRetweetedByMeNow:(CBRetweetedByMeParams*)params;
 + (NSArray*) getRetweetedByMeNow:(CBRetweetedByMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetedByMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedByMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetedByMe:(id)delegate selector:(SEL)selector params:(CBRetweetedByMeParams*)params;
++ (CBRequestId*) getRetweetedByMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedByMeLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getRetweetedByMe:(id)delegate selector:(SEL)selector params:(CBRetweetedByMeParams*)params;
 
 //Retweeted To Me
 + (NSArray*) getRetweetedToMeNow;
 + (NSArray*) getRetweetedToMeNow:(CBRetweetedToMeParams*)params;
 + (NSArray*) getRetweetedToMeNow:(CBRetweetedToMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetedToMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedToMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetedToMe:(id)delegate selector:(SEL)selector params:(CBRetweetedToMeParams*)params;
++ (CBRequestId*) getRetweetedToMe:(id)delegate selector:(SEL)selector;           // - (void) retweetedToMeLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getRetweetedToMe:(id)delegate selector:(SEL)selector params:(CBRetweetedToMeParams*)params;
 
 //Retweets Of Me
 + (NSArray*) getRetweetsOfMeNow;
 + (NSArray*) getRetweetsOfMeNow:(CBRetweetsOfMeParams*)params;
 + (NSArray*) getRetweetsOfMeNow:(CBRetweetsOfMeParams*)params error:(NSError**)error;
-+ (NSString*) getRetweetsOfMe:(id)delegate selector:(SEL)selector;           // - (void) retweetsOfMeLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getRetweetsOfMe:(id)delegate selector:(SEL)selector params:(CBRetweetsOfMeParams*)params;
++ (CBRequestId*) getRetweetsOfMe:(id)delegate selector:(SEL)selector;           // - (void) retweetsOfMeLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getRetweetsOfMe:(id)delegate selector:(SEL)selector params:(CBRetweetsOfMeParams*)params;
 
 @end

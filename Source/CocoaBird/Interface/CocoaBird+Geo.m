@@ -37,7 +37,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/geo/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] error:error];
 }
 
-+ (NSString*) searchGeo:(id)delegate selector:(SEL)selector params:(CBSearchGeoParams*)params
++ (CBRequestId*) searchGeo:(id)delegate selector:(SEL)selector params:(CBSearchGeoParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/geo/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] delegate:delegate selector:selector];    
 }
@@ -50,7 +50,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/geo/similar_places.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] error:error];
 }
 
-+ (NSString*) searchForSimilarPlaces:(id)delegate selector:(SEL)selector params:(CBSearchForSimilarPlacesParams*)params
++ (CBRequestId*) searchForSimilarPlaces:(id)delegate selector:(SEL)selector params:(CBSearchForSimilarPlacesParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/geo/similar_places.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] delegate:delegate selector:selector];    
 }
@@ -63,7 +63,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/geo/reverse_geocode.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] error:error];
 }
 
-+ (NSString*) reverseGeocode:(id)delegate selector:(SEL)selector params:(CBReverseGeocodeParams*)params
++ (CBRequestId*) reverseGeocode:(id)delegate selector:(SEL)selector params:(CBReverseGeocodeParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/geo/reverse_geocode.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBGeoSearchResponse class] delegate:delegate selector:selector];    
 }
@@ -77,7 +77,7 @@
     return [self processRequestSynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBPlace class] error:error];
 }
 
-+ (NSString*) getPlace:(NSString*)place_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getPlace:(NSString*)place_id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/geo/id/%@.json", place_id];
     return [self processRequestAsynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBPlace class] delegate:delegate selector:selector];    
@@ -91,7 +91,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/geo/place.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBPlace class] error:error];
 }
 
-+ (NSString*) createPlace:(CBCreatePlaceParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) createPlace:(CBCreatePlaceParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/geo/place.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBPlace class] delegate:delegate selector:selector];       
 }

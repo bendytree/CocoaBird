@@ -61,12 +61,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
-+ (NSString*) getUserById:(int)id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getUserById:(int)id delegate:(id)delegate selector:(SEL)selector
 {
     return [self getUserById:id delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getUserById:(int)id delegate:(id)delegate selector:(SEL)selector params:(CBGetUserParams*)params
++ (CBRequestId*) getUserById:(int)id delegate:(id)delegate selector:(SEL)selector params:(CBGetUserParams*)params
 {
     params = params ? params : [CBGetUserParams params];
     params.user_id = [NSNumber numberWithInt:id];
@@ -93,12 +93,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
-+ (NSString*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
 {
     return [self getUserByScreenName:screen_name delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetUserParams*)params
++ (CBRequestId*) getUserByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetUserParams*)params
 {
     params = params ? params : [CBGetUserParams params];
     params.screen_name = screen_name;
@@ -125,12 +125,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/lookup.json" method:@"POST" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
-+ (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector
 {
     return [self getUsersByIds:user_ids delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
++ (CBRequestId*) getUsersByIds:(NSArray*)user_ids delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
 {
     params = params ? params : [CBGetUsersParams params];
     params.user_id = [user_ids componentsJoinedByString:@","];
@@ -157,12 +157,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/lookup.json" method:@"POST" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
-+ (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector
 {
     return [self getUsersByScreenNames:screen_names delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
++ (CBRequestId*) getUsersByScreenNames:(NSArray*)screen_names delegate:(id)delegate selector:(SEL)selector params:(CBGetUsersParams*)params
 {
     params = params ? params : [CBGetUsersParams params];
     params.screen_name = [screen_names componentsJoinedByString:@","];
@@ -189,12 +189,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/search.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
-+ (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector
 {
     return [self searchUsers:query delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params
++ (CBRequestId*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params
 {
     params = params ? params : [CBSearchUsersParams params];
     params.q = query;
@@ -209,7 +209,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUserCategory class] error:error];
 }
 
-+ (NSString*) getUserCategories:(CBGetUserCategoriesParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getUserCategories:(CBGetUserCategoriesParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUserCategory class] delegate:delegate selector:selector];    
 }
@@ -223,7 +223,7 @@
     return [self processRequestSynchronous:slug method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSuggestedUsers class] error:error];
 }
 
-+ (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     NSString* slug = [NSString stringWithFormat:@"api.twitter.com/1/users/suggestions/%@.json", params.slug];
     return [self processRequestAsynchronous:slug method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSuggestedUsers class] delegate:delegate selector:selector];    
@@ -250,7 +250,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/contributors.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
-+ (NSString*) getContributors:(CBGetContributorsParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getContributors:(CBGetContributorsParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/users/contributors.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
 }
@@ -263,7 +263,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/users/contributees.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
 }
 
-+ (NSString*) getContributees:(CBGetContributeesParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getContributees:(CBGetContributeesParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/users/contributees.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
 }

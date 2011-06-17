@@ -20,7 +20,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil error:error];
 }
 
-+ (NSString*) test:(id)delegate selector:(SEL)selector
++ (CBRequestId*) test:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/help/test.json" method:@"GET" params:nil type:CBTwitterResponseTypeNatural class:nil delegate:delegate selector:selector];    
 }
@@ -33,7 +33,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] error:error];
 }
 
-+ (NSString*) getHelpConfiguration:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getHelpConfiguration:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/help/configuration.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBHelpConfiguration class] delegate:delegate selector:selector];    
 }
@@ -46,7 +46,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] error:error];
 }
 
-+ (NSString*) getLanguages:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getLanguages:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/help/languages.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBLanguage class] delegate:delegate selector:selector];    
 }

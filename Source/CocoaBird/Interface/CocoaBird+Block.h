@@ -44,22 +44,22 @@
 
 //Is Blocking
 + (CBUser*) isBlockingNow:(CBIsBlockingParams*)params error:(NSError**)error;
-+ (NSString*) isBlocking:(id)delegate selector:(SEL)selector params:(CBIsBlockingParams*)params;    // - (void) isBlockingLoaded:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) isBlocking:(id)delegate selector:(SEL)selector params:(CBIsBlockingParams*)params;    // - (void) isBlockingLoaded:(CBUser*)user error:(NSError*)error;
 
 //Get Blocked Users
 + (NSArray*) getBlockedUsersNow:(CBGetBlockedUsersParams*)params error:(NSError**)error;
-+ (NSString*) getBlockedUsers:(id)delegate selector:(SEL)selector params:(CBGetBlockedUsersParams*)params;    // - (void) blockedUsersLoaded:(NSArray*)users error:(NSError*)error;
++ (CBRequestId*) getBlockedUsers:(id)delegate selector:(SEL)selector params:(CBGetBlockedUsersParams*)params;    // - (void) blockedUsersLoaded:(NSArray*)users error:(NSError*)error;
 
 //Get Blocked User Ids
 + (NSArray*) getBlockedUserIdsNow:(NSError**)error;
-+ (NSString*) getBlockedUserIds:(id)delegate selector:(SEL)selector;    // - (void) blockedUserIdsLoaded:(NSArray*)userIds error:(NSError*)error;
++ (CBRequestId*) getBlockedUserIds:(id)delegate selector:(SEL)selector;    // - (void) blockedUserIdsLoaded:(NSArray*)userIds error:(NSError*)error;
 
 //Block User
 + (CBUser*) blockUserNow:(CBBlockUserParams*)params error:(NSError**)error;
-+ (NSString*) blockUser:(id)delegate selector:(SEL)selector params:(CBBlockUserParams*)params;    // - (void) blockCompleted:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) blockUser:(id)delegate selector:(SEL)selector params:(CBBlockUserParams*)params;    // - (void) blockCompleted:(CBUser*)user error:(NSError*)error;
 
 //Unblock User
 + (CBUser*) unblockUserNow:(CBUnblockUserParams*)params error:(NSError**)error;
-+ (NSString*) unblockUser:(id)delegate selector:(SEL)selector params:(CBUnblockUserParams*)params;    // - (void) unblockCompleted:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) unblockUser:(id)delegate selector:(SEL)selector params:(CBUnblockUserParams*)params;    // - (void) unblockCompleted:(CBUser*)user error:(NSError*)error;
 
 @end

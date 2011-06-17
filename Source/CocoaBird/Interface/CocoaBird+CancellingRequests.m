@@ -13,7 +13,7 @@
 @implementation CocoaBird (CancellingRequests)
 
 
-+ (void) cancelRequest:(NSString*)requestId
++ (void) cancelRequest:(CBRequestId*)requestId
 {
     CBRequestData* data = [self getRequestDataAndRemoveById:requestId];
     [data.request clearDelegatesAndCancel];
@@ -28,4 +28,21 @@
     }
 }
 
++ (void) cancelAllRequestsForDelegate:(id)delegate
+{
+    while([[self currentRequests] count] > 0)
+    {
+        CBRequestData* data = [[self currentRequests] objectAtIndex:0];
+        if(data.delegate == delegate)
+        {
+            [self cancelRequest:data.id];
+        }
+    }
+}
+
+
 @end
+
+
+
+

@@ -33,12 +33,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
-+ (NSString*) getTrends:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getTrends:(id)delegate selector:(SEL)selector
 {
     return [self getTrends:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
++ (CBRequestId*) getTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/trends.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
@@ -61,12 +61,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
-+ (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getCurrentTrends:(id)delegate selector:(SEL)selector
 {
     return [self getCurrentTrends:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
++ (CBRequestId*) getCurrentTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/trends/current.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
@@ -89,12 +89,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
-+ (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getDailyTrends:(id)delegate selector:(SEL)selector
 {
     return [self getDailyTrends:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
++ (CBRequestId*) getDailyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/trends/daily.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }
@@ -117,12 +117,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] error:error];
 }
 
-+ (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getWeeklyTrends:(id)delegate selector:(SEL)selector
 {
     return [self getWeeklyTrends:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
++ (CBRequestId*) getWeeklyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/trends/weekly.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBTrendsResponse class] delegate:delegate selector:selector];
 }

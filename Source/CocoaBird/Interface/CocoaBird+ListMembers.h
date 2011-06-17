@@ -65,40 +65,40 @@
 + (CBListMembers*) getListMembersByIdNow:(int)list_id;
 + (CBListMembers*) getListMembersByIdNow:(int)list_id params:(CBGetListMembersParams*)params;
 + (CBListMembers*) getListMembersByIdNow:(int)list_id params:(CBGetListMembersParams*)params error:(NSError**)error;
-+ (NSString*) getListMembersById:(int)list_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
-+ (NSString*) getListMembersById:(int)list_id delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
++ (CBRequestId*) getListMembersById:(int)list_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
++ (CBRequestId*) getListMembersById:(int)list_id delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
 
 //List by Name & User Id
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug userId:(int)user_id;
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug userId:(int)user_id params:(CBGetListMembersParams*)params;
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug userId:(int)user_id params:(CBGetListMembersParams*)params error:(NSError**)error;
-+ (NSString*) getListMembersByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
-+ (NSString*) getListMembersByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
++ (CBRequestId*) getListMembersByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
++ (CBRequestId*) getListMembersByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
 
 //List by Name & Screen Name
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug screenName:(NSString*)screen_name;
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug screenName:(NSString*)screen_name params:(CBGetListMembersParams*)params;
 + (CBListMembers*) getListMembersByNameNow:(NSString*)slug screenName:(NSString*)screen_name params:(CBGetListMembersParams*)params error:(NSError**)error;
-+ (NSString*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
-+ (NSString*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
++ (CBRequestId*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;           // - (void) listMembersLoaded:(CBListMembers*)listMembers error:(NSError*)error;
++ (CBRequestId*) getListMembersByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBGetListMembersParams*)params;
 
 //User Is Member of List
 + (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params;
 + (CBUser*) isUserMemberOfListNow:(CBIsUserMemberOfListParams*)params error:(NSError**)error;
-+ (NSString*) isUserMemberOfList:(CBIsUserMemberOfListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) isMemberOfListLoaded:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) isUserMemberOfList:(CBIsUserMemberOfListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) isMemberOfListLoaded:(CBUser*)user error:(NSError*)error;
 
 //Add Member to List
 + (CBUser*) addMemberToListNow:(CBAddMemberToListParams*)params;
 + (CBUser*) addMemberToListNow:(CBAddMemberToListParams*)params error:(NSError**)error;
-+ (NSString*) addMemberToList:(CBAddMemberToListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) memberWasAdded:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) addMemberToList:(CBAddMemberToListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) memberWasAdded:(CBUser*)user error:(NSError*)error;
 
 //Add Members to List
 + (NSArray*) addMembersToListNow:(CBAddMembersToListParams*)params;
 + (NSArray*) addMembersToListNow:(CBAddMembersToListParams*)params error:(NSError**)error;
-+ (NSString*) addMembersToList:(CBAddMembersToListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) membersWereAdded:(NSArray*)users error:(NSError*)error;
++ (CBRequestId*) addMembersToList:(CBAddMembersToListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) membersWereAdded:(NSArray*)users error:(NSError*)error;
 
 //Remove Member From List
 + (void) removeMemberFromListNow:(CBRemoveMemberFromListParams*)params error:(NSError**)error;
-+ (NSString*) removeMemberFromList:(CBRemoveMemberFromListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) memberRemoved:(NSError*)error;
++ (CBRequestId*) removeMemberFromList:(CBRemoveMemberFromListParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) memberRemoved:(NSError*)error;
 
 @end

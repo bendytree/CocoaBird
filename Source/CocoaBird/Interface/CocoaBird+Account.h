@@ -52,35 +52,35 @@
 + (CBUser*) verifyCredentialsNow;
 + (CBUser*) verifyCredentialsNow:(CBVerifyCredentialsParams*)params;
 + (CBUser*) verifyCredentialsNow:(CBVerifyCredentialsParams*)params error:(NSError**)error;
-+ (NSString*) verifyCredentials:(id)delegate selector:(SEL)selector;           // - (void) credentialsVerified:(CBUser*)user error:(NSError*)error;
-+ (NSString*) verifyCredentials:(id)delegate selector:(SEL)selector params:(CBVerifyCredentialsParams*)params;
++ (CBRequestId*) verifyCredentials:(id)delegate selector:(SEL)selector;           // - (void) credentialsVerified:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) verifyCredentials:(id)delegate selector:(SEL)selector params:(CBVerifyCredentialsParams*)params;
 
 //Rate Limit Status
 + (CBRateLimitStatus*) getRateLimitStatusNow;
 + (CBRateLimitStatus*) getRateLimitStatusNow:(NSError**)error;
-+ (NSString*) getRateLimitStatus:(id)delegate selector:(SEL)selector;           // - (void) rateLimitStatus:(CBRateLimitStatus*)status error:(NSError*)error;
++ (CBRequestId*) getRateLimitStatus:(id)delegate selector:(SEL)selector;           // - (void) rateLimitStatus:(CBRateLimitStatus*)status error:(NSError*)error;
 
 //Settings
 + (CBAccountSettings*) getAccountSettingsNow;
 + (CBAccountSettings*) getAccountSettingsNow:(CBAccountSettingsParams*)params;
 + (CBAccountSettings*) getAccountSettingsNow:(CBAccountSettingsParams*)params error:(NSError**)error;
-+ (NSString*) getAccountSettings:(id)delegate selector:(SEL)selector;           // - (void) accountSettingsLoaded:(CBAccountSettings*)settings error:(NSError*)error;
-+ (NSString*) getAccountSettings:(id)delegate selector:(SEL)selector params:(CBAccountSettingsParams*)params;
++ (CBRequestId*) getAccountSettings:(id)delegate selector:(SEL)selector;           // - (void) accountSettingsLoaded:(CBAccountSettings*)settings error:(NSError*)error;
++ (CBRequestId*) getAccountSettings:(id)delegate selector:(SEL)selector params:(CBAccountSettingsParams*)params;
 
 //Update Profile
 + (CBUser*) updateProfileNow;
 + (CBUser*) updateProfileNow:(CBUpdateProfileParams*)params;
 + (CBUser*) updateProfileNow:(CBUpdateProfileParams*)params error:(NSError**)error;
-+ (NSString*) updateProfile:(id)delegate selector:(SEL)selector;           // - (void) profileUpdated:(CBUser*)user error:(NSError*)error;
-+ (NSString*) updateProfile:(id)delegate selector:(SEL)selector params:(CBUpdateProfileParams*)params;
++ (CBRequestId*) updateProfile:(id)delegate selector:(SEL)selector;           // - (void) profileUpdated:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) updateProfile:(id)delegate selector:(SEL)selector params:(CBUpdateProfileParams*)params;
 
 //Get Totals
 + (CBAccountTotals*) getAccountTotalsNow:(NSError**)error;
-+ (NSString*) getAccountTotals:(id)delegate selector:(SEL)selector;           // - (void) totalsLoaded:(CBAccountTotals*)totals error:(NSError*)error;
++ (CBRequestId*) getAccountTotals:(id)delegate selector:(SEL)selector;           // - (void) totalsLoaded:(CBAccountTotals*)totals error:(NSError*)error;
 
 //Update Profile Colors
 + (CBUser*) updateProfileColorsNow:(CBUpdateProfileColorsParams*)params error:(NSError**)error;
-+ (NSString*) updateProfileColors:(CBUpdateProfileColorsParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) updateProfileColors:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) updateProfileColors:(CBUpdateProfileColorsParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) updateProfileColors:(CBUser*)user error:(NSError*)error;
 
 // TODO: update profile image, background 
 

@@ -29,7 +29,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBSavedSearch class] error:error];
 }
 
-+ (NSString*) getSavedSearches:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getSavedSearches:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
@@ -43,7 +43,7 @@
     return [self processRequestSynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
 }
 
-+ (NSString*) getSavedSearch:(int)search_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getSavedSearch:(int)search_id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/show/%i.json", search_id];
     return [self processRequestAsynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    
@@ -57,7 +57,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
 }
 
-+ (NSString*) createSavedSearch:(NSString*)query delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) createSavedSearch:(NSString*)query delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
@@ -71,7 +71,7 @@
     return [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
 }
 
-+ (NSString*) deleteSavedSearch:(id)search_id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) deleteSavedSearch:(id)search_id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/destroy/%i.json", search_id];
     return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    

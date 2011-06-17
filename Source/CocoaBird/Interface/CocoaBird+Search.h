@@ -32,7 +32,7 @@
 
 //Search Statuses 
 + (CBSearchResults*) searchStatusesNow:(CBSearchStatusesParams*)params error:(NSError**)error;
-+ (NSString*) searchStatuses:(CBSearchStatusesParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) searchLoaded:(CBSearchResults*)results error:(NSError*)error;
++ (CBRequestId*) searchStatuses:(CBSearchStatusesParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) searchLoaded:(CBSearchResults*)results error:(NSError*)error;
 
 @end
 

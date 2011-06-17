@@ -31,11 +31,11 @@
 
 //Enable Notifications
 + (CBUser*) enableNotificationsNow:(CBEnableNotificationsParams*)params error:(NSError**)error;
-+ (NSString*) enableNotifications:(CBEnableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) notificationsEnabled:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) enableNotifications:(CBEnableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) notificationsEnabled:(CBUser*)user error:(NSError*)error;
 
 //Disable Notifications
 + (CBUser*) disableNotificationsNow:(CBDisableNotificationsParams*)params error:(NSError**)error;
-+ (NSString*) disableNotifications:(CBDisableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) notificationsDisabled:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) disableNotifications:(CBDisableNotificationsParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) notificationsDisabled:(CBUser*)user error:(NSError*)error;
 
 @end
 

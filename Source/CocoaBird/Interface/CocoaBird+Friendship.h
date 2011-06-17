@@ -54,9 +54,9 @@
 + (CBUser*) followByScreenNameNow:(NSString*)screen_name;
 + (CBUser*) followByScreenNameNow:(NSString*)screen_name error:(NSError**)error;
 + (CBUser*) followNow:(CBFollowParams*)params error:(NSError**)error;
-+ (NSString*) followById:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) followComplete:(CBUser*)user error:(NSError*)error;
-+ (NSString*) followByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
-+ (NSString*) follow:(id)delegate selector:(SEL)selector params:(CBFollowParams*)params;
++ (CBRequestId*) followById:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) followComplete:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) followByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) follow:(id)delegate selector:(SEL)selector params:(CBFollowParams*)params;
 
 //Unfollow
 + (CBUser*) unfollowByIdNow:(int)user_id;
@@ -64,9 +64,9 @@
 + (CBUser*) unfollowByScreenNameNow:(NSString*)screen_name;
 + (CBUser*) unfollowByScreenNameNow:(NSString*)screen_name error:(NSError**)error;
 + (CBUser*) unfollowNow:(CBUnfollowParams*)params error:(NSError**)error;
-+ (NSString*) unfollowById:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) unfollowComplete:(CBUser*)user error:(NSError*)error;
-+ (NSString*) unfollowByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
-+ (NSString*) unfollow:(id)delegate selector:(SEL)selector params:(CBUnfollowParams*)params;
++ (CBRequestId*) unfollowById:(int)user_id delegate:(id)delegate selector:(SEL)selector;           // - (void) unfollowComplete:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) unfollowByScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) unfollow:(id)delegate selector:(SEL)selector params:(CBUnfollowParams*)params;
 
 //Get Friendship
 + (CBFriendship*) getFriendshipFromUserIdNow:(int)source_id to:(int)target_id;
@@ -74,17 +74,17 @@
 + (CBFriendship*) getFriendshipFromScreenNameNow:(NSString*)source_screen_name to:(NSString*)target_screen_name;
 + (CBFriendship*) getFriendshipFromScreenNameNow:(NSString*)source_screen_name to:(NSString*)target_screen_name error:(NSError**)error;
 + (CBFriendship*) getFriendshipNow:(CBGetFriendshipParams*)params error:(NSError**)error;
-+ (NSString*) getFriendshipFromUserId:(int)source_id to:(int)target_id delegate:(id)delegate selector:(SEL)selector;    // - (void) friendshipLoaded:(CBFriendship*)friendship error:(NSError*)error;
-+ (NSString*) getFriendshipFromScreenName:(NSString*)source_screen_name to:(NSString*)target_screen_name delegate:(id)delegate selector:(SEL)selector;
-+ (NSString*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) getFriendshipFromUserId:(int)source_id to:(int)target_id delegate:(id)delegate selector:(SEL)selector;    // - (void) friendshipLoaded:(CBFriendship*)friendship error:(NSError*)error;
++ (CBRequestId*) getFriendshipFromScreenName:(NSString*)source_screen_name to:(NSString*)target_screen_name delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) getFriendship:(CBGetFriendshipParams*)params delegate:(id)delegate selector:(SEL)selector;
 
 //Get Friend Ids
 + (NSArray*) getFriendIdsByUserIdNow:(CBGetFriendIdsParams*)params error:(NSError**)error;
-+ (NSString*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) getFriendIdsByUserId:(CBGetFriendIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
 
 //Get Follower Ids
 + (NSArray*) getFollowerIdsByUserIdNow:(CBGetFollowerIdsParams*)params error:(NSError**)error;
-+ (NSString*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) getFollowerIdsByUserId:(CBGetFollowerIdsParams*)params delegate:(id)delegate selector:(SEL)selector;
 
 
 @end

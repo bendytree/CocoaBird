@@ -25,7 +25,7 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/report_spam.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
 }
 
-+ (NSString*) reportSpam:(CBReportSpamParams*)params delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) reportSpam:(CBReportSpamParams*)params delegate:(id)delegate selector:(SEL)selector
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/report_spam.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
 }

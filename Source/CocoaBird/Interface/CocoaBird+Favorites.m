@@ -42,12 +42,12 @@
     return [self processRequestSynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
 }
 
-+ (NSString*) getFavorites:(id)delegate selector:(SEL)selector
++ (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector
 {
     return [self getFavorites:delegate selector:selector params:nil];
 }
 
-+ (NSString*) getFavorites:(id)delegate selector:(SEL)selector params:(CBGetFavoritesParams*)params
++ (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector params:(CBGetFavoritesParams*)params
 {
     return [self processRequestAsynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
 }
@@ -71,12 +71,12 @@
     return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
 }
 
-+ (NSString*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
 {
     return [self createFavorite:id delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBCreateFavoriteParams*)params
++ (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBCreateFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/create/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];
@@ -101,12 +101,12 @@
     return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
 }
 
-+ (NSString*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
++ (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
 {
     return [self deleteFavorite:id delegate:delegate selector:selector params:nil];
 }
 
-+ (NSString*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBDeleteFavoriteParams*)params
++ (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBDeleteFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/destroy/%qu.json", id];
     return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];

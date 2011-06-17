@@ -38,22 +38,22 @@
 + (NSArray*) getFavoritesNow;
 + (NSArray*) getFavoritesNow:(CBGetFavoritesParams*)params;
 + (NSArray*) getFavoritesNow:(CBGetFavoritesParams*)params error:(NSError**)error;
-+ (NSString*) getFavorites:(id)delegate selector:(SEL)selector;           // - (void) favoritesLoaded:(NSArray*)statuses error:(NSError*)error;
-+ (NSString*) getFavorites:(id)delegate selector:(SEL)selector params:(CBGetFavoritesParams*)params;
++ (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector;           // - (void) favoritesLoaded:(NSArray*)statuses error:(NSError*)error;
++ (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector params:(CBGetFavoritesParams*)params;
 
 //Create Favorite
 + (CBStatus*) createFavoriteNow:(unsigned long long)id;
 + (CBStatus*) createFavoriteNow:(unsigned long long)id error:(NSError**)error;
 + (CBStatus*) createFavoriteNow:(unsigned long long)id error:(NSError**)error params:(CBCreateFavoriteParams*)params;
-+ (NSString*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) favoriteCreated:(CBStatus*)status error:(NSError*)error;
-+ (NSString*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBCreateFavoriteParams*)params;
++ (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) favoriteCreated:(CBStatus*)status error:(NSError*)error;
++ (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBCreateFavoriteParams*)params;
 
 //Delete Favorite
 + (CBStatus*) deleteFavoriteNow:(unsigned long long)id;
 + (CBStatus*) deleteFavoriteNow:(unsigned long long)id error:(NSError**)error;
 + (CBStatus*) deleteFavoriteNow:(unsigned long long)id error:(NSError**)error params:(CBDeleteFavoriteParams*)params;
-+ (NSString*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) favoriteDeleted:(CBStatus*)status error:(NSError*)error;
-+ (NSString*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBDeleteFavoriteParams*)params;
++ (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) favoriteDeleted:(CBStatus*)status error:(NSError*)error;
++ (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBDeleteFavoriteParams*)params;
 
 @end
 

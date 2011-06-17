@@ -20,11 +20,11 @@
 
 //Get Terms of Service
 + (CBTermsOfService*) getTermsOfServiceNow:(NSError**)error;
-+ (NSString*) getTermsOfService:(id)delegate selector:(SEL)selector;    // - (void) termsLoaded:(CBTermsOfService*)tos error:(NSError*)error;
++ (CBRequestId*) getTermsOfService:(id)delegate selector:(SEL)selector;    // - (void) termsLoaded:(CBTermsOfService*)tos error:(NSError*)error;
 
 //Get Privacy
 + (CBPrivacy*) getPrivacyNow:(CBGetPrivacyParams*)params error:(NSError**)error;
-+ (NSString*) getPrivacy:(CBGetPrivacyParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) privacyLoaded:(CBPrivacy*)privacy error:(NSError*)error;
++ (CBRequestId*) getPrivacy:(CBGetPrivacyParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) privacyLoaded:(CBPrivacy*)privacy error:(NSError*)error;
 
 @end
 

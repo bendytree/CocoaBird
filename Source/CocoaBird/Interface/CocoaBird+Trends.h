@@ -23,29 +23,29 @@
 + (CBTrendsResponse*) getTrendsNow;
 + (CBTrendsResponse*) getTrendsNow:(CBGetTrendsParams*)params;
 + (CBTrendsResponse*) getTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error;
-+ (NSString*) getTrends:(id)delegate selector:(SEL)selector;         // - (void) trendsLoaded:(CBTrendsResponse*)trends error:(NSError*)error;
-+ (NSString*) getTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
++ (CBRequestId*) getTrends:(id)delegate selector:(SEL)selector;         // - (void) trendsLoaded:(CBTrendsResponse*)trends error:(NSError*)error;
++ (CBRequestId*) getTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
 
 //Current Trends
 + (CBTrendsResponse*) getCurrentTrendsNow;
 + (CBTrendsResponse*) getCurrentTrendsNow:(CBGetTrendsParams*)params;
 + (CBTrendsResponse*) getCurrentTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error;
-+ (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector;         // - (void) currentTrendsLoaded:(CBTrendsResponse*)currentTrends error:(NSError*)error;
-+ (NSString*) getCurrentTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
++ (CBRequestId*) getCurrentTrends:(id)delegate selector:(SEL)selector;         // - (void) currentTrendsLoaded:(CBTrendsResponse*)currentTrends error:(NSError*)error;
++ (CBRequestId*) getCurrentTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
 
 //Daily Trends
 + (CBTrendsResponse*) getDailyTrendsNow;
 + (CBTrendsResponse*) getDailyTrendsNow:(CBGetTrendsParams*)params;
 + (CBTrendsResponse*) getDailyTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error;
-+ (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector;         // - (void) dailyTrendsLoaded:(CBTrendsResponse*)dailyTrends error:(NSError*)error;
-+ (NSString*) getDailyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
++ (CBRequestId*) getDailyTrends:(id)delegate selector:(SEL)selector;         // - (void) dailyTrendsLoaded:(CBTrendsResponse*)dailyTrends error:(NSError*)error;
++ (CBRequestId*) getDailyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
 
 //Weekly Trends
 + (CBTrendsResponse*) getWeeklyTrendsNow;
 + (CBTrendsResponse*) getWeeklyTrendsNow:(CBGetTrendsParams*)params;
 + (CBTrendsResponse*) getWeeklyTrendsNow:(CBGetTrendsParams*)params error:(NSError**)error;
-+ (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector;         // - (void) weeklyTrendsLoaded:(CBTrendsResponse*)weeklyTrends error:(NSError*)error;
-+ (NSString*) getWeeklyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
++ (CBRequestId*) getWeeklyTrends:(id)delegate selector:(SEL)selector;         // - (void) weeklyTrendsLoaded:(CBTrendsResponse*)weeklyTrends error:(NSError*)error;
++ (CBRequestId*) getWeeklyTrends:(id)delegate selector:(SEL)selector params:(CBGetTrendsParams*)params;
 
 @end
 

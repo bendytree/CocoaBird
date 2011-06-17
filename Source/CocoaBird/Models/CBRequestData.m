@@ -13,7 +13,7 @@
 
 @synthesize id, request, type, class, delegate, selector;
 
-- (id) initWithId:(NSString*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector
+- (id) initWithId:(CBRequestId*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector
 {
     self = [super init];
     if (self) {

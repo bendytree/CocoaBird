@@ -24,7 +24,7 @@
 
 //Report Spam
 + (CBUser*) reportSpamNow:(CBReportSpamParams*)params error:(NSError**)error;
-+ (NSString*) reportSpam:(CBReportSpamParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) spamReported:(CBUser*)user error:(NSError*)error;
++ (CBRequestId*) reportSpam:(CBReportSpamParams*)params delegate:(id)delegate selector:(SEL)selector;    // - (void) spamReported:(CBUser*)user error:(NSError*)error;
 
 @end
 

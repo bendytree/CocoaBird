@@ -45,15 +45,15 @@
 + (NSArray*) getDirectMessagesNow;
 + (NSArray*) getDirectMessagesNow:(CBGetDirectMessagesParams*)params;
 + (NSArray*) getDirectMessagesNow:(CBGetDirectMessagesParams*)params error:(NSError**)error;
-+ (NSString*) getDirectMessages:(id)delegate selector:(SEL)selector;           // - (void) directMessagesLoaded:(NSArray*)directMessages error:(NSError*)error;
-+ (NSString*) getDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetDirectMessagesParams*)params;
++ (CBRequestId*) getDirectMessages:(id)delegate selector:(SEL)selector;           // - (void) directMessagesLoaded:(NSArray*)directMessages error:(NSError*)error;
++ (CBRequestId*) getDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetDirectMessagesParams*)params;
 
 //Sent Direct Messages
 + (NSArray*) getSentDirectMessagesNow;
 + (NSArray*) getSentDirectMessagesNow:(CBGetSentDirectMessagesParams*)params;
 + (NSArray*) getSentDirectMessagesNow:(CBGetSentDirectMessagesParams*)params error:(NSError**)error;
-+ (NSString*) getSentDirectMessages:(id)delegate selector:(SEL)selector;           // - (void) sentDirectMessagesLoaded:(NSArray*)directMessages error:(NSError*)error;
-+ (NSString*) getSentDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetSentDirectMessagesParams*)params;
++ (CBRequestId*) getSentDirectMessages:(id)delegate selector:(SEL)selector;           // - (void) sentDirectMessagesLoaded:(NSArray*)directMessages error:(NSError*)error;
++ (CBRequestId*) getSentDirectMessages:(id)delegate selector:(SEL)selector params:(CBGetSentDirectMessagesParams*)params;
 
 //Send Direct Message
 + (CBDirectMessage*) sendDirectMessageNow:(NSString*)text toUserId:(int)user_id;
@@ -62,13 +62,13 @@
 + (CBDirectMessage*) sendDirectMessageNow:(NSString*)text toScreenName:(NSString*)screen_name error:(NSError**)error;
 + (CBDirectMessage*) sendDirectMessageNow:(CBSendDirectMessageParams*)params;
 + (CBDirectMessage*) sendDirectMessageNow:(CBSendDirectMessageParams*)params error:(NSError**)error;
-+ (NSString*) sendDirectMessage:(NSString*)text toUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector;
-+ (NSString*) sendDirectMessage:(NSString*)text toScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
-+ (NSString*) sendDirectMessage:(id)delegate selector:(SEL)selector params:(CBSendDirectMessageParams*)params;           // - (void) directMessageSent:(CBDirectMessage*)directMessage error:(NSError*)error;
++ (CBRequestId*) sendDirectMessage:(NSString*)text toUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) sendDirectMessage:(NSString*)text toScreenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) sendDirectMessage:(id)delegate selector:(SEL)selector params:(CBSendDirectMessageParams*)params;           // - (void) directMessageSent:(CBDirectMessage*)directMessage error:(NSError*)error;
 
 //Delete Direct Message
 + (CBDirectMessage*) deleteDirectMessageNow:(unsigned long long)id;
 + (CBDirectMessage*) deleteDirectMessageNow:(unsigned long long)id error:(NSError**)error;
-+ (NSString*) deleteDirectMessage:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) directMessageDeleted:(CBDirectMessage*)directMessage error:(NSError*)error;
++ (CBRequestId*) deleteDirectMessage:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector;           // - (void) directMessageDeleted:(CBDirectMessage*)directMessage error:(NSError*)error;
 
 @end

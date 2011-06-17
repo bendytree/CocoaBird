@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CocoaBird.h"
 
-@class ASIFormDataRequest;
+@class ASIFormDataRequest, CBRequestId;
 
 @interface CBRequestData : NSObject {
     
@@ -17,7 +17,7 @@
 
 - (id) initWithId:(NSString*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector;
 
-@property (retain) NSString* id;
+@property (retain) CBRequestId* id;
 @property (retain) ASIFormDataRequest* request;
 @property (assign) CBTwitterResponseType type;
 @property (retain) Class class;

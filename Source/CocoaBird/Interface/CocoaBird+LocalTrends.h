@@ -22,13 +22,13 @@
 + (NSArray*) getTrendLocationsNow;
 + (NSArray*) getTrendLocationsNow:(CBTrendLocationsParams*)params;
 + (NSArray*) getTrendLocationsNow:(CBTrendLocationsParams*)params error:(NSError**)error;
-+ (NSString*) getTrendLocations:(id)delegate selector:(SEL)selector;         // - (void) trendLocationsLoaded:(NSArray*)trendLocations error:(NSError*)error;
-+ (NSString*) getTrendLocations:(id)delegate selector:(SEL)selector params:(CBTrendLocationsParams*)params;
++ (CBRequestId*) getTrendLocations:(id)delegate selector:(SEL)selector;         // - (void) trendLocationsLoaded:(NSArray*)trendLocations error:(NSError*)error;
++ (CBRequestId*) getTrendLocations:(id)delegate selector:(SEL)selector params:(CBTrendLocationsParams*)params;
 
 //Trend Locations
 + (NSArray*) getTrendsForLocationNow:(int)woeid;
 + (NSArray*) getTrendsForLocationNow:(int)woeid error:(NSError**)error;
-+ (NSString*) getTrendsForLocation:(int)woeid delegate:(id)delegate selector:(SEL)selector;         // - (void) trendsForLocationLoaded:(NSArray*)trends error:(NSError*)error;
++ (CBRequestId*) getTrendsForLocation:(int)woeid delegate:(id)delegate selector:(SEL)selector;         // - (void) trendsForLocationLoaded:(NSArray*)trends error:(NSError*)error;
 
 @end
 

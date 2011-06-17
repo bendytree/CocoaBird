@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CBQueryParams.h"
 #import "CocoaBirdBase.h"
+#import "CBRequestId.h"
 
 @class CBRequestData;
 
@@ -24,7 +25,7 @@ typedef enum {
 
 //Processing Requests
 + (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error;
-+ (NSString*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
++ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
 + (CBRequestData*) getRequestDataAndRemoveById:(NSString*)requestId;
 + (NSMutableArray*) currentRequests;
 
