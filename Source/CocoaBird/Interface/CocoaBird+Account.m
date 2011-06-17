@@ -21,6 +21,11 @@
 @synthesize name, url, location, description, skip_status, include_entities;
 @end
 
+@implementation CBUpdateProfileColorsParams
+@synthesize profile_background_color, profile_text_color, profile_link_color, profile_sidebar_fill_color,
+            profile_sidebar_border_color, skip_status, include_entities;
+@end
+
 
 @implementation CocoaBird (Account)
 
@@ -126,6 +131,33 @@
 {
     return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/update_profile.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
 }
+
+
+#pragma Get Totals
+
++ (CBAccountTotals*) getAccountTotalsNow:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] error:error];
+}
+
++ (NSString*) getAccountTotals:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/totals.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBAccountTotals class] delegate:delegate selector:selector];
+}
+
+
+#pragma Update Profile Colors
+
++ (CBUser*) updateProfileColorsNow:(CBUpdateProfileColorsParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+}
+
++ (NSString*) updateProfileColors:(CBUpdateProfileColorsParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/account/update_profile_colors.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];
+}
+
 
 
 @end

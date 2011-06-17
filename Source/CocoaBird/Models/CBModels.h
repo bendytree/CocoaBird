@@ -40,4 +40,6 @@
 #import "CBPrivacy.h"
 #import "CBHelpConfiguration.h"
 #import "CBLanguage.h"
+#import "CBAccountTotals.h"
+#import "CBAccountSettings.h"
 

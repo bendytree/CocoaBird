@@ -24,6 +24,7 @@
 		BCBEC0161399945300FB5FA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0151399945300FB5FA9 /* main.m */; };
 		BCBEC0191399945300FB5FA9 /* TestCocoaBirdAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */; };
 		BCBEC01C1399945300FB5FA9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBEC01A1399945300FB5FA9 /* MainWindow.xib */; };
+		BCC7601C13ABA3C400144B4C /* CBAccountTotals.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7601B13ABA3C400144B4C /* CBAccountTotals.m */; };
 		BCD5129A13A82B5E00EE196E /* CBAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B913A82B5E00EE196E /* CBAccountSettings.m */; };
 		BCD5129B13A82B5E00EE196E /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BB13A82B5E00EE196E /* CBBoundingBox.m */; };
 		BCD5129C13A82B5E00EE196E /* CBCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BD13A82B5E00EE196E /* CBCoordinates.m */; };
@@ -168,6 +169,8 @@
 		BCBEC0171399945300FB5FA9 /* TestCocoaBirdAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCocoaBirdAppDelegate.h; sourceTree = "<group>"; };
 		BCBEC0181399945300FB5FA9 /* TestCocoaBirdAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCocoaBirdAppDelegate.m; sourceTree = "<group>"; };
 		BCBEC01B1399945300FB5FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		BCC7601A13ABA3C400144B4C /* CBAccountTotals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountTotals.h; sourceTree = "<group>"; };
+		BCC7601B13ABA3C400144B4C /* CBAccountTotals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountTotals.m; sourceTree = "<group>"; };
 		BCD511B813A82B5E00EE196E /* CBAccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountSettings.h; sourceTree = "<group>"; };
 		BCD511B913A82B5E00EE196E /* CBAccountSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountSettings.m; sourceTree = "<group>"; };
 		BCD511BA13A82B5E00EE196E /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 				BCEB643F13A9B12D00E8893D /* CBHelpConfiguration.m */,
 				BCEB644113A9B24600E8893D /* CBLanguage.h */,
 				BCEB644213A9B24600E8893D /* CBLanguage.m */,
+				BCC7601A13ABA3C400144B4C /* CBAccountTotals.h */,
+				BCC7601B13ABA3C400144B4C /* CBAccountTotals.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1041,6 +1046,7 @@
 				BCEB643D13A9AF2900E8893D /* CocoaBird+Help.m in Sources */,
 				BCEB644013A9B12D00E8893D /* CBHelpConfiguration.m in Sources */,
 				BCEB644313A9B24600E8893D /* CBLanguage.m in Sources */,
+				BCC7601C13ABA3C400144B4C /* CBAccountTotals.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

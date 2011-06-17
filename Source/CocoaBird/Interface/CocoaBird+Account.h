@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CocoaBirdBase.h"
+#import "CocoaBird.h"
 #import "CocoaBird+Core.h"
+#import "CBModels.h"
 
-#import "CBUser.h"
-#import "CBRateLimitStatus.h"
-#import "CBAccountSettings.h"
 
 @interface CBVerifyCredentialsParams : CBQueryParams {}
 @property (retain) NSNumber* skip_status;
@@ -33,6 +31,16 @@
 @property (retain) NSString* url;
 @property (retain) NSString* location;
 @property (retain) NSString* description;
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
+@end
+
+@interface CBUpdateProfileColorsParams : CBQueryParams {}
+@property (retain) NSString* profile_background_color;
+@property (retain) NSString* profile_text_color;
+@property (retain) NSString* profile_link_color;
+@property (retain) NSString* profile_sidebar_fill_color;
+@property (retain) NSString* profile_sidebar_border_color;
 @property (retain) NSNumber* skip_status;
 @property (retain) NSNumber* include_entities;
 @end
@@ -66,7 +74,15 @@
 + (NSString*) updateProfile:(id)delegate selector:(SEL)selector;           // - (void) profileUpdated:(CBUser*)user error:(NSError*)error;
 + (NSString*) updateProfile:(id)delegate selector:(SEL)selector params:(CBUpdateProfileParams*)params;
 
-// TODO: totals, update profile image, color, background 
+//Get Totals
++ (CBAccountTotals*) getAccountTotalsNow:(NSError**)error;
++ (NSString*) getAccountTotals:(id)delegate selector:(SEL)selector;           // - (void) totalsLoaded:(CBAccountTotals*)totals error:(NSError*)error;
+
+//Update Profile Colors
++ (CBUser*) updateProfileColorsNow:(CBUpdateProfileColorsParams*)params error:(NSError**)error;
++ (NSString*) updateProfileColors:(CBUpdateProfileColorsParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) updateProfileColors:(CBUser*)user error:(NSError*)error;
+
+// TODO: update profile image, background 
 
 @end
 
