@@ -31,6 +31,7 @@
 		BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */; };
 		BCC7602C13ABFEF000144B4C /* CocoaBird+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602B13ABFEF000144B4C /* CocoaBird+Security.m */; };
 		BCC7602F13AC136F00144B4C /* CBRequestId.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602E13AC136F00144B4C /* CBRequestId.m */; };
+		BCC7603213AC1AA500144B4C /* CocoaBird+RequestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7603113AC1AA200144B4C /* CocoaBird+RequestContext.m */; };
 		BCD5129A13A82B5E00EE196E /* CBAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B913A82B5E00EE196E /* CBAccountSettings.m */; };
 		BCD5129B13A82B5E00EE196E /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BB13A82B5E00EE196E /* CBBoundingBox.m */; };
 		BCD5129C13A82B5E00EE196E /* CBCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BD13A82B5E00EE196E /* CBCoordinates.m */; };
@@ -187,8 +188,10 @@
 		BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Search.h"; sourceTree = "<group>"; };
 		BCC7602A13ABFEF000144B4C /* CocoaBird+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Security.h"; sourceTree = "<group>"; };
 		BCC7602B13ABFEF000144B4C /* CocoaBird+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Security.m"; sourceTree = "<group>"; };
-		BCC7602D13AC136E00144B4C /* CBRequestId.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBRequestId.h; sourceTree = "<group>"; };
+		BCC7602D13AC136E00144B4C /* CBRequestId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequestId.h; sourceTree = "<group>"; };
 		BCC7602E13AC136F00144B4C /* CBRequestId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestId.m; sourceTree = "<group>"; };
+		BCC7603013AC1AA100144B4C /* CocoaBird+RequestContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+RequestContext.h"; sourceTree = "<group>"; };
+		BCC7603113AC1AA200144B4C /* CocoaBird+RequestContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+RequestContext.m"; sourceTree = "<group>"; };
 		BCD511B813A82B5E00EE196E /* CBAccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountSettings.h; sourceTree = "<group>"; };
 		BCD511B913A82B5E00EE196E /* CBAccountSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountSettings.m; sourceTree = "<group>"; };
 		BCD511BA13A82B5E00EE196E /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
@@ -672,6 +675,8 @@
 				BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */,
 				BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */,
 				BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */,
+				BCC7603013AC1AA100144B4C /* CocoaBird+RequestContext.h */,
+				BCC7603113AC1AA200144B4C /* CocoaBird+RequestContext.m */,
 				BCEB642913A9A86A00E8893D /* CocoaBird+SavedSearches.h */,
 				BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */,
 				BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */,
@@ -1083,6 +1088,7 @@
 				BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */,
 				BCC7602C13ABFEF000144B4C /* CocoaBird+Security.m in Sources */,
 				BCC7602F13AC136F00144B4C /* CBRequestId.m in Sources */,
+				BCC7603213AC1AA500144B4C /* CocoaBird+RequestContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

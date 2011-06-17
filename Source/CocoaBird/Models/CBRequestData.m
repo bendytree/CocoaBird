@@ -11,7 +11,7 @@
 
 @implementation CBRequestData
 
-@synthesize id, request, type, class, delegate, selector;
+@synthesize id, request, type, class, delegate, selector, context;
 
 - (id) initWithId:(CBRequestId*)_id request:(ASIFormDataRequest*)_request type:(CBTwitterResponseType)_type class:(Class)_class delegate:(id)_delegate selector:(SEL)_selector
 {
@@ -27,6 +27,26 @@
         
     }
     return self;
+}
+
+- (void) fireDelegateWithResult:(id)result error:(NSError*)error
+{
+    if(!self.delegate || !self.selector) return;
+    
+    NSInvocation* invo = [NSInvocation invocationWithMethodSignature:[self.delegate methodSignatureForSelector:self.selector]];
+    [invo setTarget:self.delegate];
+    [invo setSelector:self.selector];
+    
+    if(self.type == CBTwitterResponseTypeVoid){
+        [invo setArgument:error atIndex:3];
+        [invo setArgument:self.context atIndex:4];
+    }else{
+        [invo setArgument:result atIndex:2];
+        [invo setArgument:error atIndex:3];
+        [invo setArgument:self.context atIndex:4];
+    }
+    
+    [invo invoke];
 }
 
 - (void)dealloc {

@@ -23,5 +23,8 @@
 @property (retain) Class class;
 @property (assign) id delegate;
 @property (assign) SEL selector;
+@property (retain) id context;
+
+- (void) fireDelegateWithResult:(id)result error:(NSError*)error;
 
 @end

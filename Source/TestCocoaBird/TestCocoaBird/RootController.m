@@ -39,7 +39,6 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
-
     
     CBRemoveMemberFromListParams* params = [CBRemoveMemberFromListParams params];
     params.slug = @"test";

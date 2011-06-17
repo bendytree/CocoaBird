@@ -1,13 +1,10 @@
 
 
-
 Intents
 Easy tweet, follow, etc without oauth or anything
 - format the request for them
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
-
-fix nsstring* and use context instead for async
 
 widespread serialization
 

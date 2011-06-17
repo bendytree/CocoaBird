@@ -19,6 +19,17 @@
 
 #pragma Request API Helpers
 
+static NSMutableArray* _contexts = NULL;
++ (NSMutableArray*) contexts
+{
+    @synchronized(self)
+    {
+        if(_contexts == NULL)
+            _contexts = [[NSMutableArray alloc] init];
+    }
+    return _contexts;
+}
+
 static NSMutableArray* _currentRequests = NULL;
 + (NSMutableArray*) currentRequests
 {
@@ -190,10 +201,16 @@ static NSString *urlEncode(id object) {
 + (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
 {
     ASIFormDataRequest* request = [self buildRequest:url method:method params:params];
-    
     NSString* id = [CocoaBird getGuid];
+    
     CBRequestData* data = [[[CBRequestData alloc] initWithId:id request:request type:type class:cls delegate:delegate selector:selector] autorelease];
     [[self currentRequests] addObject:data];
+    
+    if([[self contexts] count])
+    {
+        data.context = [[self contexts] lastObject];
+        [[self contexts] removeLastObject];
+    }
     
     [request startAsynchronous];
     [request setDelegate:self];
@@ -207,12 +224,8 @@ static NSString *urlEncode(id object) {
     CBRequestData* data = [self getRequestDataAndRemove:request];    
     NSError* error = nil;
     id result = [self processResponse:[request responseString] type:data.type class:data.class error:&error];
-    
-    if(data.type == CBTwitterResponseTypeVoid){
-        [data.delegate performSelector:data.selector withObject:error];
-    }else{
-        [data.delegate performSelector:data.selector withObject:result withObject:error];
-    }
+        
+    [data fireDelegateWithResult:result error:error];
 }
 
 + (void) requestFailed:(ASIHTTPRequest *)request
@@ -220,8 +233,21 @@ static NSString *urlEncode(id object) {
     NSLog(@"requestFailed:");
     CBRequestData* data = [self getRequestDataAndRemove:request];
     NSError* error = [request error];
-    [data.delegate performSelector:data.selector withObject:nil withObject:error];
+    
+    [data fireDelegateWithResult:nil error:error];
+}
+
+
+#pragma Context
+
++ (void) pushRequestContext:(id)context
+{
+    [[self contexts] addObject:context];
 }
 
 
 @end
+
+
+
+

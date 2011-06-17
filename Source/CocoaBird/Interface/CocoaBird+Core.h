@@ -29,5 +29,8 @@ typedef enum {
 + (CBRequestData*) getRequestDataAndRemoveById:(NSString*)requestId;
 + (NSMutableArray*) currentRequests;
 
+//Context
++ (void) pushRequestContext:(id)context;
+
 @end
 
