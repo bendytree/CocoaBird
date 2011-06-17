@@ -21,8 +21,20 @@
 @synthesize q, per_page, page, include_entities, skip_status;
 @end
 
-@implementation CBGetSuggestedUsersParams
+@implementation CBGetUserCategoriesParams
 @synthesize lang;
+@end
+
+@implementation CBGetSuggestedUsersParams
+@synthesize lang, slug;
+@end
+
+@implementation CBGetContributorsParams
+@synthesize user_id, screen_name, skip_status, include_entities;
+@end
+
+@implementation CBGetContributeesParams
+@synthesize user_id, screen_name, skip_status, include_entities;
 @end
 
 
@@ -190,16 +202,70 @@
 }
 
 
+#pragma Get User Categories
+
++ (NSArray*) getUserCategoriesNow:(CBGetUserCategoriesParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUserCategory class] error:error];
+}
+
++ (NSString*) getUserCategories:(CBGetUserCategoriesParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUserCategory class] delegate:delegate selector:selector];    
+}
+
+
 #pragma Get Suggested Users 
 
-+ (NSArray*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error
++ (CBSuggestedUsers*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+    NSString* slug = [NSString stringWithFormat:@"http://api.twitter.com/1/users/suggestions/%@.json", params.slug];
+    return [self processRequestSynchronous:slug method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSuggestedUsers class] error:error];
 }
 
 + (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/suggestions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
+    NSString* slug = [NSString stringWithFormat:@"http://api.twitter.com/1/users/suggestions/%@.json", params.slug];
+    return [self processRequestAsynchronous:slug method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSuggestedUsers class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Profile Image
+
++ (NSString*) buildProfileImageUrl:(NSString*)screen_name
+{
+    return [NSString stringWithFormat:@"http://api.twitter.com/1/users/profile_image/%@.json", screen_name];
+}
+
++ (NSString*) buildProfileImageUrl:(NSString*)screen_name size:(NSString*)size
+{
+    return [NSString stringWithFormat:@"http://api.twitter.com/1/users/profile_image/%@.json?size=%@", screen_name, size];
+}
+
+
+#pragma Get Contributors 
+
++ (NSArray*) getContributorsNow:(CBGetContributorsParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/contributors.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+}
+
++ (NSString*) getContributors:(CBGetContributorsParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/contributors.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
+}
+
+
+#pragma Get Contributees 
+
++ (NSArray*) getContributeesNow:(CBGetContributeesParams*)params error:(NSError**)error
+{
+    return [self processRequestSynchronous:@"http://api.twitter.com/1/users/contributees.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+}
+
++ (NSString*) getContributees:(CBGetContributeesParams*)params delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:@"http://api.twitter.com/1/users/contributees.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 

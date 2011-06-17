@@ -11,6 +11,9 @@
 #import "CocoaBird+Core.h"
 
 
+@class CBSuggestedUsers;
+
+
 @interface CBGetUserParams : CBQueryParams {}
 @property (retain) NSNumber* user_id;
 @property (retain) NSString* screen_name;
@@ -33,8 +36,27 @@
 @property (retain) NSNumber* include_entities;
 @end
 
-@interface CBGetSuggestedUsersParams : CBQueryParams {}
+@interface CBGetUserCategoriesParams : CBQueryParams {}
 @property (retain) NSString* lang;
+@end
+
+@interface CBGetSuggestedUsersParams : CBQueryParams {}
+@property (retain) NSString* slug;
+@property (retain) NSString* lang;
+@end
+
+@interface CBGetContributorsParams : CBQueryParams {}
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
+@end
+
+@interface CBGetContributeesParams : CBQueryParams {}
+@property (retain) NSNumber* user_id;
+@property (retain) NSString* screen_name;
+@property (retain) NSNumber* skip_status;
+@property (retain) NSNumber* include_entities;
 @end
 
 
@@ -76,11 +98,25 @@
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector;           // - (void) usersLoaded:(NSArray*)users error:(NSError*)error;
 + (NSString*) searchUsers:(NSString*)query delegate:(id)delegate selector:(SEL)selector params:(CBSearchUsersParams*)params;
 
-// TODO: profile images, contributors (see http://dev.twitter.com/doc/get/users/suggestions)
+//Get User Categories
++ (NSArray*) getUserCategoriesNow:(CBGetUserCategoriesParams*)params error:(NSError**)error;
++ (NSString*) getUserCategories:(CBGetUserCategoriesParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) userCategoriesLoaded:(NSArray*)userCategories error:(NSError*)error;
 
 //Get Suggested Users 
-+ (NSArray*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error;
-+ (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) suggestedUsersLoaded:(NSArray*)users error:(NSError*)error;
++ (CBSuggestedUsers*) getSuggestedUsersNow:(CBGetSuggestedUsersParams*)params error:(NSError**)error;
++ (NSString*) getSuggestedUsers:(CBGetSuggestedUsersParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) suggestedUsersLoaded:(CBSuggestedUsers*)response error:(NSError*)error;
+
+//Profile Image
++ (NSString*) buildProfileImageUrl:(NSString*)screen_name;
++ (NSString*) buildProfileImageUrl:(NSString*)screen_name size:(NSString*)size;
+
+//Get Contributors 
++ (NSArray*) getContributorsNow:(CBGetContributorsParams*)params error:(NSError**)error;
++ (NSString*) getContributors:(CBGetContributorsParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) contributorsLoaded:(NSArray*)users error:(NSError*)error;
+
+//Get Contributees 
++ (NSArray*) getContributeesNow:(CBGetContributeesParams*)params error:(NSError**)error;
++ (NSString*) getContributees:(CBGetContributeesParams*)params delegate:(id)delegate selector:(SEL)selector;           // - (void) contributeesLoaded:(NSArray*)users error:(NSError*)error;
 
 
 @end

@@ -42,4 +42,6 @@
 #import "CBLanguage.h"
 #import "CBAccountTotals.h"
 #import "CBAccountSettings.h"
+#import "CBUserCategory.h"
+#import "CBSuggestedUsers.h"
 

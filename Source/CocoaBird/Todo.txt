@@ -3,8 +3,6 @@
 
 Search API (one method)
 
-Todos?
-
 Intents
 Easy tweet, follow, etc without oauth or anything
 - format the request for them
