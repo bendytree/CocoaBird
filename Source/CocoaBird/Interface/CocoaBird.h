@@ -27,6 +27,7 @@
 #import "CocoaBird+SavedSearches.h"
 #import "CocoaBird+Legal.h"
 #import "CocoaBird+Help.h"
+#import "CocoaBird+Search.h"
 
 #import "CBModels.h"
 

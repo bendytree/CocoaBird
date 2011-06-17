@@ -27,6 +27,8 @@
 		BCC7601C13ABA3C400144B4C /* CBAccountTotals.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7601B13ABA3C400144B4C /* CBAccountTotals.m */; };
 		BCC7602013ABEDF600144B4C /* CBUserCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7601F13ABEDF500144B4C /* CBUserCategory.m */; };
 		BCC7602313ABF31500144B4C /* CBSuggestedUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602213ABF31500144B4C /* CBSuggestedUsers.m */; };
+		BCC7602613ABF7DB00144B4C /* CBSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602513ABF7DA00144B4C /* CBSearchResults.m */; };
+		BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */; };
 		BCD5129A13A82B5E00EE196E /* CBAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511B913A82B5E00EE196E /* CBAccountSettings.m */; };
 		BCD5129B13A82B5E00EE196E /* CBBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BB13A82B5E00EE196E /* CBBoundingBox.m */; };
 		BCD5129C13A82B5E00EE196E /* CBCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511BD13A82B5E00EE196E /* CBCoordinates.m */; };
@@ -177,6 +179,10 @@
 		BCC7601F13ABEDF500144B4C /* CBUserCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUserCategory.m; sourceTree = "<group>"; };
 		BCC7602113ABF31500144B4C /* CBSuggestedUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSuggestedUsers.h; sourceTree = "<group>"; };
 		BCC7602213ABF31500144B4C /* CBSuggestedUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSuggestedUsers.m; sourceTree = "<group>"; };
+		BCC7602413ABF7DA00144B4C /* CBSearchResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSearchResults.h; sourceTree = "<group>"; };
+		BCC7602513ABF7DA00144B4C /* CBSearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSearchResults.m; sourceTree = "<group>"; };
+		BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Search.m"; sourceTree = "<group>"; };
+		BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Search.h"; sourceTree = "<group>"; };
 		BCD511B813A82B5E00EE196E /* CBAccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountSettings.h; sourceTree = "<group>"; };
 		BCD511B913A82B5E00EE196E /* CBAccountSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountSettings.m; sourceTree = "<group>"; };
 		BCD511BA13A82B5E00EE196E /* CBBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoundingBox.h; sourceTree = "<group>"; };
@@ -590,6 +596,8 @@
 				BCC7601F13ABEDF500144B4C /* CBUserCategory.m */,
 				BCC7602113ABF31500144B4C /* CBSuggestedUsers.h */,
 				BCC7602213ABF31500144B4C /* CBSuggestedUsers.m */,
+				BCC7602413ABF7DA00144B4C /* CBSearchResults.h */,
+				BCC7602513ABF7DA00144B4C /* CBSearchResults.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -658,6 +666,8 @@
 				BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */,
 				BCEB642913A9A86A00E8893D /* CocoaBird+SavedSearches.h */,
 				BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */,
+				BCC7602813ABFA7000144B4C /* CocoaBird+Search.h */,
+				BCC7602713ABFA7000144B4C /* CocoaBird+Search.m */,
 				BCD5121413A82B5E00EE196E /* CocoaBird+Timeline.h */,
 				BCD5121513A82B5E00EE196E /* CocoaBird+Timeline.m */,
 				BCD5121613A82B5E00EE196E /* CocoaBird+Trends.h */,
@@ -1059,6 +1069,8 @@
 				BCC7601C13ABA3C400144B4C /* CBAccountTotals.m in Sources */,
 				BCC7602013ABEDF600144B4C /* CBUserCategory.m in Sources */,
 				BCC7602313ABF31500144B4C /* CBSuggestedUsers.m in Sources */,
+				BCC7602613ABF7DB00144B4C /* CBSearchResults.m in Sources */,
+				BCC7602913ABFA7000144B4C /* CocoaBird+Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

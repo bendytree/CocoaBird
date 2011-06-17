@@ -44,4 +44,5 @@
 #import "CBAccountSettings.h"
 #import "CBUserCategory.h"
 #import "CBSuggestedUsers.h"
+#import "CBSearchResults.h"
 
