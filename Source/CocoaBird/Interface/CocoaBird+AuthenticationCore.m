@@ -22,20 +22,15 @@ static NSMutableDictionary* _loginDelegates = NULL;
     return _loginDelegates;
 }
 
-+ (void) notifyDelegatesWithObject:(id)obj1 withObject:(id)obj2
++ (void) sendClosedNotification:(CocoaBirdLoginResult)result error:(NSError*)error
 {
     for(NSValue* v in [self loginDelegates]){
         NSObject* delegate = [v pointerValue];
         SEL selector = NSSelectorFromString([[self loginDelegates] objectForKey:v]);
         if([delegate respondsToSelector:selector]){
-            [delegate performSelector:selector withObject:obj1 withObject:obj2];
+            [delegate performSelector:selector withObject:(id)result withObject:error];
         }
     }
-}
-
-+ (void) sendClosedNotification:(CocoaBirdLoginResult)result error:(NSError*)error
-{
-    [self notifyDelegatesWithObject:@"" withObject:@""];
 }
 
 @end

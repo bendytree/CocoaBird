@@ -39,14 +39,11 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
-    
-    CBRemoveMemberFromListParams* params = [CBRemoveMemberFromListParams params];
-    params.slug = @"test";
-    params.owner_screen_name = @"crookedwoody";
-    params.screen_name = @"bendytree";
-    NSError* error = nil;
-    [CocoaBird removeMemberFromListNow:params error:&error];
-    NSLog(@"error: %@", error);
+}
+
+- (void) test:(int)i
+{
+    NSLog(@"got it: %i", i);
 }
 
 
