@@ -33,12 +33,12 @@
 
 + (CBUser*) isBlockingNow:(CBIsBlockingParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/exist.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/exist.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] error:error];
 }
 
 + (CBRequestId*) isBlocking:(id)delegate selector:(SEL)selector params:(CBIsBlockingParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/exist.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/exist.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 
@@ -46,12 +46,12 @@
 
 + (NSArray*) getBlockedUsersNow:(CBGetBlockedUsersParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/blocking.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/blocking.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] error:error];
 }
 
 + (CBRequestId*) getBlockedUsers:(id)delegate selector:(SEL)selector params:(CBGetBlockedUsersParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/blocking.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/blocking.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 
@@ -72,12 +72,12 @@
 
 + (CBUser*) blockUserNow:(CBBlockUserParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/create.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] error:error];
 }
 
 + (CBRequestId*) blockUser:(id)delegate selector:(SEL)selector params:(CBBlockUserParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/create.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 
@@ -85,12 +85,12 @@
 
 + (CBUser*) unblockUserNow:(CBUnblockUserParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/blocks/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] error:error];
 }
 
 + (CBRequestId*) unblockUser:(id)delegate selector:(SEL)selector params:(CBUnblockUserParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBUser class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/blocks/destroy.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBUser class] delegate:delegate selector:selector];    
 }
 
 

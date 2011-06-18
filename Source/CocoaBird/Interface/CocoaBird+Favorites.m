@@ -39,7 +39,7 @@
 
 + (NSArray*) getFavoritesNow:(CBGetFavoritesParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector
@@ -49,7 +49,7 @@
 
 + (CBRequestId*) getFavorites:(id)delegate selector:(SEL)selector params:(CBGetFavoritesParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/favorites.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -68,7 +68,7 @@
 + (CBStatus*) createFavoriteNow:(unsigned long long)id error:(NSError**)error params:(CBCreateFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/create/%qu.json", id];
-    return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
@@ -79,7 +79,7 @@
 + (CBRequestId*) createFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBCreateFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/create/%qu.json", id];
-    return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -98,7 +98,7 @@
 + (CBStatus*) deleteFavoriteNow:(unsigned long long)id error:(NSError**)error params:(CBDeleteFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/destroy/%qu.json", id];
-    return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector
@@ -109,7 +109,7 @@
 + (CBRequestId*) deleteFavorite:(unsigned long long)id delegate:(id)delegate selector:(SEL)selector params:(CBDeleteFavoriteParams*)params
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/favorites/destroy/%qu.json", id];
-    return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:url method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 

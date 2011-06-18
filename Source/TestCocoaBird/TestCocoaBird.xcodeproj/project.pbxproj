@@ -61,7 +61,7 @@
 		BCD512B413A82B5E00EE196E /* CBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511EE13A82B5E00EE196E /* CBUser.m */; };
 		BCD512B513A82B5E00EE196E /* CBUserMentionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F013A82B5E00EE196E /* CBUserMentionEntity.m */; };
 		BCD512B613A82B5E00EE196E /* CBQueryParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F313A82B5E00EE196E /* CBQueryParams.m */; };
-		BCD512B713A82B5E00EE196E /* CBReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F513A82B5E00EE196E /* CBReflection.m */; };
+		BCD512B713A82B5E00EE196E /* CocoaBirdReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F513A82B5E00EE196E /* CocoaBirdReflection.m */; };
 		BCD512B813A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F713A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.m */; };
 		BCD512B913A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD511F813A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.xib */; };
 		BCD512BA13A82B5E00EE196E /* CocoaBirdModal.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511FA13A82B5E00EE196E /* CocoaBirdModal.m */; };
@@ -138,6 +138,7 @@
 		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
 		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
 		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
+		BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */; };
 		BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */; };
 		BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */; };
 		BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */; };
@@ -251,8 +252,8 @@
 		BCD511F013A82B5E00EE196E /* CBUserMentionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUserMentionEntity.m; sourceTree = "<group>"; };
 		BCD511F213A82B5E00EE196E /* CBQueryParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBQueryParams.h; sourceTree = "<group>"; };
 		BCD511F313A82B5E00EE196E /* CBQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBQueryParams.m; sourceTree = "<group>"; };
-		BCD511F413A82B5E00EE196E /* CBReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBReflection.h; sourceTree = "<group>"; };
-		BCD511F513A82B5E00EE196E /* CBReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBReflection.m; sourceTree = "<group>"; };
+		BCD511F413A82B5E00EE196E /* CocoaBirdReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdReflection.h; sourceTree = "<group>"; };
+		BCD511F513A82B5E00EE196E /* CocoaBirdReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdReflection.m; sourceTree = "<group>"; };
 		BCD511F613A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdAuthenticatorViewController.h; sourceTree = "<group>"; };
 		BCD511F713A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdAuthenticatorViewController.m; sourceTree = "<group>"; };
 		BCD511F813A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CocoaBirdAuthenticatorViewController.xib; sourceTree = "<group>"; };
@@ -411,6 +412,8 @@
 		BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Favorites.h"; sourceTree = "<group>"; };
 		BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Favorites.m"; sourceTree = "<group>"; };
 		BCD5131213A85C0300EE196E /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = Todo.txt; sourceTree = "<group>"; };
+		BCEAF13313AD39EC00DB6092 /* CocoaBirdSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdSerializer.h; sourceTree = "<group>"; };
+		BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSerializer.m; sourceTree = "<group>"; };
 		BCEB642213A9A45F00E8893D /* CocoaBird+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Notification.h"; sourceTree = "<group>"; };
 		BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Notification.m"; sourceTree = "<group>"; };
 		BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+ReportSpam.h"; sourceTree = "<group>"; };
@@ -618,8 +621,8 @@
 			children = (
 				BCD511F213A82B5E00EE196E /* CBQueryParams.h */,
 				BCD511F313A82B5E00EE196E /* CBQueryParams.m */,
-				BCD511F413A82B5E00EE196E /* CBReflection.h */,
-				BCD511F513A82B5E00EE196E /* CBReflection.m */,
+				BCD511F413A82B5E00EE196E /* CocoaBirdReflection.h */,
+				BCD511F513A82B5E00EE196E /* CocoaBirdReflection.m */,
 				BCD511F613A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.h */,
 				BCD511F713A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.m */,
 				BCD511F813A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.xib */,
@@ -629,6 +632,8 @@
 				BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m */,
 				BCD511FD13A82B5E00EE196E /* CocoaBirdSettings.h */,
 				BCD511FE13A82B5E00EE196E /* CocoaBirdSettings.m */,
+				BCEAF13313AD39EC00DB6092 /* CocoaBirdSerializer.h */,
+				BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -994,7 +999,7 @@
 				BCD512B413A82B5E00EE196E /* CBUser.m in Sources */,
 				BCD512B513A82B5E00EE196E /* CBUserMentionEntity.m in Sources */,
 				BCD512B613A82B5E00EE196E /* CBQueryParams.m in Sources */,
-				BCD512B713A82B5E00EE196E /* CBReflection.m in Sources */,
+				BCD512B713A82B5E00EE196E /* CocoaBirdReflection.m in Sources */,
 				BCD512B813A82B5E00EE196E /* CocoaBirdAuthenticatorViewController.m in Sources */,
 				BCD512BA13A82B5E00EE196E /* CocoaBirdModal.m in Sources */,
 				BCD512BB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m in Sources */,
@@ -1089,6 +1094,7 @@
 				BCC7602C13ABFEF000144B4C /* CocoaBird+Security.m in Sources */,
 				BCC7602F13AC136F00144B4C /* CBRequestId.m in Sources */,
 				BCC7603213AC1AA500144B4C /* CocoaBird+RequestContext.m in Sources */,
+				BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

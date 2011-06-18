@@ -26,12 +26,12 @@
 
 + (NSArray*) getSavedSearchesNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBSavedSearch class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] error:error];
 }
 
 + (CBRequestId*) getSavedSearches:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeArray class:[CBSavedSearch class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
 
 
@@ -40,13 +40,13 @@
 + (CBSavedSearch*) getSavedSearchNow:(int)search_id error:(NSError**)error
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/show/%i.json", search_id];
-    return [self processRequestSynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
+    return [self processRequestSynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] error:error];
 }
 
 + (CBRequestId*) getSavedSearch:(int)search_id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/show/%i.json", search_id];
-    return [self processRequestAsynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:url method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
 
 
@@ -54,12 +54,12 @@
 
 + (CBSavedSearch*) createSavedSearchNow:(NSString*)query error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] error:error];
 }
 
 + (CBRequestId*) createSavedSearch:(NSString*)query delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/saved_searches/create.json" method:@"POST" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
 
 
@@ -68,13 +68,13 @@
 + (CBSavedSearch*) deleteSavedSearchNow:(id)search_id error:(NSError**)error
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/destroy/%i.json", search_id];
-    return [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] error:error];
+    return [self processRequestSynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] error:error];
 }
 
 + (CBRequestId*) deleteSavedSearch:(id)search_id delegate:(id)delegate selector:(SEL)selector
 {
     NSString* url = [NSString stringWithFormat:@"api.twitter.com/1/saved_searches/destroy/%i.json", search_id];
-    return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeObject class:[CBSavedSearch class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:url method:@"POST" params:nil type:CBTwitterResponseTypeCustom class:[CBSavedSearch class] delegate:delegate selector:selector];    
 }
 
 

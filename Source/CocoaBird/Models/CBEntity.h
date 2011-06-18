@@ -13,8 +13,6 @@
     
 }
 
-- (id) initWithDictionary:(NSDictionary*)dic;
-
 @property (retain) NSDictionary* orig;
 
 @end

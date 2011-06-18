@@ -19,12 +19,12 @@
 
 + (CBTermsOfService*) getTermsOfServiceNow:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/legal/tos.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBTermsOfService class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/legal/tos.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBTermsOfService class] error:error];
 }
 
 + (CBRequestId*) getTermsOfService:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/legal/tos.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBTermsOfService class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/legal/tos.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBTermsOfService class] delegate:delegate selector:selector];    
 }
 
 
@@ -32,12 +32,12 @@
 
 + (CBPrivacy*) getPrivacyNow:(CBGetPrivacyParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/legal/privacy.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBPrivacy class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/legal/privacy.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBPrivacy class] error:error];
 }
 
 + (CBRequestId*) getPrivacy:(CBGetPrivacyParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/legal/privacy.json" method:@"GET" params:nil type:CBTwitterResponseTypeObject class:[CBPrivacy class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/legal/privacy.json" method:@"GET" params:nil type:CBTwitterResponseTypeCustom class:[CBPrivacy class] delegate:delegate selector:selector];    
 }
 
 

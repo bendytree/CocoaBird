@@ -13,7 +13,6 @@
     
 }
 
-- (NSDictionary*) toDictionary;
 + (id) params;
 
 @end

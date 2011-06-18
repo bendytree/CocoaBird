@@ -62,7 +62,7 @@
 {
     params = params ? params : [CBGetListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getListsByUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -74,7 +74,7 @@
 {
     params = params ? params : [CBGetListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -99,7 +99,7 @@
 {
     params = params ? params : [CBGetListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getLists:(id)delegate selector:(SEL)selector
@@ -116,7 +116,7 @@
 {
     params = params ? params : [CBGetListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -136,7 +136,7 @@
 {
     params = params ? params : [CBGetMembershipListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getMembershipListsByUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -148,7 +148,7 @@
 {
     params = params ? params : [CBGetMembershipListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -173,7 +173,7 @@
 {
     params = params ? params : [CBGetMembershipListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getMembershipLists:(id)delegate selector:(SEL)selector
@@ -190,7 +190,7 @@
 {
     params = params ? params : [CBGetMembershipListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/memberships.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -210,7 +210,7 @@
 {
     params = params ? params : [CBGetSubscriptionListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getSubscriptionListsByUserId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -222,7 +222,7 @@
 {
     params = params ? params : [CBGetSubscriptionListsParams params];
     params.user_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -247,7 +247,7 @@
 {
     params = params ? params : [CBGetSubscriptionListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] error:error];
 }
 
 + (CBRequestId*) getSubscriptionLists:(id)delegate selector:(SEL)selector
@@ -264,7 +264,7 @@
 {
     params = params ? params : [CBGetSubscriptionListsParams params];
     params.screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBLists class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/subscriptions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBLists class] delegate:delegate selector:selector];    
 }
 
 
@@ -284,7 +284,7 @@
 {
     params = params ? params : [CBGetListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) getListById:(int)list_id delegate:(id)delegate selector:(SEL)selector
@@ -296,7 +296,7 @@
 {
     params = params ? params : [CBGetListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -317,7 +317,7 @@
     params = params ? params : [CBGetListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) getListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -330,7 +330,7 @@
     params = params ? params : [CBGetListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -351,7 +351,7 @@
     params = params ? params : [CBGetListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) getListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
@@ -364,7 +364,7 @@
     params = params ? params : [CBGetListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/show.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -384,7 +384,7 @@
 {
     params = params ? params : [CBGetListStatusesParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getListStatusesById:(int)list_id delegate:(id)delegate selector:(SEL)selector
@@ -396,7 +396,7 @@
 {
     params = params ? params : [CBGetListStatusesParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];    
 }
 
 
@@ -417,7 +417,7 @@
     params = params ? params : [CBGetListStatusesParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getListStatusesByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector
@@ -430,7 +430,7 @@
     params = params ? params : [CBGetListStatusesParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];    
 }
 
 
@@ -451,7 +451,7 @@
     params = params ? params : [CBGetListStatusesParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getListStatusesByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector
@@ -464,7 +464,7 @@
     params = params ? params : [CBGetListStatusesParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/statuses.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];    
 }
 
 
@@ -484,7 +484,7 @@
 {
     params = params ? params : [CBCreateListParams params];
     params.name = name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/create.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) createList:(NSString*)name delegate:(id)delegate selector:(SEL)selector
@@ -496,7 +496,7 @@
 {
     params = params ? params : [CBCreateListParams params];
     params.name = name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/create.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/create.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -511,14 +511,14 @@
 {
     params = params ? params : [CBUpdateListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) updateListById:(int)list_id delegate:(id)delegate selector:(SEL)selector params:(CBUpdateListParams*)params
 {
     params = params ? params : [CBUpdateListParams params];
     params.list_id = [NSNumber numberWithInt:list_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -534,7 +534,7 @@
     params = params ? params : [CBUpdateListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) updateListByName:(NSString*)slug userId:(int)user_id delegate:(id)delegate selector:(SEL)selector params:(CBUpdateListParams*)params
@@ -542,7 +542,7 @@
     params = params ? params : [CBUpdateListParams params];
     params.slug = slug;
     params.owner_id = [NSNumber numberWithInt:user_id];
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 
@@ -558,7 +558,7 @@
     params = params ? params : [CBUpdateListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"update" params:params type:CBTwitterResponseTypeObject class:[CBList class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/lists/update.json" method:@"update" params:params type:CBTwitterResponseTypeCustom class:[CBList class] error:error];
 }
 
 + (CBRequestId*) updateListByName:(NSString*)slug screenName:(NSString*)screen_name delegate:(id)delegate selector:(SEL)selector params:(CBUpdateListParams*)params
@@ -566,7 +566,7 @@
     params = params ? params : [CBUpdateListParams params];
     params.slug = slug;
     params.owner_screen_name = screen_name;
-    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeObject class:[CBList class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"api.twitter.com/1/lists/update.json" method:@"POST" params:params type:CBTwitterResponseTypeCustom class:[CBList class] delegate:delegate selector:selector];    
 }
 
 

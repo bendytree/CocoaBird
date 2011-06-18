@@ -63,7 +63,7 @@
 
 + (NSArray*) getPublicTimelineNow:(CBPublicTimelineParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/public_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/public_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getPublicTimeline:(id)delegate selector:(SEL)selector           // - (void) publicTimelineLoaded:(NSArray*)statuses error:(NSError*)error;
@@ -73,7 +73,7 @@
 
 + (CBRequestId*) getPublicTimeline:(id)delegate selector:(SEL)selector params:(CBPublicTimelineParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/public_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/public_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -91,7 +91,7 @@
 
 + (NSArray*) getHomeTimelineNow:(CBHomeTimelineParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/home_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/home_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getHomeTimeline:(id)delegate selector:(SEL)selector
@@ -101,7 +101,7 @@
 
 + (CBRequestId*) getHomeTimeline:(id)delegate selector:(SEL)selector params:(CBHomeTimelineParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/home_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/home_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -119,7 +119,7 @@
 
 + (NSArray*) getUserTimelineNow:(CBUserTimelineParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/user_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/user_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getUserTimeline:(id)delegate selector:(SEL)selector
@@ -129,7 +129,7 @@
 
 + (CBRequestId*) getUserTimeline:(id)delegate selector:(SEL)selector params:(CBUserTimelineParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/user_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/user_timeline.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -147,7 +147,7 @@
 
 + (NSArray*) getMentionsNow:(CBMentionsParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/mentions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/mentions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getMentions:(id)delegate selector:(SEL)selector
@@ -157,7 +157,7 @@
 
 + (CBRequestId*) getMentions:(id)delegate selector:(SEL)selector params:(CBMentionsParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/mentions.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/mentions.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -175,7 +175,7 @@
 
 + (NSArray*) getRetweetedByMeNow:(CBRetweetedByMeParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweeted_by_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweeted_by_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getRetweetedByMe:(id)delegate selector:(SEL)selector
@@ -185,7 +185,7 @@
 
 + (CBRequestId*) getRetweetedByMe:(id)delegate selector:(SEL)selector params:(CBRetweetedByMeParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweeted_by_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweeted_by_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -203,7 +203,7 @@
 
 + (NSArray*) getRetweetedToMeNow:(CBRetweetedToMeParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweeted_to_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweeted_to_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getRetweetedToMe:(id)delegate selector:(SEL)selector
@@ -213,7 +213,7 @@
 
 + (CBRequestId*) getRetweetedToMe:(id)delegate selector:(SEL)selector params:(CBRetweetedToMeParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweeted_to_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweeted_to_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 
@@ -231,7 +231,7 @@
 
 + (NSArray*) getRetweetsOfMeNow:(CBRetweetsOfMeParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweets_of_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] error:error];
+    return [self processRequestSynchronous:@"api.twitter.com/1/statuses/retweets_of_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] error:error];
 }
 
 + (CBRequestId*) getRetweetsOfMe:(id)delegate selector:(SEL)selector
@@ -241,7 +241,7 @@
 
 + (CBRequestId*) getRetweetsOfMe:(id)delegate selector:(SEL)selector params:(CBRetweetsOfMeParams*)params
 {
-    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweets_of_me.json" method:@"GET" params:params type:CBTwitterResponseTypeArray class:[CBStatus class] delegate:delegate selector:selector];
+    return [self processRequestAsynchronous:@"api.twitter.com/1/statuses/retweets_of_me.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBStatus class] delegate:delegate selector:selector];
 }
 
 @end

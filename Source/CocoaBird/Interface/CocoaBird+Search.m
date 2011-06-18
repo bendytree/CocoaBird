@@ -22,12 +22,12 @@
 
 + (CBSearchResults*) searchStatusesNow:(CBSearchStatusesParams*)params error:(NSError**)error
 {
-    return [self processRequestSynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSearchResults class] error:error];
+    return [self processRequestSynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBSearchResults class] error:error];
 }
 
 + (CBRequestId*) searchStatuses:(CBSearchStatusesParams*)params delegate:(id)delegate selector:(SEL)selector
 {
-    return [self processRequestAsynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeObject class:[CBSearchResults class] delegate:delegate selector:selector];    
+    return [self processRequestAsynchronous:@"search.twitter.com/search.json" method:@"GET" params:params type:CBTwitterResponseTypeCustom class:[CBSearchResults class] delegate:delegate selector:selector];    
 }
 
 @end

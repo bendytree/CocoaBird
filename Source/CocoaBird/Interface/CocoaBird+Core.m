@@ -13,6 +13,7 @@
 #import "JSON.h"
 #import "ASIFormDataRequest.h"
 #import "CBRequestData.h"
+#import "CocoaBirdReflection.h"
 
 
 @implementation CocoaBird (Core)
@@ -124,7 +125,7 @@ static NSString *urlEncode(id object) {
 {
     url = [NSString stringWithFormat:@"%@%@", [CocoaBirdSettings useSSL] ? @"https://" : @"http://", url];
     
-    NSDictionary* paramsDic = [params toDictionary];
+    NSDictionary* paramsDic = [CocoaBirdReflection convertObjectToCoreType:params];
     
     if([method isEqualToString:@"GET"]){
         url = [self appendQueryString:paramsDic toUrl:url];
@@ -168,22 +169,8 @@ static NSString *urlEncode(id object) {
     if(type == CBTwitterResponseTypeNatural)
         return responseObj;
     
-    if(type == CBTwitterResponseTypeArray){
-        NSArray* dics = responseObj;
-        NSMutableArray* objs = [NSMutableArray array];
-        for(NSDictionary* statusDic in dics){
-            id obj = [[[cls alloc] initWithDictionary:statusDic] autorelease];
-            [objs addObject:obj];
-        }
-        return objs;
-    }
-    
-    if(type == CBTwitterResponseTypeObject){
-        return [[[cls alloc] initWithDictionary:responseObj] autorelease];
-    }
-    
-    NSLog(@"should not have gotten this far... processResponse:type:error:");
-    return nil;
+    // CBTwitterResponseTypeCustom
+    return [CocoaBirdReflection buildObject:cls fromCoreType:responseObj];
 }
 
 + (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error
