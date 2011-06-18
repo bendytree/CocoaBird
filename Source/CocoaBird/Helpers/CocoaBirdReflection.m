@@ -12,8 +12,30 @@
 @implementation CocoaBirdReflection
 
 
-+ (NSDictionary*) convertObjectToCoreType:(id)obj
++ (id) convertObjectToCoreType:(id)obj
 {
+    if(!obj) return nil;
+    
+    //Arrays
+    if([self class:[obj class] descendsFrom:[NSArray class]])
+    {
+        NSMutableArray* newArray = [NSMutableArray array];
+        for(id o in obj){
+            [newArray addObject:[self convertObjectToCoreType:o]];
+        }
+        return newArray;
+    }        
+    
+    //Already Core Type
+    if(
+       [self class:[obj class] descendsFrom:[NSString class]]
+       || [self class:[obj class] descendsFrom:[NSNumber class]]
+    )
+    {
+        return obj;
+    }
+    
+    //Custom Type
     NSMutableDictionary* dic = [NSMutableDictionary dictionary];
     for(NSString* propertyName in [self propertyNamesForClass:[obj class]]){
         id val = [obj valueForKey:propertyName];
@@ -23,7 +45,7 @@
             if([propertyName characterAtIndex:[propertyName length]-1] == '_')
                 propertyName = [propertyName substringToIndex:[propertyName length]-1];
             
-            [dic setObject:val forKey:propertyName];
+            [dic setObject:[self convertObjectToCoreType:val] forKey:propertyName];
         }
     }
     return dic;

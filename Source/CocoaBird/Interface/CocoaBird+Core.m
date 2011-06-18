@@ -121,11 +121,10 @@ static NSString *urlEncode(id object) {
     return url;
 }
 
-+ (ASIFormDataRequest*) buildRequest:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params
++ (ASIFormDataRequest*) buildRequest:(NSString*)url method:(NSString*)method params:(NSDictionary*)paramsDic
 {
-    url = [NSString stringWithFormat:@"%@%@", [CocoaBirdSettings useSSL] ? @"https://" : @"http://", url];
-    
-    NSDictionary* paramsDic = [CocoaBirdReflection convertObjectToCoreType:params];
+    if([url hasPrefix:@"http"] == NO)
+        url = [NSString stringWithFormat:@"%@%@", ([CocoaBirdSettings useSSL] ? @"https://" : @"http://"), url];
     
     if([method isEqualToString:@"GET"]){
         url = [self appendQueryString:paramsDic toUrl:url];
@@ -173,7 +172,7 @@ static NSString *urlEncode(id object) {
     return [CocoaBirdReflection buildObject:cls fromCoreType:responseObj];
 }
 
-+ (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error
++ (id) processRequestSynchronous:(NSString*)url method:(NSString*)method dicParams:(NSDictionary*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error
 {
     ASIFormDataRequest* request = [self buildRequest:url method:method params:params];
     
@@ -185,7 +184,13 @@ static NSString *urlEncode(id object) {
     return [self processResponse:[request responseString] type:type class:cls error:error];
 }
 
-+ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
++ (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error
+{
+    return [self processRequestSynchronous:url method:method dicParams:[CocoaBirdReflection convertObjectToCoreType:params] type:type class:cls error:error];
+}
+
+
++ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method dicParams:(NSDictionary*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
 {
     ASIFormDataRequest* request = [self buildRequest:url method:method params:params];
     NSString* id = [CocoaBird getGuid];
@@ -203,6 +208,11 @@ static NSString *urlEncode(id object) {
     [request setDelegate:self];
     
     return [CBRequestId stringWithString:id];
+}
+
++ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector
+{
+    return [self processRequestAsynchronous:url method:method dicParams:[CocoaBirdReflection convertObjectToCoreType:params] type:type class:cls delegate:delegate selector:selector];
 }
 
 + (void) requestFinished:(ASIHTTPRequest *)request

@@ -6,10 +6,6 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-widespread serialization
-
-generic requests with generic responses (for flexibility)
-
 should "Now" be used for syncronous?
 
 should params be first (before delegate)?

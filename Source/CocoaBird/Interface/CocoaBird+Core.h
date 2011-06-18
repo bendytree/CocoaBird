@@ -23,7 +23,9 @@ typedef enum {
 @interface CocoaBird (Core)
 
 //Processing Requests
++ (id) processRequestSynchronous:(NSString*)url method:(NSString*)method dicParams:(NSDictionary*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error;
 + (id) processRequestSynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls error:(NSError**)error;
++ (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method dicParams:(NSDictionary*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
 + (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
 + (CBRequestData*) getRequestDataAndRemoveById:(NSString*)requestId;
 + (NSMutableArray*) currentRequests;

@@ -12,6 +12,23 @@
 
 @implementation CocoaBirdSerializer
 
++ (NSString*) serialize:(id)obj
+{
+    return [self serialize:obj error:nil];
+}
+
++ (NSString*) serialize:(id)obj error:(NSError**)error
+{
+    SBJSON* serializer = [[SBJSON alloc] init];
+    
+    id ct = [CocoaBirdReflection convertObjectToCoreType:obj];
+    id str = [serializer stringWithObject:ct error:error];
+    
+    [serializer release];
+    
+    return str;
+}
+
 + (id) deserialize:(NSString*)json as:(Class)cls
 {
     return [self deserialize:json as:cls error:nil];

@@ -139,6 +139,7 @@
 		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
 		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
 		BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */; };
+		BCEAF13913AD3B9B00DB6092 /* CocoaBird+Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */; };
 		BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */; };
 		BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */; };
 		BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */; };
@@ -414,6 +415,8 @@
 		BCD5131213A85C0300EE196E /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = Todo.txt; sourceTree = "<group>"; };
 		BCEAF13313AD39EC00DB6092 /* CocoaBirdSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdSerializer.h; sourceTree = "<group>"; };
 		BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSerializer.m; sourceTree = "<group>"; };
+		BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Generic.m"; sourceTree = "<group>"; };
+		BCEAF13813AD3B9B00DB6092 /* CocoaBird+Generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Generic.h"; sourceTree = "<group>"; };
 		BCEB642213A9A45F00E8893D /* CocoaBird+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Notification.h"; sourceTree = "<group>"; };
 		BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Notification.m"; sourceTree = "<group>"; };
 		BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+ReportSpam.h"; sourceTree = "<group>"; };
@@ -662,6 +665,8 @@
 				BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */,
 				BCD5130713A83F7900EE196E /* CocoaBird+Friendship.h */,
 				BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */,
+				BCEAF13813AD3B9B00DB6092 /* CocoaBird+Generic.h */,
+				BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */,
 				BC19053D13A9829100274631 /* CocoaBird+Geo.h */,
 				BC19053C13A9829100274631 /* CocoaBird+Geo.m */,
 				BCEB643B13A9AF2800E8893D /* CocoaBird+Help.h */,
@@ -1095,6 +1100,7 @@
 				BCC7602F13AC136F00144B4C /* CBRequestId.m in Sources */,
 				BCC7603213AC1AA500144B4C /* CocoaBird+RequestContext.m in Sources */,
 				BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */,
+				BCEAF13913AD3B9B00DB6092 /* CocoaBird+Generic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
