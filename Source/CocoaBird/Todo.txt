@@ -6,9 +6,5 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-should "Now" be used for syncronous?
-
-should params be first (before delegate)?
-
 wrap uiwebview for custom look of oauth login
 
