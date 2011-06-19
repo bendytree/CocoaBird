@@ -12,11 +12,12 @@
 #import "CocoaBirdSettings.h"
 #import "CocoaBird+AuthenticationCore.h"
 
+
 @interface CBLoginWebController (private)
 - (NSString*) findPin;
 - (void) sendUserToAuthorizationPage;
+- (void) fadeWebViewOut:(BOOL)fadeOut;
 @end
-
 
 
 @implementation CBLoginWebController
@@ -68,6 +69,8 @@
     
     web.delegate = self;
     
+    [web setAlpha:0];
+    
     if([self.tokenRetriever hasRequestToken])
         [self sendUserToAuthorizationPage];
 }
@@ -100,6 +103,8 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    [self fadeWebViewOut:YES];
+    
 	NSData* data = [request HTTPBody];
 	char* raw = data ? (char *) [data bytes] : "";
 	
@@ -124,18 +129,20 @@
 {
 	if (isFirstLoad) {
    		isFirstLoad = NO;
+        [self fadeWebViewOut:NO];
 		
         //scroll to the login area
         [web performSelector: @selector(stringByEvaluatingJavaScriptFromString:) withObject: @"window.scrollBy(0,200)" afterDelay: 0];
-	} else {
-        //Did it work?
-		NSString* pin = [self findPin];
-		if (pin.length) {
-            [self.tokenRetriever beginLoadingAccessTokenWithPin:pin];			
-		}else{
-            //Could do "copy pin" stuff here if we can't find it
-        }
+        return;
+	} 
+    
+    NSString* pin = [self findPin];
+    if(pin.length){
+        [self.tokenRetriever beginLoadingAccessTokenWithPin:pin];	
+        return;
 	}
+    
+    [self fadeWebViewOut:NO];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -191,9 +198,10 @@
 
 - (NSString*) findPin
 {
+    // Special thanks to SA_OAuthTwitterController for this concept/code
 	// Look for either 'oauth-pin' or 'oauth_pin' in the raw HTML
-	NSString			*js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); if (d) d = d.innerHTML; d;";
-	NSString			*pin = [[web stringByEvaluatingJavaScriptFromString: js] stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	NSString* js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); if (d) d = d.innerHTML; d;";
+	NSString* pin = [[web stringByEvaluatingJavaScriptFromString: js] stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	
 	if (pin.length == 7) {
 		return pin;
@@ -212,6 +220,19 @@
 }
 
 
+- (void) fadeWebViewOut:(BOOL)fadeOut
+{
+    [UIView beginAnimations:@"fadeOut" context:nil];
+    [UIView setAnimationDuration:.2];
+    [web setAlpha:fadeOut ? 0 : 1];
+    [UIView commitAnimations];
+    
+    if(fadeOut){
+        [spinner startAnimating];
+    }else{
+        [spinner stopAnimating];
+    }
+}
 
 
 @end

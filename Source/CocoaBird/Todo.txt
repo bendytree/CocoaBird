@@ -6,7 +6,5 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-fade in/out webview
-
 pull out serialization?
 

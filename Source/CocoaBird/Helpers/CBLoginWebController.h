@@ -26,6 +26,7 @@ typedef enum {
 @interface CBLoginWebController : UIViewController<UIWebViewDelegate, CocoaBirdOAuthTokenRetrieverDelegate> {
     
     IBOutlet UIWebView* web;
+    IBOutlet UIActivityIndicatorView* spinner;
     BOOL hasBegunFirstLoad;
     BOOL isFirstLoad;
     
