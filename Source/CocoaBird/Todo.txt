@@ -6,5 +6,7 @@ Easy tweet, follow, etc without oauth or anything
 - pop up a uiwebview for them
 http://dev.twitter.com/pages/intents
 
-wrap uiwebview for custom look of oauth login
+fade in/out webview
+
+pull out serialization?
 

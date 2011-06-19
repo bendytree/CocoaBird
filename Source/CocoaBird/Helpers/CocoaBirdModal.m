@@ -70,7 +70,7 @@ static NSMutableArray* _controllers = NULL;
 }
 
 + (void) dismiss:(UIViewController*)_controller
-{   
+{       
     //Remove then re-add so the 2nd view becomes the first view & gets
     //rotation event BEFORE our animation out (so we REVEAL the correct view)
     UIView* superview = _controller.view.superview;

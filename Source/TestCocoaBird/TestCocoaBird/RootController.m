@@ -39,12 +39,9 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
+    
 }
 
-- (void) test:(int)i
-{
-    NSLog(@"got it: %i", i);
-}
 
 
 - (void)viewDidUnload

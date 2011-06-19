@@ -9,8 +9,8 @@
 #import "CocoaBird+Authentication.h"
 #import "CocoaBirdSettings.h"
 #import "CocoaBirdModal.h"
-#import "CocoaBirdAuthenticatorViewController.h"
 #import "CocoaBird+AuthenticationCore.h"
+#import "CBLoginModalController.h"
 
 
 @implementation CocoaBird (Authentication)
@@ -37,8 +37,13 @@
 
 + (void) launchLogin:(BOOL)animated
 {
-    UIViewController* controller = [[[CocoaBirdAuthenticatorViewController alloc] init] autorelease];
+    UIViewController* controller = [[[CBLoginModalController alloc] init] autorelease];
     [CocoaBirdModal present:controller];
+}
+
++ (CBLoginWebController*) getLoginViewController
+{
+    return [[[CBLoginWebController alloc] init] autorelease];
 }
 
 

@@ -22,7 +22,7 @@ static NSMutableDictionary* _loginDelegates = NULL;
     return _loginDelegates;
 }
 
-+ (void) sendClosedNotification:(CocoaBirdLoginResult)result error:(NSError*)error
++ (void) sendClosedNotification:(CBLoginResult)result error:(NSError*)error
 {
     for(NSValue* v in [self loginDelegates]){
         NSObject* delegate = [v pointerValue];

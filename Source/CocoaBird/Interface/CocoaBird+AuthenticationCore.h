@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CocoaBirdBase.h"
 #import "CocoaBird+Authentication.h"
+#import "CBLoginWebController.h"
 
 @interface CocoaBird (AuthenticationCore)
 
-+ (void) sendClosedNotification:(CocoaBirdLoginResult)result error:(NSError*)error;
++ (void) sendClosedNotification:(CBLoginResult)result error:(NSError*)error;
 + (NSMutableDictionary*) loginDelegates;
 
 @end

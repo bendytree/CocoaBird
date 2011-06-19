@@ -1,28 +1,31 @@
 //
-//  CocoaBirdAuthenticatorViewController.m
+//  CBLoginWebController.m
 //  TestCocoaBird
 //
-//  Created by JOSHUA WRIGHT on 6/3/11.
+//  Created by JOSHUA WRIGHT on 6/18/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CocoaBirdAuthenticatorViewController.h"
+#import "CBLoginWebController.h"
+
 #import "CocoaBirdModal.h"
 #import "CocoaBirdSettings.h"
 #import "CocoaBird+AuthenticationCore.h"
 
-@interface CocoaBirdAuthenticatorViewController (private)
+@interface CBLoginWebController (private)
 - (NSString*) findPin;
 - (void) sendUserToAuthorizationPage;
 @end
 
-@implementation CocoaBirdAuthenticatorViewController
 
-@synthesize tokenRetriever;
 
-- (id)init
+@implementation CBLoginWebController
+
+@synthesize tokenRetriever, delegate;
+
+- (id) init
 {
-    self = [super initWithNibName:@"CocoaBirdAuthenticatorViewController" bundle:nil];
+    self = [super initWithNibName:@"CBLoginWebController" bundle:nil];
     if (self) {
         isFirstLoad = YES;
         hasBegunFirstLoad = NO;
@@ -39,8 +42,9 @@
 - (void)dealloc
 {
     self.tokenRetriever = nil;
+    self.delegate = nil;
     
-    //otherwise, if a request is in progress then it will blow up
+    //if a request is in progress then make sure callback doesn't blow up
     web.delegate = nil;
 	[web loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: @""]]];
     
@@ -55,12 +59,12 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
     web.delegate = self;
     
@@ -75,14 +79,20 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return YES;
+}
+
+
+
 
 #pragma mark - End Results
 
-- (void) quit:(CocoaBirdLoginResult)result error:(NSError*)error
+- (void) quit:(CBLoginResult)result error:(NSError*)error
 {
-    [CocoaBirdModal dismiss:self];
-    
-    [CocoaBird sendClosedNotification:result error:error];
+    [self.delegate loginWebControllerFinished:result error:error];
 }
 
 
@@ -93,11 +103,15 @@
 	NSData* data = [request HTTPBody];
 	char* raw = data ? (char *) [data bytes] : "";
 	
-	if (raw && strstr(raw, "cancel=")) {
-		[self quit:CocoaBirdLoginResultCancelled error:nil];
+    NSString* requestUrl = [[request URL] absoluteString];
+    
+    //NSString* body = [NSString stringWithUTF8String:raw];
+    
+	if (raw && (strstr(raw, "cancel=") || strstr(raw, "deny=") || [requestUrl rangeOfString:@"denied="].length)) {
+		[self quit:CBLoginResultCancelled error:nil];
 		return NO;
 	}
-
+    
 	return YES;
 }
 
@@ -143,7 +157,7 @@
 {
     NSLog(@"tokenRetrieverUnableToGetRequestToken: %@", error);
     
-    [self quit:CocoaBirdLoginResultError error:error];
+    [self quit:CBLoginResultError error:error];
 }
 
 - (void) tokenRetrieverGotAccessToken:(NSString*)key secret:(NSString*)secret screenname:(NSString*)screenname
@@ -152,27 +166,14 @@
     
     [CocoaBirdSettings setAuthenticationToken:key secret:secret screenname:screenname];
     
-    [self quit:CocoaBirdLoginResultSuccess error:nil];
+    [self quit:CBLoginResultSuccess error:nil];
 }
 
 - (void) tokenRetrieverUnableToGetAccessToken:(NSError*)error
 {
     NSLog(@"tokenRetrieverUnableToGetAccessToken: %@", error);
     
-    [self quit:CocoaBirdLoginResultError error:error];
-}
-
-
-#pragma mark - Events
-
-- (IBAction) pressedCancel
-{
-    [self quit:CocoaBirdLoginResultCancelled error:nil];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
+    [self quit:CBLoginResultError error:error];
 }
 
 
@@ -209,6 +210,7 @@
 	
 	return nil;
 }
+
 
 
 
