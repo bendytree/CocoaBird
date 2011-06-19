@@ -23,6 +23,7 @@
 {    
     [CocoaBird setConsumerKey:@"FD36QhvLRLZYPLdl1Qfg" andSecret:@"V6Wx1HK1L8RVYKyA3lbmz36CstMaQ9EnIP7RKoPaE"];
     
+    /*
     [CocoaBird logout];
     if([CocoaBird isLoggedIn]){
         [self showRootView];
@@ -30,6 +31,7 @@
         [CocoaBird addLoginDelegate:self selector:@selector(cocoaBirdLoginComplete)];
         [CocoaBird launchLogin:NO];
     }
+     */
     
     [self.window makeKeyAndVisible];
     return YES;

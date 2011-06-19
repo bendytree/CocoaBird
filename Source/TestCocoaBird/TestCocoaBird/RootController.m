@@ -39,7 +39,6 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
-    
 }
 
 
@@ -54,7 +53,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return YES;
+    //return YES;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 

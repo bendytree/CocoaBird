@@ -85,7 +85,7 @@ static SBJSON* _serializer = NULL;
     return nil;
 }
 
-+ (NSString *) getGuid
++ (NSString*) getGuid
 {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
@@ -93,8 +93,8 @@ static SBJSON* _serializer = NULL;
     return [(NSString *)string autorelease];
 }
 
-static NSString *urlEncode(id object) {
-    NSString *string = [NSString stringWithFormat: @"%@", object];
+static NSString* urlEncode(id object) {
+    NSString* string = [NSString stringWithFormat: @"%@", object];
     return [string stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
 }
 

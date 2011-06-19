@@ -142,6 +142,9 @@
 		BCEAF13913AD3B9B00DB6092 /* CocoaBird+Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */; };
 		BCEAF13D13AD48D600DB6092 /* CBLoginWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13B13AD48D600DB6092 /* CBLoginWebController.m */; };
 		BCEAF13E13AD48D600DB6092 /* CBLoginWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEAF13C13AD48D600DB6092 /* CBLoginWebController.xib */; };
+		BCEAF14D13ADADF800DB6092 /* CBWebModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF14B13ADADF700DB6092 /* CBWebModalController.m */; };
+		BCEAF14E13ADADF800DB6092 /* CBWebModalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEAF14C13ADADF700DB6092 /* CBWebModalController.xib */; };
+		BCEAF15813ADB7F900DB6092 /* CocoaBird+Intent.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF15713ADB7F900DB6092 /* CocoaBird+Intent.m */; };
 		BCEB642413A9A45F00E8893D /* CocoaBird+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */; };
 		BCEB642813A9A6CE00E8893D /* CocoaBird+ReportSpam.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642713A9A6CE00E8893D /* CocoaBird+ReportSpam.m */; };
 		BCEB642B13A9A86A00E8893D /* CocoaBird+SavedSearches.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB642A13A9A86A00E8893D /* CocoaBird+SavedSearches.m */; };
@@ -257,7 +260,7 @@
 		BCD511F313A82B5E00EE196E /* CBQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBQueryParams.m; sourceTree = "<group>"; };
 		BCD511F413A82B5E00EE196E /* CocoaBirdReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdReflection.h; sourceTree = "<group>"; };
 		BCD511F513A82B5E00EE196E /* CocoaBirdReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdReflection.m; sourceTree = "<group>"; };
-		BCD511F613A82B5E00EE196E /* CBLoginModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBLoginModalController.h; sourceTree = "<group>"; };
+		BCD511F613A82B5E00EE196E /* CBLoginModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginModalController.h; sourceTree = "<group>"; };
 		BCD511F713A82B5E00EE196E /* CBLoginModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginModalController.m; sourceTree = "<group>"; };
 		BCD511F813A82B5E00EE196E /* CBLoginModalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginModalController.xib; sourceTree = "<group>"; };
 		BCD511F913A82B5E00EE196E /* CocoaBirdModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdModal.h; sourceTree = "<group>"; };
@@ -419,9 +422,14 @@
 		BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSerializer.m; sourceTree = "<group>"; };
 		BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Generic.m"; sourceTree = "<group>"; };
 		BCEAF13813AD3B9B00DB6092 /* CocoaBird+Generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Generic.h"; sourceTree = "<group>"; };
-		BCEAF13A13AD48D600DB6092 /* CBLoginWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBLoginWebController.h; sourceTree = "<group>"; };
+		BCEAF13A13AD48D600DB6092 /* CBLoginWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginWebController.h; sourceTree = "<group>"; };
 		BCEAF13B13AD48D600DB6092 /* CBLoginWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginWebController.m; sourceTree = "<group>"; };
 		BCEAF13C13AD48D600DB6092 /* CBLoginWebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginWebController.xib; sourceTree = "<group>"; };
+		BCEAF14813ADA21500DB6092 /* CocoaBird+Intent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Intent.h"; sourceTree = "<group>"; };
+		BCEAF14A13ADADF700DB6092 /* CBWebModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWebModalController.h; sourceTree = "<group>"; };
+		BCEAF14B13ADADF700DB6092 /* CBWebModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWebModalController.m; sourceTree = "<group>"; };
+		BCEAF14C13ADADF700DB6092 /* CBWebModalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBWebModalController.xib; sourceTree = "<group>"; };
+		BCEAF15713ADB7F900DB6092 /* CocoaBird+Intent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Intent.m"; sourceTree = "<group>"; };
 		BCEB642213A9A45F00E8893D /* CocoaBird+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Notification.h"; sourceTree = "<group>"; };
 		BCEB642313A9A45F00E8893D /* CocoaBird+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Notification.m"; sourceTree = "<group>"; };
 		BCEB642613A9A6CE00E8893D /* CocoaBird+ReportSpam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+ReportSpam.h"; sourceTree = "<group>"; };
@@ -637,6 +645,9 @@
 				BCD511F613A82B5E00EE196E /* CBLoginModalController.h */,
 				BCD511F713A82B5E00EE196E /* CBLoginModalController.m */,
 				BCD511F813A82B5E00EE196E /* CBLoginModalController.xib */,
+				BCEAF14A13ADADF700DB6092 /* CBWebModalController.h */,
+				BCEAF14B13ADADF700DB6092 /* CBWebModalController.m */,
+				BCEAF14C13ADADF700DB6092 /* CBWebModalController.xib */,
 				BCD511F913A82B5E00EE196E /* CocoaBirdModal.h */,
 				BCD511FA13A82B5E00EE196E /* CocoaBirdModal.m */,
 				BCD511FB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.h */,
@@ -679,6 +690,8 @@
 				BC19053C13A9829100274631 /* CocoaBird+Geo.m */,
 				BCEB643B13A9AF2800E8893D /* CocoaBird+Help.h */,
 				BCEB643C13A9AF2900E8893D /* CocoaBird+Help.m */,
+				BCEAF14813ADA21500DB6092 /* CocoaBird+Intent.h */,
+				BCEAF15713ADB7F900DB6092 /* CocoaBird+Intent.m */,
 				BCEB643213A9AC7B00E8893D /* CocoaBird+Legal.h */,
 				BCEB643313A9AC7B00E8893D /* CocoaBird+Legal.m */,
 				BCD5120A13A82B5E00EE196E /* CocoaBird+ListMembers.h */,
@@ -971,6 +984,7 @@
 				BCD512FC13A82B5E00EE196E /* OATestServer.rb in Resources */,
 				BCD5131313A85C0400EE196E /* Todo.txt in Resources */,
 				BCEAF13E13AD48D600DB6092 /* CBLoginWebController.xib in Resources */,
+				BCEAF14E13ADADF800DB6092 /* CBWebModalController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,6 +1125,8 @@
 				BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */,
 				BCEAF13913AD3B9B00DB6092 /* CocoaBird+Generic.m in Sources */,
 				BCEAF13D13AD48D600DB6092 /* CBLoginWebController.m in Sources */,
+				BCEAF14D13ADADF800DB6092 /* CBWebModalController.m in Sources */,
+				BCEAF15813ADB7F900DB6092 /* CocoaBird+Intent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

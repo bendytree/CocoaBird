@@ -29,6 +29,7 @@ typedef enum {
 + (CBRequestId*) processRequestAsynchronous:(NSString*)url method:(NSString*)method params:(CBQueryParams*)params type:(CBTwitterResponseType)type class:(Class)cls delegate:(id)delegate selector:(SEL)selector;
 + (CBRequestData*) getRequestDataAndRemoveById:(NSString*)requestId;
 + (NSMutableArray*) currentRequests;
++ (NSString*) appendQueryString:(NSDictionary*)params toUrl:(NSString*)oldUrl;
 
 //Context
 + (void) pushRequestContext:(id)context;

@@ -29,6 +29,7 @@
 #import "CocoaBird+Help.h"
 #import "CocoaBird+Search.h"
 #import "CocoaBird+Security.h"
+#import "CocoaBird+Intent.h"
 
 #import "CBModels.h"
 
