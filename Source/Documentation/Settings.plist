@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--company-id</key>
+	<string>com.bendytree.cocoabird</string>
+	<key>--ignore</key>
+	<array>
+		<string>Libs</string>
+		<string>Helpers</string>
+	</array>
+	<key>--install-docset</key>
+	<true/>
+	<key>--keep-undocumented-members</key>
+	<true/>
+	<key>--keep-undocumented-objects</key>
+	<true/>
+	<key>--merge-categories</key>
+	<false/>
+	<key>--no-create-docset</key>
+	<true/>
+	<key>--output</key>
+	<string>../../Docs</string>
+	<key>--project-company</key>
+	<string>BendyTree</string>
+	<key>--project-name</key>
+	<string>TestCocoaBird</string>
+	<key>--templates</key>
+	<string>../../Source/Documentation/Templates</string>
+	<key>--warn-empty-description</key>
+	<false/>
+	<key>--warn-missing-arg</key>
+	<false/>
+	<key>--warn-undocumented-member</key>
+	<false/>
+	<key>--warn-undocumented-object</key>
+	<false/>
+	<key>--warn-unknown-directive</key>
+	<true/>
+</dict>
+</plist>

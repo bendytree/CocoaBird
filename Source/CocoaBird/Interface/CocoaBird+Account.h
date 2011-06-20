@@ -46,10 +46,25 @@
 @end
 
 
+/** Extends CocoaBird by adding Account info
+ 
+ Account info was added by this class. 
+ */
+
 @interface CocoaBird (Account)
 
-//Verify Credentials
+/** Verify Credentials
+ 
+ @return Returns the verified user. 
+ */
 + (CBUser*) verifyCredentialsNow;
+
+
+/** Verify Credentials
+ 
+ @param params the parameters for verifying credentials
+ @return Returns the verified user. 
+ */
 + (CBUser*) verifyCredentialsNow:(CBVerifyCredentialsParams*)params;
 + (CBUser*) verifyCredentialsNow:(CBVerifyCredentialsParams*)params error:(NSError**)error;
 + (CBRequestId*) verifyCredentials:(id)delegate selector:(SEL)selector;           // - (void) credentialsVerified:(CBUser*)user error:(NSError*)error;
