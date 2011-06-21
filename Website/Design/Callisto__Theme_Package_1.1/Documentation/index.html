@@ -1,0 +1,1133 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Callisto WordPress 1.0 Theme Documentation</title>
+  <meta name="description" content="Get the inside scoop on the workings of Icarus Industries' Callisto WP theme">
+  <meta name="author" content="Icarus Industries">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+
+</head>
+
+<body>
+
+    <header>
+		<h1>Callisto WordPress 1.0 Theme Documentation</h1>
+    </header>
+    
+    <div class="container" role="main">
+		<footer class="themeDetails group">
+			<ul class="alignleft">
+				<li><span class="highlight">Author</span>: Icarus Industries</li>
+				<li><span class="highlight">Email</span>: <a href="mailto:themesupport@icarusindustries.com?subject=Callisto Theme Support">themesupport@icarusindustries.com</a></li>
+			</ul>
+			<ul class="alignright">
+				<li><span class="highlight">Demo URL</span>: <a href="http://icarusindustries.com/callisto" target="_blank">icarusindustries.com/callisto</a></li>
+				<li><span class="highlight">Screencast Tutorials</span>: <a href="http://icarusindustries.com/callisto/screencasts" target="_blank">icarusindustries.com/callisto/screencasts</a></li>
+			</ul>
+		</footer>
+		
+		<div id="contents" class="group">
+		
+			<h2 id="bigTitle">Contents</h2>
+			
+			<div class="row group">
+				<div class="col3">
+					<ol>
+						<h4>Getting Started</h4>
+						<li><a href="#fundamentals">Support &amp; Feature Requests</a></li>
+						<li><a href="#installation">Installation &amp; Activation</a></li>
+						<li><a href="#initial_setup">Initial Setup</a></li>
+					</ol>
+				</div>
+				<div class="col3">
+					<ol>
+						<h4>Setting Up</h4>
+						<li><a href="#navigation">Setting Up the Navigation</a></li>
+						<li><a href="#homepage">Setting Up the Homepage</a></li>
+						<li><a href="#featured">Setting Up the Featured Area</a></li>
+						<li><a href="#blog">Setting Up the Blog</a></li>
+						<li><a href="#portfolio">Setting Up the Portfolio</a></li>
+						<li><a href="#logos">Add Your Logo</a></li>
+						<li><a href="#widgets">Configure Your Widgets</a></li>
+					</ol>
+				</div>
+				<div class="col3">
+					<h4>Using Shortcodes</h4>
+					<ol>
+						<li><a href="#toggle">Toggled Content</a></li>
+						<li><a href="#tab">Tabbed Content</a></li>
+						<li><a href="#youtube">Youtube Clip</a></li>
+						<li><a href="#vimeo">Vimeo Clip</a></li>
+						<li><a href="#gmap">Google Maps</a></li>
+						<li><a href="#slider">Slider</a></li>
+						<li><a href="#alert">Alert Box</a></li>
+						<li><a href="#button">Button</a></li>
+					</ol>
+				</div>
+				<div class="col3">
+					<ol>
+						<h4>Typography</h4>
+						<li><a href="#pageLayout">Page Layouts</a></li>
+						<li><a href="#subtitle">Subtitle</a></li>
+						<li><a href="#columns">Columns</a></li>
+						<li><a href="#divider">Page Divider</a></li>
+						<li><a href="#dropcap">Drop Cap</a></li>
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#pre">Pre Tag</a></li>
+						<li><a href="#code">Code Tag</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		
+		<ol class="sections">
+			<li id="fundamentals">
+				<a href="#" class="clicker"><h2>Support &amp; Feature Requests</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li style="list-style:none;">
+							<div class="stepContent group">
+								<p>We hope that you enjoy working with this theme; wherever possible we have endeavoured to make its functionality easy and accessible for WordPress newcomers and experienced WP aficionados alike.</p>
+								<h3 style="margin: 18px 0;">Support</h3>
+								<p>If you have any questions at all when using this theme to construct your site, please address these to <a href="mailto:themesupport@icarusindustries.com?subject=Callisto Theme Support">themesupport@icarusindustries.com</a> and we'll be happy to assist. We aim to respond to all support emails within 1-2 working days; response times may be longer on weekends. Any relevant technical information you can provide with your support query will be appreciated - the more detail the better!</p>
+								<h3 style="margin: 18px 0;">Feature Requests</h3>
+								<p>We really appreciate feature suggestions, so if you have an idea that you think would make a good addition/alteration to this or a future theme, please don't hesitate to get in touch with us at <a href="mailto:suggestions@icarusindustries.com?subject=Callisto Theme Support">suggestions@icarusindustries.com</a> and we would be happy to consider this and discuss it with you.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="installation">
+				<a href="#" class="clicker"><h2>Installation &amp; Activation</h2></a>
+				<div class="toggle_container">
+					<div class="block">
+						<ol class="steps">
+							<li>
+								<h3>Step 1</h3>
+								<div class="stepContent group">
+									<p>In the WordPress admin area, navigate to 'Appearance &raquo; Themes'.</p>
+									<img src="assets/img/install_1.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 2</h3>
+								<div class="stepContent group">
+									<p>Click the tab marked 'Install Themes'. Then click 'Upload' on the submenu.</p>
+									<img src="assets/img/install_2_a.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 3</h3>
+								<div class="stepContent group">
+									<p>Click 'Choose File' under the heading 'Install a theme in .zip format'. In the window that opens, select the zip file named 'Callisto_Theme' in your Themeforest download.</p>
+									<p>Click 'Install Now'. The installation may take a few minutes or more.</p>
+									<img src="assets/img/install_3.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Alternate Option (FTP)</h3>
+								<div class="stepContent group">
+									<p>If you have an FTP client installed and know the FTP login details for your site, you may prefer to upload the theme via FTP.</p>
+									<p>If so, unzip the file named 'Callisto_theme_1.0.zip' (the version number may no longer be 1.0 due to updates) and connect via FTP to your site's WordPress install (usually the site root, unless you have opted to install WordPress in a directory).</p>
+									<p>Finally, upload the unzipped 'Callisto_theme_1.0' folder to 'wp-content &raquo; themes'. The Callisto theme will now be available to select from your WordPress admin area.</p>
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</li>
+			<li id="initial_setup">
+				<a href="#" class="clicker"><h2>Initial Setup</h2></a>
+				<div class="toggle_container">
+					<div class="block">
+						<ol class="steps">
+							<li>
+								<h3>Media</h3>
+								<div class="stepContent group">
+									<p>To set up the media sizes for embedding images in posts/pages, navigate to 'Settings &raquo; Media'. Enter the following sizes and click 'Save':<br />(These sizes have been calculated to play nicely with various elements of the theme's layout)</p>
+									<img src="assets/img/initial_1.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Permalinks</h3>
+								<div class="stepContent group">
+									<p>By default, WordPress permalinks are not descriptive of pages or posts. To change this, navigate to 'Settings &raquo; Permalinks'.</p>
+									<p>We advise setting your permalink structure to either 'Day and name,' 'Month and name,' or a similarly descriptive custom structure. This will make your URLs much cleaner and easier to understand. Click 'Save Changes' after selecting a permalink structure.</p>
+									<img src="assets/img/initial_2.png" alt="" />
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</li>
+		</ol>	
+		
+		<ol class="sections">
+			<li id="navigation">
+				<a href="#" class="clicker"><h2>Setting up the Navigation</h2></a>
+				<div class="toggle_container">
+					<div class="block">
+						<ol class="steps">
+							<li>
+								<h3>Step 1</h3>
+								<div class="stepContent group">
+									<p>In the WordPress admin area, navigate to 'Appearance &raquo; Menus'. Enter any name into the input next to 'Menu Name' and click 'Create Menu'.</p>
+									<img src="assets/img/nav_1.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 2</h3>
+								<div class="stepContent group">
+									<p>In the box on the left titled 'Theme Locations', select the menu you just created from the dropdown list and click 'Save'.</p>
+									<img src="assets/img/nav_2.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 3</h3>
+								<div class="stepContent group">
+									<p>In the box on the left titled 'Pages', select any pages you have created to add to the menu and click 'Add to Menu'.<br /><span class="highlight">Important</span>: Whenever you create a new page, add it to the navigation using this method.</p>
+									<img src="assets/img/nav_3.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Add Subtitles</h3>
+								<div class="stepContent group">
+									<p>This step will allow you to add subtitles to the top-level menu items as in the example image below:</p>
+									<img src="assets/img/nav_4_a.png" alt="" class="imageSpace" />
+									<p>While you are in 'Appearance &raquo; Menus,' click 'Screen Options' in the top right of the window.</p>
+									<img src="assets/img/nav_4_b.png" alt="" class="imageSpace" />
+									<p>In the dropdown menu that slides down, select the checkbox next to 'Description.'</p>
+									<img src="assets/img/nav_4_c.png" alt="" class="imageSpace" />
+									<p>Now in 'Appearance &raquo; Menus', for each page you will have a textarea named 'Description.' Whatever text you enter here will display as the subtitle for that page in the menu. Click 'Save Menu' to keep your changes.</p>
+									<img src="assets/img/nav_4_d.png" alt="" />
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</li>
+			<li id="homepage">
+				<a href="#" class="clicker"><h2>Setting Up the Homepage</h2></a>
+				<div class="toggle_container">
+					<div class="block">
+						<ol class="steps">
+							<li>
+								<h3>Step 1</h3>
+								<div class="stepContent group">
+									<p>Create a new page by navigating to 'Pages &raquo; Add New.' Give this a title of 'Home' and assign it the template 'Home' in the box on the right titled 'Page Attributes.' Leave the content of this page blank for now, and click 'Publish.'</p>
+									<img src="assets/img/home_1.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 2</h3>
+								<div class="stepContent group">
+									<p>In the WordPress admin area, navigate to 'Settings &raquo; Reading'. For the setting named 'Front Page Displays' select 'A Static Page'.</p>
+									<p>For the dropdown titled 'Front Page,' select the Home page you just created and click 'Save.' Leave the dropdown titled 'Posts Page' blank - you will set this in the next section: 'Setting Up the Blog.'</p>
+									<img src="assets/img/home_2.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 3</h3>
+								<div class="stepContent group">
+									<p>In the Callisto Options Panel, open the 'Home Page' section. Here you can set your welcome tagline and set the content &amp; layout of the homepage.</p>
+									<p>For the dropdown titled 'Homepage Content,' decide whether you would like blog posts or custom content on your homepage. If you select 'Both,' your custom content will appear first and the blog posts below.</p>
+									<img src="assets/img/home_3.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Custom Content</h3>
+								<div class="stepContent group">
+									<p>In Step 1 of this section, when creating the homepage it was published with the content left blank. If you set the 'Homepage Content' dropdown in the Options Panel (see previous step) to 'Custom Content' or 'Both,' any content that you now add to that blank page will be added to your homepage, below the featured area.</p>
+									<p>To enable maximum customisability, the homepage is a completely blank template - please read our section on 'Working with Page Layouts' to see how to effectively add custom content to the homepage.</p>
+									<p>Please also view our screencasts as these demonstrate how to set up custom content for the homepage in greater detail.</p>
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</li>
+			<li id="featured">
+				<a href="#" class="clicker"><h2>Setting Up the Featured Area</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>The featured area is the large area on the homepage for displaying your primary content. By default it is a slider, but it can also be an accordion or a large image that links to a single portfolio item or blog post.</p>
+								<p>To set up the featured area, you must first create a category for featured content to be pulled from. Navigate to 'Posts &raquo; Categories' and choose a category name for this featured content (this name can be anything). Next, click 'Add New Category.'</p>
+								<img src="assets/img/featured_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>In the Callisto Options Panel, open the 'Featured Area' section. For the dropdown titled 'Select a Featured Category', select the category that you created in the previous step, and click 'Save All Changes.'</p>
+								<img src="assets/img/featured_2_a.png" alt="" class="imageSpace" />
+								<p><span class="highlight">Important</span>: You must enter a height for the featured area at this point (default is 380px). The width of the featured area is fixed to 970px, so please ensure that all featured images for posts/items in the featured category are at least 970px by 380px (or whatever you set the height to). If they are larger than this that is OK - they will be automatically resized when they are uploaded.</p>
+								<p>Please also note that if you uploaded featured items and then changed the height of the featured area <span class="highlight">afterwards</span>, these images will be the wrong size. To fix this, you can either re-upload the images or use the 'Regenerate Thumbnails' plugin included in the Themeforest download.</p>
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>The featured area is now set up! Let's add some content to check everything is working as expected.</p>
+								<p>Create a new post or portfolio item that you would like to be featured on the front page. While creating this post/portfolio item, in the box on the right titled 'Categories' select the category that you create in the previous step.</p>
+								<img src="assets/img/featured_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Before publishing this post/portfolio item, you must add a featured image (this is what will be displayed on the slider/accordion). To do this, click 'Set Featured Image' in the box on the right titled 'Featured Image.'</p>
+								<img src="assets/img/featured_3_a.png" alt="" class="imageSpace" />
+								<p>This will open a modal window through which you can upload your picture. Click 'Select File' and choose the image from your local file system.</p>
+								<img src="assets/img/featured_3.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 5</h3>
+							<div class="stepContent group">
+								<p>For the Featured Area, you can leave all the image fields blank - just click 'Use as Featured Image,' then click 'Save all Changes' and close the modal window with the cross in the upper-right.</p>
+								<img src="assets/img/featured_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 6</h3>
+							<div class="stepContent group">
+								<p>Publish the post/portfolio item and visit your homepage to verfiy that the featured area is working correctly. That's it!</p>
+								<p>Please note that you must have completed the earlier section 'Setting Up Your Homepage' in order for the homepage to display the featured area.</p>
+								<p>Please also note that if your featured area is set to 'Accordion' in the Callisto Options Panel, there must be at least five posts in the featured category for it to pull from - otherwise, there will be blank spaces.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="blog">
+				<a href="#" class="clicker"><h2>Setting Up the Blog</h2></a>
+				<div class="toggle_container">
+					<div class="block">
+						<ol class="steps">
+							<li>
+								<h3>Step 1</h3>
+								<div class="stepContent group">
+									<p>Create a new page by navigating to 'Pages &raquo; Add New.' Give this a title of 'Blog' (or anything you would like your blog to be called). Leave the content of this page blank and click 'Publish.'</p>
+								</div>
+							</li>
+							<li>
+								<h3>Step 2</h3>
+								<div class="stepContent group">
+									<p>In the WordPress admin area, navigate to 'Settings &raquo; Reading'. For the dropdown titled 'Front Page,' select the Blog page you just created and click 'Save.'</p>
+									<img src="assets/img/blog_2.png" alt="" />
+								</div>
+							</li>
+							<li>
+								<h3>Step 3</h3>
+								<div class="stepContent group">
+									<p>In the Callisto Options Panel, open the 'Blog Settings' section. Here you can set the layout of the blog page, with granular control over columns/number of posts/sidebar, etc.</p>
+									<img src="assets/img/blog_3.png" alt="" class="imageSpace" />
+									<p>The last option, titled 'Display Sidebar on Blog Entry?', is the only one that does not refer to the blog overview. Instead it refers to whether a sidebar will be present when viewing single posts.</p>
+									<p>Once you have five or six posts published, it should be much easier to find out which type of layout works best with your content. Creating a few test posts with dummy content/featured images could help you assess how the blog options affect the blog layout.</p>
+								</div>
+							</li>
+							<li>
+								<h3>Adding Blog Posts</h3>
+								<div class="stepContent group">
+									<p>Create new blog posts by navigating to 'Posts &raquo; Add New.'</p>
+									<p>Make sure to add featured images to these items - the process is identical to that covered in steps 4-5 in the 'Setting Up the Featured Area.'</p>
+								</div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</li>
+			<li id="portfolio">
+				<a href="#" class="clicker"><h2>Setting Up the Portfolio</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>Create a new page by navigating to 'Pages &raquo; Add New.' Give this a title of 'Portfolio' (or anything else you would like it to be called, e.g. 'Projects' or 'Work') and assign it the template 'Portfolio' in the box on the right titled 'Page Attributes.' Leave the content of this page blank and click 'Publish.'</p>
+								<img src="assets/img/portfolio_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>In the Callisto Options Panel, open the 'Portfolio Settings' section. In the input for 'Your Portfolio Name,' either leave this as 'Portfolio' or enter some other description, e.g. 'Projects' or 'Work.' This will be used for the URL slug for all portfolio pieces. It will also take the place of the text 'Portfolio' in various places in the WordPress admin area.</p>
+								<p>You can use punctuation/spaces/multiple words for this setting if you like - it will be cleaned up and hyphenated using regular expressions to create a URL-friendly slug.</p>
+								<img src="assets/img/portfolio_2.png" alt="" class="imageSpace" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>If you changed the 'Portfolio' text in Step 2 to something that better matched your content, you must go to 'Settings &raquo; Permalinks' in the WordPress admin area. Just entering this section should flush the old Portfolio permalinks so that your custom ones will work. (You can just close the page or navigate back to the WordPress Dashboard after visiting 'Settings &raquo; Permalinks').</p>
+								<p><span class="highlight">Important</span>: If you ever change your 'Portfolio' name again after first setting it up, you must repeat this step in order to get the Permalinks to resolve properly. (Otherwise you may hit 404s.)</p>
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>In the Callisto Options Panel, open the 'Portfolio Settings' section. Here you can set the layout of the portfolio page, with granular control over columns/number of posts/sidebar, etc.</p>
+								<img src="assets/img/portfolio_2.png" alt="" class="imageSpace" />
+								<p>The last option, titled 'Display Sidebar on Single Portfolio Entry?', is the only one that does not refer to the portfolio overview. Instead it refers to whether a sidebar will be present when viewing single portfolio items.</p>
+								<p>Once you have five or six portfolio items published, it should be much easier to find out which type of layout works best with your content. Creating a few test portfolio items with dummy content/featured images could help you assess how the portfolio options affect the layout.</p>
+							</div>
+						</li>
+						<li>
+							<h3>Adding Portfolio Items</h3>
+							<div class="stepContent group">
+								<p>Create new portfolio items by navigating to 'Portfolio &raquo; Add New.'</p>
+								<p>Make sure to add featured images to these items - the process is identical to that covered in steps 4-5 in the 'Setting Up the Featured Area.'</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="logos">
+				<a href="#" class="clicker"><h2>Add Your Logo</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>This section assumes that you have a logo ready to upload. If you do not yet have one and you would like to create a logo similar to the bundled Callisto logo, please first read the section 'Creating Your Logo'.</p>
+								<p>In the Callisto Options Panel, open the 'Logo &amp; Favicon' section. Under the title 'Header Logo' click 'Upload Image'. In the window that opens, select your logo PNG image.</p>
+								<img src="assets/img/addLogo_1.png" alt="" class="imageSpace" />
+								<p>Your logo image should now appear on a white background below the upload button, like so:</p>
+								<img src="assets/img/addLogo_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>Under the title 'Header Logo Height' enter the height of the logo image you just uploaded. Then click 'Save All Changes.'</p>
+								<img src="assets/img/addLogo_3.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Footer Logo</h3>
+							<div class="stepContent group">
+								<p>Create a copy of your logo image. Resize this copy to around 50-75% of its original size using Photoshop or similar image editing software.</p>
+								<p>Upload this smaller logo and enter its height (just as in steps 1 &amp; 2) in the footer logo section of the Callisto Options Panel.<br />Finally click 'Save All Changes.</p>
+								<img src="assets/img/addLogo_4.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="widgets">
+				<a href="#" class="clicker"><h2>Configure Your Widgets</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Overview</h3>
+							<div class="stepContent group">
+								<p>This theme has a widgetised footer and sidebar. The footer is designed to hold four widgets (see <a href="http://icarusindustries.com/callisto" target="_blank">theme demo</a> for widget layout); there is no real limit to the amount of widgets the sidebar can hold.</p>
+								<p>This theme comes with four custom widget: Callisto Sidebar Adverts, Callisto Sidebar Google Map, Callisto Twitter Feed &amp; Callisto Flickr Stream.</p>
+								<p>Widgets are activated in the usual manner - drag them to the sidebar/footer, fill in the details and click 'Save.'</p>
+								<img src="assets/img/widgets_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Callisto Flickr Stream</h3>
+							<div class="stepContent group">
+								<p>When activating the Flickr widget, choose a title and check <a href="http://www.idgettr.com" target="_blank">idGettr</a> to fetch the Flickr ID. When selecting the number of images, multiples of three fit best in the sidebar and multiples of two fit best in the footer.</p>
+								<img src="assets/img/widgets_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Callisto Sidebar Google Maps Widget</h3>
+							<div class="stepContent group">
+								<p>When activating the Google Maps widget, choose a title and a pixel height (250 will make the map square).</p>
+								<img src="assets/img/widgets_3.png" alt="" class="imageSpace" />
+								<p>To find the right Google Maps Link, open the Google Maps website in a separate tab and find the relevant map area. Click 'Link' in the upper-right of the window and copy the first link (titled 'Paste link in email or IM'). Paste this link into the widget input.</p>
+								<img src="assets/img/widgets_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Callisto Twitter Feed</h3>
+							<div class="stepContent group">
+								<p>When activating the Twitter widget, choose a title, enter your username and select the number of tweets to be displayed.</p>
+								<img src="assets/img/widgets_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Callisto Sidebar Adverts</h3>
+							<div class="stepContent group">
+								<p>When activating the sidebar adverts widget, first choose a title.</p>
+								<img src="assets/img/widgets_6.png" alt="" class="imageSpace" />
+								<p>Next, go to the Callisto Options Panel and open the 'Sidebar 125px Ads' section. For each advert that you would like to show in your sidebar (up to a possible four), upload a 125px by 125px advert image and enter the link to which it should direct. You can also select whether these advert links should open in a new tab.</p>
+								<p>The theme decides which adverts to display based upon whether anything has been entered in their 'Link' input in the Callisto Options Panel. So if you only upload one or two adverts, only these will be displayed - there will not be blank spaces in the layout to fill up the four.</p>
+								<img src="assets/img/widgets_7.png" alt="" class="imageSpace" />
+								<p>Included in the Themeforest download is a sample 125px by 125px image that displays the text 'Advertise Here,' styled to suit the theme. If looking for site advertising, you could upload this image in the advert slots and link to a page on your site (which you would first create) that could list your contact details, fees, audience demographic, hits per month, etc.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+		</ol>
+		
+		<ol class="sections">
+			<li id="toggle">
+				<a href="#" class="clicker"><h2>Add Toggled Content</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Toggle' button:</p>
+								<img src="assets/img/toggle_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with two inputs. Enter a title for the toggle and the content that should be made visible when the toggle is clicked, then click 'OK.'</p>
+								<img src="assets/img/toggle_2.png" alt="" class="imageSpace" />
+								<p>The shortcode will then be generated and added to the editor, looking something like this:</p>
+								<img src="assets/img/toggle_3.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>When you publish your page/post/portfolio item, the toggle will output to this when closed:</p>
+								<img src="assets/img/toggle_4.png" alt="" class="imageSpace" />
+								<p>And this when open:</p>
+								<img src="assets/img/toggle_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>HTML Content</h3>
+							<div class="stepContent group">
+								<p>To add HTML content to toggles, create a toggle as above with any content in the 'Toggle Content' field. Once the shortcode has been generated (as in Step 2), replace the toggle content with your HTML content. So, your shortcode might end up looking like this:</p>
+								<img src="assets/img/toggle_6.png" alt="" class="imageSpace" />
+								<p>Which will output to this:</p>
+								<img src="assets/img/toggle_7.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="tab">
+				<a href="#" class="clicker"><h2>Add Tabbed Content</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Tabs' button:</p>
+								<img src="assets/img/tabs_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with three inputs. Choose whether to have the tabs located at the top or bottom (see <a href="http://icarusindustries.com/callisto/features/shortcodes/tabs-and-toggles/" target="_blank">examples</a>). Enter a title for the first tab and the content that should be made visible when that tab is clicked.</p>
+								<img src="assets/img/tabs_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Click '+ Add Another Tab' to insert an additional tab, then enter the tab text and tab content. Repeat this step as many times as required, then click 'OK.'</p>
+								<img src="assets/img/tabs_3.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Step 3 will generate a shortcode and insert it into the visual editor, looking something like this:</p>
+								<img src="assets/img/tabs_4.png" alt="" class="imageSpace" />
+								<p>Publish the page/post/portfolio item, and this shortcode will output to this:</p>
+								<img src="assets/img/tabs_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>HTML Content</h3>
+							<div class="stepContent group">
+								<p>To add HTML content to tabss, create your main tab structure as above with any content in the 'Tab Content' field. Once the shortcode has been generated (as in Step 3), replace the tab content with your HTML content. So, your shortcode might end up looking like this:</p>
+								<img src="assets/img/tabs_6.png" alt="" class="imageSpace" />
+								<p>Which will output to this:</p>
+								<img src="assets/img/tabs_7.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="youtube">
+				<a href="#" class="clicker"><h2>Add a YouTube Clip</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'YouTube' button:</p>
+								<img src="assets/img/youtube_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with an input for the YouTube clip ID.</p>
+								<img src="assets/img/youtube_2.png" alt="" class="imageSpace" />
+								<p>To find this, visit the video on YouTube and look at the browser URL. The clip ID is a string of letters and digits appended to the end. <br />(See the image below for an example of what you are looking for).</p>
+								<img src="assets/img/youtube_3.png" alt="" class="imageSpace" />
+								<p>Depending on how you were referred to the video page on YouTube, the URL might have some additional query strings, etc. Make sure to only copy the clip ID string:</p>
+								<img src="assets/img/youtube_3_a.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Paste the clip ID into the modal window, click 'OK' and a shortcode will be generated and entered into the editor.</p>
+								<img src="assets/img/youtube_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Publish the page/post/portfolio item, and this shortcode will output to an embedded video. This will fill the width of its parent container (be it a page, column, tab, toggle or anything else), and a 16:9 aspect ratio will be preserved by automatically calculating the height based upon the fluid width (plus 30px for YouTube's control bar).</p>
+								<img src="assets/img/youtube_5.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="vimeo">
+				<a href="#" class="clicker"><h2>Add a Vimeo Clip</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Vimeo' button:</p>
+								<img src="assets/img/vimeo_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with an input for the Vimeo clip ID.</p>
+								<img src="assets/img/vimeo_2.png" alt="" class="imageSpace"/>
+								<p>To find this, visit the video on Vimeo and look at the browser URL. The clip ID is a string of digits appended to the end. <br />(See the image below for an example of what you are looking for).</p>
+								<img src="assets/img/vimeo_3.png" alt="" class="imageSpace" />
+								<p>Depending on how you were referred to the video page on Vimeo, the URL might have some additional query strings, etc. Make sure to only copy the numerical string:</p>
+								<img src="assets/img/vimeo_3_a.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Paste the clip ID into the modal window, click 'OK' and a shortcode will be generated and entered into the editor.</p>
+								<img src="assets/img/vimeo_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Publish the page/post/portfolio item, and this shortcode will output to an embedded video. This will fill the width of its parent container (be it a page, column, tab, toggle or anything else), and a 16:9 aspect ratio will be preserved by automatically calculating the height based upon the fluid width.</p>
+								<img src="assets/img/vimeo_5.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="gmap">
+				<a href="#" class="clicker"><h2>Add a Google Map</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Google Map' button:</p>
+								<img src="assets/img/gmap_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with inputs for the Google Map link and height.</p>
+								<img src="assets/img/gmap_2.png" alt="" class="imageSpace" />
+								<p>To find the right Google Map link, open the Google Maps website in a separate tab and find the relevant map area. Click 'Link' in the upper-right of the window and copy the first link (titled 'Paste link in email or IM').</p>
+								<img src="assets/img/widgets_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Paste the link into the modal window input, enter a pixel height and click 'OK.' This will generate and enter a shortcode into the editor.</p>
+								<img src="assets/img/gmap_3.png" alt="" class="imageSpace" />
+								<p>Publish the page/post and this shortcode will output to create a map that fills the width of its parent container:</p>
+								<img src="assets/img/gmap_5.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="slider">
+				<a href="#" class="clicker"><h2>Add a Slider</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Add Slider' button:</p>
+								<img src="assets/img/slider_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with inputs for the alignment of the slider, the height and width, and the link and caption for the first image.</p>
+								<p>Enter a height and width for the slider, then go to the next step to see how to upload your pictures and find their links.</p>
+								<img src="assets/img/slider_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>In another tab, open the WordPress admin area and go to 'Media &raquo; Add New'</p>
+								<img src="assets/img/slider_3.png" alt="" class="imageSpace" />
+								<p>Click 'Select Files' and find the first picture for your slider from your local file system. When the image has been uploaded, copy the link from the greyed-out 'File URL' textbox.</p> 
+								<img src="assets/img/slider_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Go back to your tab with the slider modal window open and paste the image link into the 'Image Link' input. Optionally add a caption.</p>
+								<img src="assets/img/slider_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 5</h3>
+							<div class="stepContent group">
+								<p>Click '+ Add Another Image', then repeat steps 3-4 as many times as you like until you have uploaded and entered all the images for your slider.</p>
+								<img src="assets/img/slider_6.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 6</h3>
+							<div class="stepContent group">
+								<p>When you have all your images entered, click 'OK' in the modal window. This will generate and enter a shortcode into the visual editor.</p>
+								<img src="assets/img/slider_7.png" alt="" class="imageSpace" />
+								<p>Publish your page/post and this shortcode will output to create the slider according to your specifications.</p>
+								<img src="assets/img/slider_8.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="alert">
+				<a href="#" class="clicker"><h2>Add an Alert Box</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Add Alert Box' button:</p>
+								<img src="assets/img/alert_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with inputs for the alert type (info, success, general, error) and the alert content.</p>
+								<p>Choose an alert type and enter your content, then click 'OK.'</p>
+								<img src="assets/img/alert_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Depending on the type of alert you chose in the previous step, this will generate and enter one of the following shortcodes:</p>
+								<img src="assets/img/alert_3.png" alt="" class="imageSpace" />
+								<p>Publish your page/post and this shortcode will output to create one of the following alert boxes (depending on type chosen):</p>
+								<img src="assets/img/alert_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Info</h3>
+							<div class="stepContent group">
+								<p>Alert boxes are fluid width and will automatically fill the width of their parent element.<br />They will scale vertically to fit long content and can contain HTML elements.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="button">
+				<a href="#" class="clicker"><h2>Add a Button</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post, page or portfolio item, in the visual editor click the 'Add Button' button:</p>
+								<img src="assets/img/button_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with inputs for the button colour, position, text and link.</p>
+								<p>Enter these specifications according to the function of your button.</p>
+								<img src="assets/img/button_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Click 'OK' in the modal window and a shortcode will be generated and entered.</p>
+								<img src="assets/img/button_3.png" alt="" class="imageSpace" />
+								<p>Publish your page/post and this shortcode will output to create a button according to your specifications.</p>
+								<img src="assets/img/button_4.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+		</ol>
+		
+		<ol class="sections">
+			<li id="pageLayout">
+				<a href="#" class="clicker"><h2>Page Layouts</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Info</h3>
+							<div class="stepContent group">
+								<p>To make a custom page layout you must be using a post/page template named '<span class="highlight">Blank Template</span>' or '<span class="highlight">Blank Template with Sidebar</span>.' (Page templates are enabled by default; enabling post templates requires the use of the 'Custom Post Template' plugin - see our documentation section on this plugin.)</p>
+								<img src="assets/img/page_1_a.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post/page with a 'Blank' template as described above, in the visual editor click one of the 'Page' buttons:</p>
+								<img src="assets/img/page_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A visual representation of the page will be generated and inserted into the visual editor. In each page the size will be written (e.g. 'Full', 'Half,', 'Two Thirds' or 'Third.'). <span class="highlight">Highlight</span> this text and overwrite it with your content. (If you backspace it rather than highlighting and overwriting, the page may be deleted.)</p>
+								<img src="assets/img/page_2.png" alt="" class="imageSpace" />
+								<p>This image shows all the possible page combinations (with the text of the first column highlighted and ready to be overwritten).</p>
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>After you have finished constructing your custom page layout, your editor may look something like this:</p>
+								<img src="assets/img/page_3.png" alt="" class="imageSpace" />
+								<p>When published, this will output to this:</p>
+								<img src="assets/img/page_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Interlocking</h3>
+							<div class="stepContent group">
+								<p>This concept is best illustrated with an example. Let's say you have a layout of multiple pages (of various heights) that could 'interlock.' By default, browsers will render <span class="highlight">all</span> lower elements below <span class="highlight">all</span> heigher elements, like this:</p>
+								<img src="assets/img/page_5.png" alt="" class="imageSpace" />
+								<p>We can fix this with a jQuery plugin called <a href="http://desandro.com/resources/jquery-masonry/" target="_blank">Masonry</a>. In the HTML editor, wrap all your pages in a shortcode tag like so:</p>
+								<img src="assets/img/page_5_a.png" alt="" class="imageSpace" />
+								<p>When published, all of the pages within the [masonry] tags will be arranged into an interlocking structure, like this:</p>
+								<img src="assets/img/page_6.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>HTML Content</h3>
+							<div class="stepContent group">
+								<p>Pages can contain any HTML content (as well as shortcodes and columns). So, you may end up with something that looks like this in the visual editor:</p>
+								<img src="assets/img/col_3.png" alt="" class="imageSpace" />
+								<p>Which, when published, will output to this:</p>
+								<img src="assets/img/col_4.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="subtitle">
+				<a href="#" class="clicker"><h2>Subtitle</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Info</h3>
+							<div class="stepContent group">
+								<p>To add a self-enclosed subtitle to a post or page, you must be using a post/page template named '<span class="highlight">Blank Template</span>.' (Page templates are enabled by default; enabling post templates requires the use of the 'Custom Post Template' plugin - see our documentation section on this plugin.)</p>
+								<p>Subtitles must be placed <span class="highlight">between</span> pages, rather than inside them (see our documentation section titled 'Page Layouts'.)</p>
+							</div>
+						</li>
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post or page, in the visual editor click the 'Add Subtitle' button:</p>
+								<img src="assets/img/sub_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>This will generate a shortcode and add it to the visual editor. Between the [subtitle] and [/subtitle] tags, write your subtitle.</p>
+								<img src="assets/img/sub_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Add the rest of your content and publish the post/page. The subtitle shortcode will output like so:</p>
+								<img src="assets/img/sub_3.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="columns">
+				<a href="#" class="clicker"><h2>Columns</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post or page, in the visual editor click one of the 'Column' buttons. (To read a description of which columns they will create, hover over them until the description is displayed.)</p>
+								<img src="assets/img/col_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A visual representation of the column layout will be generated and inserted into the visual editor. In each column box, the size of that column will be written (e.g. 'Half', 'Third,', 'Three Fourths' etc.). <span class="highlight">Highlight</span> this text and overwrite it with your content. (If you backspace it rather than highlighting and overwriting, the column may be deleted.)</p>
+								<img src="assets/img/col_2.png" alt="" class="imageSpace" />
+								<p>This image shows all the possible column combinations (with the text of the first column highlighted and ready to be overwritten).</p>
+							</div>
+						</li>
+						<li>
+							<h3>Info</h3>
+							<div class="stepContent group">
+								<p>Columns can contain any HTML content (as well as shortcodes), and can be placed within pages when working with blank templates (see the documentation section on 'Page Layouts' for more on this). So, you may end up with something that looks like this in the visual editor:</p>
+								<img src="assets/img/col_3.png" alt="" class="imageSpace" />
+								<p>Which, when published, will output to this:</p>
+								<img src="assets/img/col_4.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="divider">
+				<a href="#" class="clicker"><h2>Page Divider</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When editing a post, page or portfolio item, in the visual editor click the 'Page Divider' button:</p>
+								<img src="assets/img/divider_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>This will create a grey dividing line in the visual editor that looks like this:</p>
+								<img src="assets/img/divider_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Publish your page/post and this shortcode will output to create a divider that looks like this:</p>
+								<img src="assets/img/divider_3.png" alt="" class="imageSpace" />
+								<p>When clicked, the 'Top &uarr;' text will smoothly animate a return to the top of the page.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="dropcap">
+				<a href="#" class="clicker"><h2>Drop Caps</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When editing a post, page or portfolio item, in the visual editor click the 'Drop Cap' button:</p>
+								<img src="assets/img/dropcap_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A modal window will open up with inputs for the dropcap style and character. Enter these and click 'OK.'</p>
+								<img src="assets/img/dropcap_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Depending on the style you chose in the previous step, this will generate and enter one of the following shortcodes:</p>
+								<img src="assets/img/dropcap_3.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 4</h3>
+							<div class="stepContent group">
+								<p>Add the rest of your content to the page/post, immediately after the dropcap shortcode.</p>
+								<img src="assets/img/dropcap_4.png" alt="" class="imageSpace" />
+								<p>Publish your page/post and this shortcode will output to create a drop according to your chosen style/character.</p>
+								<img src="assets/img/dropcap_5.png" alt="" />
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="headings">
+				<a href="#" class="clicker"><h2>Headings</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post or page, in the visual editor click one of the 'Heading' buttons:</p>
+								<img src="assets/img/heading_1.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>A heading with a level between 1-6 will be output into the visual editor with the text 'Heading'. Replace this with your chosen title, and when you publish the post/page the heading will appear in regular HTML h1/h2/h3/h4/h5/h6 tags.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="pre">
+				<a href="#" class="clicker"><h2>Pre Tag</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post or page, in the visual editor click the 'Pre' button:</p>
+								<img src="assets/img/pre_1.png" alt="" class="imageSpace" />
+								<p>This will create a shortcode in the visual editor that looks like this:</p>
+								<img src="assets/img/pre_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>Go to the <span class="highlight">HTML editor</span> tab, and find the text 'Content' between the [pre_pretty] and [/pre_pretty] tags. Replace this with your code to be embedded.</p>
+								<img src="assets/img/pre_3.png" alt="" class="imageSpace" />
+								<p><span class="highlight">Note</span>: You will probably want to format your code with indentations &amp; linebreaks in your text editor of choice, then paste it into the WordPress HTML editor rather than try to enter it by hand into the WordPress editor.</p>
+								<img src="assets/img/pre_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Once your code is pasted in, publish the post/page and the pre shortcode will output like so:</p>
+								<img src="assets/img/pre_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>CSS</h3>
+							<div class="stepContent group">
+								<p>If you are embedding CSS code, then to get the syntax highlighting to work correctly you should add the class 'lang-css' to the pre tag. Almost all other languages will be auto-detected and their highlighted appropriately.</p>
+								<img src="assets/img/pre_5_a.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Expansion</h3>
+							<div class="stepContent group">
+								<p>If your code contains long lines that would ordinarily cause the pre area to overflow with an x-axis scrollbar, hovering over the pre area will cause it to automatically expand (and contract again on mouseout). If a visitor has Javascript disabled, a scrollbar will appear instead.</p>
+								<p>Normal state:</p>
+								<img src="assets/img/pre_6.png" alt="" class="imageSpace" />
+								<p>Mouseover state:</p>
+								<img src="assets/img/pre_7.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>HTML Tags</h3>
+							<div class="stepContent group">
+								<p>If you are embedding HTML code, then the WordPress editor will try to interpret this rather than output it as plain text. Accordingly, you will need to replace all <span class="highlight">&lt;</span> signs with '<span class="highlight">&amp;lt;</span>' and all <span class="highlight">&gt;</span> signs with '<span class="highlight">&amp;gt;</span>' (The 'Find &amp; Replace' function in your text editor should make this quick &amp; easy.)</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li id="code">
+				<a href="#" class="clicker"><h2>Code Tag</h2></a>
+				<div class="toggle_container">
+					<ol class="steps">
+						<li>
+							<h3>Step 1</h3>
+							<div class="stepContent group">
+								<p>When creating a post or page, in the visual editor click the 'Code' button:</p>
+								<img src="assets/img/code_1.png" alt="" class="imageSpace" />
+								<p>This will create a shortcode in the visual editor that looks like this:</p>
+								<img src="assets/img/code_2.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 2</h3>
+							<div class="stepContent group">
+								<p>Go to the <span class="highlight">HTML editor</span> tab, and find the text 'Content' between the [code_pretty] and [/code_pretty] tags. Replace this with your code to be embedded.</p>
+								<img src="assets/img/code_3.png" alt="" class="imageSpace" />
+								<p>The code tag should be used for inline fragments of code - for multi-line blocks, use the pre tag.</p>
+								<img src="assets/img/code_4.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>Step 3</h3>
+							<div class="stepContent group">
+								<p>Once your code is pasted in, publish the post/page and the pre shortcode will output like so:</p>
+								<img src="assets/img/code_5.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>CSS</h3>
+							<div class="stepContent group">
+								<p>If you are embedding CSS code, then to get the syntax highlighting to work correctly you should add the class 'lang-css' to the code tag. Almost all other languages will be auto-detected and their highlighted appropriately.</p>
+								<img src="assets/img/code_5_a.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<h3>HTML Tags</h3>
+							<div class="stepContent group">
+								<p>If you are embedding HTML code, then the WordPress editor will try to interpret this rather than output it as plain text. Accordingly, you will need to replace all <span class="highlight">&lt;</span> signs with '<span class="highlight">&amp;lt;</span>' and all <span class="highlight">&gt;</span> signs with '<span class="highlight">&amp;gt;</span>' (The 'Find &amp; Replace' function in your text editor should make this quick &amp; easy.)</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</li>
+		</ol>
+		
+    </div><!-- /.container -->
+  
+  
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/easing.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!-- end scripts-->
+
+</body>
+</html>
