@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/3/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import "CocoaBird+Core.h"
@@ -132,15 +132,15 @@ static NSString* urlEncode(id object) {
                                        requestWithURL:[NSURL URLWithString:url]
                                        consumerKey: [CocoaBirdSettings oAuthConsumerKey]
                                        consumerSecret: [CocoaBirdSettings oAuthConsumerSecret]
-                                       token:[CocoaBirdSettings oAuthToken]
-                                       tokenSecret: [CocoaBirdSettings oAuthTokenSecret]];
+                                       token:[CocoaBirdSettings oAuthAccessTokenKey]
+                                       tokenSecret: [CocoaBirdSettings oAuthAccessTokenSecret]];
     }else{
         ASIFormDataRequest* request = [ASIFormDataRequest 
                                        requestWithURL:[NSURL URLWithString:url]
                                        consumerKey: [CocoaBirdSettings oAuthConsumerKey]
                                        consumerSecret: [CocoaBirdSettings oAuthConsumerSecret]
-                                       token:[CocoaBirdSettings oAuthToken]
-                                       tokenSecret: [CocoaBirdSettings oAuthTokenSecret]];
+                                       token:[CocoaBirdSettings oAuthAccessTokenKey]
+                                       tokenSecret: [CocoaBirdSettings oAuthAccessTokenSecret]];
         for(NSString* key in paramsDic){
             [request addPostValue:[paramsDic objectForKey:key] forKey:key];
         }

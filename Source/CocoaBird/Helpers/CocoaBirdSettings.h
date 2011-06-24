@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/3/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,10 +22,10 @@
 + (BOOL) useSSL;
 
 //OAuth Tokey/Secret
-+ (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname;
-+ (BOOL) hasAuthenticationTokens;
-+ (NSString*) oAuthToken;
-+ (NSString*) oAuthTokenSecret;
++ (void) setAccessTokenKey:(NSString*)key secret:(NSString*)secret screenname:(NSString*)screenname;
++ (BOOL) hasAccessTokens;
++ (NSString*) oAuthAccessTokenKey;
++ (NSString*) oAuthAccessTokenSecret;
 + (NSString*) screenname;
 + (void) logout;
 

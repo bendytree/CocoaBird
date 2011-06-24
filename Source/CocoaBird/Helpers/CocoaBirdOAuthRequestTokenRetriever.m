@@ -3,22 +3,22 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/4/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
-#import "CocoaBirdOAuthTokenRetriever.h"
+#import "CocoaBirdOAuthRequestTokenRetriever.h"
 #import "CocoaBirdSettings.h"
 
 #import "OAMutableURLRequest.h"
 #import "OAConsumer.h"
 #import "OADataFetcher.h"
 
-@interface CocoaBirdOAuthTokenRetriever (private)
+@interface CocoaBirdOAuthRequestTokenRetriever (private)
 - (NSString *) extractUsernameFromHTTPBody:(NSString*)body;
 @end
 
 
-@implementation CocoaBirdOAuthTokenRetriever
+@implementation CocoaBirdOAuthRequestTokenRetriever
 
 @synthesize requestToken, delegate, fetcher;
 

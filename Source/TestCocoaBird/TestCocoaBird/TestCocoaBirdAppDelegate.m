@@ -3,16 +3,16 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/3/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import "TestCocoaBirdAppDelegate.h"
 #import "ASIHTTPRequest.h"
 #import "RootController.h"
-#import "CocoaBird.h"
+
 
 @interface TestCocoaBirdAppDelegate()
-- (void) showRootView;
+
 @end
 
 @implementation TestCocoaBirdAppDelegate
@@ -20,34 +20,13 @@
 @synthesize window=_window, controller;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
-    [CocoaBird setConsumerKey:@"FD36QhvLRLZYPLdl1Qfg" andSecret:@"V6Wx1HK1L8RVYKyA3lbmz36CstMaQ9EnIP7RKoPaE"];
-    
-    /*
-    [CocoaBird logout];
-    if([CocoaBird isLoggedIn]){
-        [self showRootView];
-    }else{
-        [CocoaBird addLoginDelegate:self selector:@selector(cocoaBirdLoginComplete)];
-        [CocoaBird launchLogin:NO];
-    }
-     */
+{
     
     [self.window makeKeyAndVisible];
+    
     return YES;
 } 
 
-- (void) showRootView
-{
-    self.controller = [[[RootController alloc] init] autorelease];
-    [self.window addSubview:self.controller.view];
-    [self.controller.view setFrame:[[UIScreen mainScreen] applicationFrame]];
-}
-
-- (void) cocoaBirdLoginComplete
-{
-    [self showRootView];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

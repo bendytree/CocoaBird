@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import "CocoaBird+Authentication.h"
@@ -24,7 +24,7 @@
 
 + (BOOL) isLoggedIn
 {
-    return [CocoaBirdSettings hasAuthenticationTokens];
+    return [CocoaBirdSettings hasAccessTokens];
 }
 
 + (void) logout

@@ -3,11 +3,11 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/18/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "CocoaBirdOAuthTokenRetriever.h"
+#import "CocoaBirdOAuthRequestTokenRetriever.h"
 #import "CocoaBird+Authentication.h"
 
 
@@ -23,7 +23,7 @@ typedef enum {
 @end
 
 
-@interface CBLoginWebController : UIViewController<UIWebViewDelegate, CocoaBirdOAuthTokenRetrieverDelegate> {
+@interface CBLoginWebController : UIViewController<UIWebViewDelegate, CocoaBirdOAuthRequestTokenRetrieverDelegate> {
     
     IBOutlet UIWebView* web;
     IBOutlet UIActivityIndicatorView* spinner;
@@ -32,7 +32,7 @@ typedef enum {
     
 }
 
-@property (retain) CocoaBirdOAuthTokenRetriever* tokenRetriever;
+@property (retain) CocoaBirdOAuthRequestTokenRetriever* tokenRetriever;
 @property (assign) id<CBLoginWebControllerDelegate> delegate;
 
 @end

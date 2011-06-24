@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/18/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import "CBLoginWebController.h"
@@ -33,7 +33,7 @@
         
         [CocoaBirdSettings assertConsumerKeyAndSecretAreSet];
         
-        self.tokenRetriever = [[[CocoaBirdOAuthTokenRetriever alloc] init] autorelease];
+        self.tokenRetriever = [[[CocoaBirdOAuthRequestTokenRetriever alloc] init] autorelease];
         self.tokenRetriever.delegate = self;
         [self.tokenRetriever beginLoadingRequestToken];
     }
@@ -171,7 +171,7 @@
 {
     NSLog(@"tokenRetrieverGotAccessToken");
     
-    [CocoaBirdSettings setAuthenticationToken:key secret:secret screenname:screenname];
+    [CocoaBirdSettings setAccessTokenKey:key secret:secret screenname:screenname];
     
     [self quit:CBLoginResultSuccess error:nil];
 }

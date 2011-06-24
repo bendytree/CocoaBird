@@ -6,21 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		BC9502B713AEDFC3004641C3 /* Documentation */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = BC9502B813AEDFC3004641C3 /* Build configuration list for PBXAggregateTarget "Documentation" */;
-			buildPhases = (
-				BC9502BB13AEDFEF004641C3 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Documentation;
-			productName = Documentation;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
+		BC06DB3113B421AE00B0743F /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC06DB3013B421AE00B0743F /* readme.txt */; };
 		BC19053A13A977FE00274631 /* CocoaBird+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = BC19053913A977FE00274631 /* CocoaBird+Block.m */; };
 		BC19053E13A9829100274631 /* CocoaBird+Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC19053C13A9829100274631 /* CocoaBird+Geo.m */; };
 		BC19054113A984F800274631 /* CBGeoSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BC19054013A984F800274631 /* CBGeoSearchResponse.m */; };
@@ -31,19 +18,6 @@
 		BC7698B913999DDD009A7FA1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7698B813999DDD009A7FA1 /* MobileCoreServices.framework */; };
 		BC7698BB13999DED009A7FA1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7698BA13999DED009A7FA1 /* libz.1.2.3.dylib */; };
 		BC7698C11399A00D009A7FA1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7698C01399A00D009A7FA1 /* CFNetwork.framework */; };
-		BC9502DD13AEF556004641C3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC9502C713AEF555004641C3 /* Settings.plist */; };
-		BC9502DF13AEF556004641C3 /* documents-template in Resources */ = {isa = PBXBuildFile; fileRef = BC9502CE13AEF555004641C3 /* documents-template */; };
-		BC9502E013AEF556004641C3 /* nodes-template.xml in Resources */ = {isa = PBXBuildFile; fileRef = BC9502CF13AEF555004641C3 /* nodes-template.xml */; };
-		BC9502E113AEF556004641C3 /* tokens-template.xml in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D013AEF555004641C3 /* tokens-template.xml */; };
-		BC9502E213AEF556004641C3 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D313AEF555004641C3 /* styles.css */; };
-		BC9502E313AEF556004641C3 /* document-template.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D413AEF555004641C3 /* document-template.html */; };
-		BC9502E413AEF556004641C3 /* hierarchy-template.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D513AEF555004641C3 /* hierarchy-template.html */; };
-		BC9502E513AEF556004641C3 /* button_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D713AEF555004641C3 /* button_bar_background.png */; };
-		BC9502E613AEF556004641C3 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D813AEF555004641C3 /* disclosure.png */; };
-		BC9502E713AEF556004641C3 /* disclosure_open.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9502D913AEF555004641C3 /* disclosure_open.png */; };
-		BC9502E813AEF556004641C3 /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9502DA13AEF555004641C3 /* title_background.png */; };
-		BC9502E913AEF556004641C3 /* index-template.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9502DB13AEF555004641C3 /* index-template.html */; };
-		BC9502EA13AEF556004641C3 /* object-template.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9502DC13AEF555004641C3 /* object-template.html */; };
 		BCBEC0091399945300FB5FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC0081399945300FB5FA9 /* UIKit.framework */; };
 		BCBEC00B1399945300FB5FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00A1399945300FB5FA9 /* Foundation.framework */; };
 		BCBEC00D1399945300FB5FA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEC00C1399945300FB5FA9 /* CoreGraphics.framework */; };
@@ -92,7 +66,7 @@
 		BCD512B813A82B5E00EE196E /* CBLoginModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511F713A82B5E00EE196E /* CBLoginModalController.m */; };
 		BCD512B913A82B5E00EE196E /* CBLoginModalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD511F813A82B5E00EE196E /* CBLoginModalController.xib */; };
 		BCD512BA13A82B5E00EE196E /* CocoaBirdModal.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511FA13A82B5E00EE196E /* CocoaBirdModal.m */; };
-		BCD512BB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m */; };
+		BCD512BB13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.m */; };
 		BCD512BC13A82B5E00EE196E /* CocoaBirdSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD511FE13A82B5E00EE196E /* CocoaBirdSettings.m */; };
 		BCD512BD13A82B5E00EE196E /* CocoaBird+Account.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5120113A82B5E00EE196E /* CocoaBird+Account.m */; };
 		BCD512BE13A82B5E00EE196E /* CocoaBird+Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5120313A82B5E00EE196E /* CocoaBird+Authentication.m */; };
@@ -164,7 +138,6 @@
 		BCD5130813A83F7A00EE196E /* CocoaBird+Friendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130613A83F7900EE196E /* CocoaBird+Friendship.m */; };
 		BCD5130B13A8451D00EE196E /* CBFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5130A13A8451D00EE196E /* CBFriendship.m */; };
 		BCD5131113A8560C00EE196E /* CocoaBird+Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */; };
-		BCD5131313A85C0400EE196E /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD5131213A85C0300EE196E /* Todo.txt */; };
 		BCEAF13513AD39EC00DB6092 /* CocoaBirdSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */; };
 		BCEAF13913AD3B9B00DB6092 /* CocoaBird+Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */; };
 		BCEAF13D13AD48D600DB6092 /* CBLoginWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAF13B13AD48D600DB6092 /* CBLoginWebController.m */; };
@@ -185,6 +158,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC06DB3013B421AE00B0743F /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		BC19053813A977FE00274631 /* CocoaBird+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Block.h"; sourceTree = "<group>"; };
 		BC19053913A977FE00274631 /* CocoaBird+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Block.m"; sourceTree = "<group>"; };
 		BC19053C13A9829100274631 /* CocoaBird+Geo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Geo.m"; sourceTree = "<group>"; };
@@ -199,19 +173,6 @@
 		BC7698B813999DDD009A7FA1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BC7698BA13999DED009A7FA1 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		BC7698C01399A00D009A7FA1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		BC9502C713AEF555004641C3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
-		BC9502CE13AEF555004641C3 /* documents-template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "documents-template"; sourceTree = "<group>"; };
-		BC9502CF13AEF555004641C3 /* nodes-template.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "nodes-template.xml"; sourceTree = "<group>"; };
-		BC9502D013AEF555004641C3 /* tokens-template.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "tokens-template.xml"; sourceTree = "<group>"; };
-		BC9502D313AEF555004641C3 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
-		BC9502D413AEF555004641C3 /* document-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "document-template.html"; sourceTree = "<group>"; };
-		BC9502D513AEF555004641C3 /* hierarchy-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "hierarchy-template.html"; sourceTree = "<group>"; };
-		BC9502D713AEF555004641C3 /* button_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bar_background.png; sourceTree = "<group>"; };
-		BC9502D813AEF555004641C3 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
-		BC9502D913AEF555004641C3 /* disclosure_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_open.png; sourceTree = "<group>"; };
-		BC9502DA13AEF555004641C3 /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
-		BC9502DB13AEF555004641C3 /* index-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "index-template.html"; sourceTree = "<group>"; };
-		BC9502DC13AEF555004641C3 /* object-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "object-template.html"; sourceTree = "<group>"; };
 		BCBEC0041399945300FB5FA9 /* TestCocoaBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCocoaBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBEC0081399945300FB5FA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCBEC00A1399945300FB5FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -305,8 +266,8 @@
 		BCD511F813A82B5E00EE196E /* CBLoginModalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginModalController.xib; sourceTree = "<group>"; };
 		BCD511F913A82B5E00EE196E /* CocoaBirdModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdModal.h; sourceTree = "<group>"; };
 		BCD511FA13A82B5E00EE196E /* CocoaBirdModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdModal.m; sourceTree = "<group>"; };
-		BCD511FB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdOAuthTokenRetriever.h; sourceTree = "<group>"; };
-		BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdOAuthTokenRetriever.m; sourceTree = "<group>"; };
+		BCD511FB13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdOAuthRequestTokenRetriever.h; sourceTree = "<group>"; };
+		BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdOAuthRequestTokenRetriever.m; sourceTree = "<group>"; };
 		BCD511FD13A82B5E00EE196E /* CocoaBirdSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdSettings.h; sourceTree = "<group>"; };
 		BCD511FE13A82B5E00EE196E /* CocoaBirdSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSettings.m; sourceTree = "<group>"; };
 		BCD5120013A82B5E00EE196E /* CocoaBird+Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "CocoaBird+Account.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -457,7 +418,6 @@
 		BCD5130A13A8451D00EE196E /* CBFriendship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFriendship.m; sourceTree = "<group>"; };
 		BCD5130F13A8560B00EE196E /* CocoaBird+Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocoaBird+Favorites.h"; sourceTree = "<group>"; };
 		BCD5131013A8560B00EE196E /* CocoaBird+Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Favorites.m"; sourceTree = "<group>"; };
-		BCD5131213A85C0300EE196E /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = Todo.txt; sourceTree = "<group>"; };
 		BCEAF13313AD39EC00DB6092 /* CocoaBirdSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBirdSerializer.h; sourceTree = "<group>"; };
 		BCEAF13413AD39EC00DB6092 /* CocoaBirdSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBirdSerializer.m; sourceTree = "<group>"; };
 		BCEAF13713AD3B9B00DB6092 /* CocoaBird+Generic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CocoaBird+Generic.m"; sourceTree = "<group>"; };
@@ -511,95 +471,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC9502C613AEF555004641C3 /* Documentation */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502C713AEF555004641C3 /* Settings.plist */,
-				BC9502C813AEF555004641C3 /* Templates */,
-			);
-			name = Documentation;
-			path = ../Documentation;
-			sourceTree = "<group>";
-		};
-		BC9502C813AEF555004641C3 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502C913AEF555004641C3 /* docset */,
-				BC9502D113AEF555004641C3 /* html */,
-			);
-			path = Templates;
-			sourceTree = "<group>";
-		};
-		BC9502C913AEF555004641C3 /* docset */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502CA13AEF555004641C3 /* Contents */,
-			);
-			path = docset;
-			sourceTree = "<group>";
-		};
-		BC9502CA13AEF555004641C3 /* Contents */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502CC13AEF555004641C3 /* Resources */,
-			);
-			path = Contents;
-			sourceTree = "<group>";
-		};
-		BC9502CC13AEF555004641C3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502CD13AEF555004641C3 /* Documents */,
-				BC9502CF13AEF555004641C3 /* nodes-template.xml */,
-				BC9502D013AEF555004641C3 /* tokens-template.xml */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		BC9502CD13AEF555004641C3 /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502CE13AEF555004641C3 /* documents-template */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		BC9502D113AEF555004641C3 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502D213AEF555004641C3 /* css */,
-				BC9502D413AEF555004641C3 /* document-template.html */,
-				BC9502D513AEF555004641C3 /* hierarchy-template.html */,
-				BC9502D613AEF555004641C3 /* img */,
-				BC9502DB13AEF555004641C3 /* index-template.html */,
-				BC9502DC13AEF555004641C3 /* object-template.html */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		BC9502D213AEF555004641C3 /* css */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502D313AEF555004641C3 /* styles.css */,
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
-		BC9502D613AEF555004641C3 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				BC9502D713AEF555004641C3 /* button_bar_background.png */,
-				BC9502D813AEF555004641C3 /* disclosure.png */,
-				BC9502D913AEF555004641C3 /* disclosure_open.png */,
-				BC9502DA13AEF555004641C3 /* title_background.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
 		BCBEBFF91399945300FB5FA9 = {
 			isa = PBXGroup;
 			children = (
-				BC9502C613AEF555004641C3 /* Documentation */,
 				BCBEC0221399946200FB5FA9 /* CocoaBird */,
 				BCBEC00E1399945300FB5FA9 /* TestCocoaBird */,
 				BCBEC0071399945300FB5FA9 /* Frameworks */,
@@ -662,7 +536,7 @@
 				BCD511B713A82B5E00EE196E /* Models */,
 				BCD511FF13A82B5E00EE196E /* Interface */,
 				BCD511F113A82B5E00EE196E /* Helpers */,
-				BCD5131213A85C0300EE196E /* Todo.txt */,
+				BC06DB3013B421AE00B0743F /* readme.txt */,
 			);
 			name = CocoaBird;
 			path = ../CocoaBird;
@@ -776,8 +650,8 @@
 				BCEAF14C13ADADF700DB6092 /* CBWebModalController.xib */,
 				BCD511F913A82B5E00EE196E /* CocoaBirdModal.h */,
 				BCD511FA13A82B5E00EE196E /* CocoaBirdModal.m */,
-				BCD511FB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.h */,
-				BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m */,
+				BCD511FB13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.h */,
+				BCD511FC13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.m */,
 				BCD511FD13A82B5E00EE196E /* CocoaBirdSettings.h */,
 				BCD511FE13A82B5E00EE196E /* CocoaBirdSettings.m */,
 				BCEAF13313AD39EC00DB6092 /* CocoaBirdSerializer.h */,
@@ -1094,7 +968,6 @@
 			projectRoot = "";
 			targets = (
 				BCBEC0031399945300FB5FA9 /* TestCocoaBird */,
-				BC9502B713AEDFC3004641C3 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1109,42 +982,13 @@
 				BC3D2A351399B2A500C56B9C /* RootController.xib in Resources */,
 				BCD512B913A82B5E00EE196E /* CBLoginModalController.xib in Resources */,
 				BCD512FC13A82B5E00EE196E /* OATestServer.rb in Resources */,
-				BCD5131313A85C0400EE196E /* Todo.txt in Resources */,
 				BCEAF13E13AD48D600DB6092 /* CBLoginWebController.xib in Resources */,
 				BCEAF14E13ADADF800DB6092 /* CBWebModalController.xib in Resources */,
-				BC9502DD13AEF556004641C3 /* Settings.plist in Resources */,
-				BC9502DF13AEF556004641C3 /* documents-template in Resources */,
-				BC9502E013AEF556004641C3 /* nodes-template.xml in Resources */,
-				BC9502E113AEF556004641C3 /* tokens-template.xml in Resources */,
-				BC9502E213AEF556004641C3 /* styles.css in Resources */,
-				BC9502E313AEF556004641C3 /* document-template.html in Resources */,
-				BC9502E413AEF556004641C3 /* hierarchy-template.html in Resources */,
-				BC9502E513AEF556004641C3 /* button_bar_background.png in Resources */,
-				BC9502E613AEF556004641C3 /* disclosure.png in Resources */,
-				BC9502E713AEF556004641C3 /* disclosure_open.png in Resources */,
-				BC9502E813AEF556004641C3 /* title_background.png in Resources */,
-				BC9502E913AEF556004641C3 /* index-template.html in Resources */,
-				BC9502EA13AEF556004641C3 /* object-template.html in Resources */,
+				BC06DB3113B421AE00B0743F /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BC9502BB13AEDFEF004641C3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Build an Xcode documentation\n$SOURCE_ROOT/../../Tools/Appledoc/appledoc $SOURCE_ROOT/../../Source/Documentation/Settings.plist $SOURCE_ROOT/../CocoaBird";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCBEC0001399945300FB5FA9 /* Sources */ = {
@@ -1186,7 +1030,7 @@
 				BCD512B713A82B5E00EE196E /* CocoaBirdReflection.m in Sources */,
 				BCD512B813A82B5E00EE196E /* CBLoginModalController.m in Sources */,
 				BCD512BA13A82B5E00EE196E /* CocoaBirdModal.m in Sources */,
-				BCD512BB13A82B5E00EE196E /* CocoaBirdOAuthTokenRetriever.m in Sources */,
+				BCD512BB13A82B5E00EE196E /* CocoaBirdOAuthRequestTokenRetriever.m in Sources */,
 				BCD512BC13A82B5E00EE196E /* CocoaBirdSettings.m in Sources */,
 				BCD512BD13A82B5E00EE196E /* CocoaBird+Account.m in Sources */,
 				BCD512BE13A82B5E00EE196E /* CocoaBird+Authentication.m in Sources */,
@@ -1308,20 +1152,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BC9502B913AEDFC3004641C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		BC9502BA13AEDFC3004641C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		BCBEC01D1399945300FB5FA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1364,6 +1194,7 @@
 				GCC_PREFIX_HEADER = "TestCocoaBird/TestCocoaBird-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "TestCocoaBird/TestCocoaBird-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1378,6 +1209,7 @@
 				GCC_PREFIX_HEADER = "TestCocoaBird/TestCocoaBird-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "TestCocoaBird/TestCocoaBird-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1387,14 +1219,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC9502B813AEDFC3004641C3 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC9502B913AEDFC3004641C3 /* Debug */,
-				BC9502BA13AEDFC3004641C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		BCBEBFFE1399945300FB5FA9 /* Build configuration list for PBXProject "TestCocoaBird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

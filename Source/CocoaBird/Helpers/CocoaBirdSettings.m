@@ -3,7 +3,7 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/3/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import "CocoaBirdSettings.h"
@@ -53,30 +53,30 @@ static BOOL useSSL = YES;
 
 #pragma User Key/Secret
 
-+ (void) setAuthenticationToken:(NSString*)token secret:(NSString*)secret screenname:(NSString*)screenname
++ (void) setAccessTokenKey:(NSString*)key secret:(NSString*)secret screenname:(NSString*)screenname
 {
     NSLog(@"setAuthenticationToken:Secret:Screenname:%@", screenname);
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:token forKey: @"CocoaBird_AuthenticationToken"];
-    [defaults setObject:secret forKey: @"CocoaBird_AuthenticationSecret"];
+    [defaults setObject:key forKey: @"CocoaBird_AccessTokenKey"];
+    [defaults setObject:secret forKey: @"CocoaBird_AccessTokenSecret"];
     [defaults setObject:screenname forKey: @"CocoaBird_AuthenticationScreenname"];
     [defaults synchronize];
 }
 
-+ (BOOL) hasAuthenticationTokens
++ (BOOL) hasAccessTokens
 {
-    return [[CocoaBirdSettings oAuthToken] length] && [[CocoaBirdSettings oAuthTokenSecret] length];
+    return [[CocoaBirdSettings oAuthAccessTokenKey] length] && [[CocoaBirdSettings oAuthAccessTokenSecret] length];
 }
 
-+ (NSString*) oAuthToken
++ (NSString*) oAuthAccessTokenKey
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationToken"];
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AccessTokenKey"];
 }
 
-+ (NSString*) oAuthTokenSecret
++ (NSString*) oAuthAccessTokenSecret
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AuthenticationSecret"];
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"CocoaBird_AccessTokenSecret"];
 }
 
 + (NSString*) screenname
@@ -86,7 +86,7 @@ static BOOL useSSL = YES;
 
 + (void) logout
 {
-    [self setAuthenticationToken:nil secret:nil screenname:nil];
+    [self setAccessTokenKey:nil secret:nil screenname:nil];
 }
 
 

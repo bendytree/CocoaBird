@@ -3,14 +3,14 @@
 //  TestCocoaBird
 //
 //  Created by JOSHUA WRIGHT on 6/4/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bendy Tree, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "OAToken.h"
 #import "OADataFetcher.h"
 
-@protocol CocoaBirdOAuthTokenRetrieverDelegate
+@protocol CocoaBirdOAuthRequestTokenRetrieverDelegate
 - (void) tokenRetrieverGotRequestToken;
 - (void) tokenRetrieverUnableToGetRequestToken:(NSError*)error;
 
@@ -18,13 +18,13 @@
 - (void) tokenRetrieverUnableToGetAccessToken:(NSError*)error;
 @end
 
-@interface CocoaBirdOAuthTokenRetriever : NSObject {
+@interface CocoaBirdOAuthRequestTokenRetriever : NSObject {
     
 }
 
 @property (retain) OAToken* requestToken;
 @property (retain) OADataFetcher* fetcher;
-@property (assign) id<CocoaBirdOAuthTokenRetrieverDelegate> delegate;
+@property (assign) id<CocoaBirdOAuthRequestTokenRetrieverDelegate> delegate;
 
 - (void) beginLoadingAccessTokenWithPin:(NSString*)pin;
 - (void) beginLoadingRequestToken;
